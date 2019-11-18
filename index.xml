@@ -110,5 +110,14 @@
 </description>
             </item>
         
+            <item>
+                <title>Posts</title>
+                <link>https://simon-lu.github.io/posts/</link>
+                <pubDate>Mon, 03 Jun 2019 14:51:25 +0000</pubDate>
+                
+                <guid>https://simon-lu.github.io/posts/</guid>
+                <description></description>
+            </item>
+        
     </channel>
 </rss>
