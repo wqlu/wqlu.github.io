@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>GDB on LoveIt 主题</title>
+    <title>GDB on Lu&#39;s Blog</title>
     <link>https://simon-lu.github.io/tags/gdb/</link>
-    <description>Recent content in GDB on LoveIt 主题</description>
+    <description>Recent content in GDB on Lu&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
@@ -18,7 +18,8 @@
       <pubDate>Mon, 03 Jun 2019 14:51:25 +0000</pubDate>
       
       <guid>https://simon-lu.github.io/2019/06/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8gdb%E8%B0%83%E8%AF%95%E9%A1%B9%E7%9B%AE/</guid>
-      <description></description>
+      <description>&lt;p&gt;-g 可在编译后的程序中保留调试符号信息&lt;br /&gt;
+strip hello_server 移除程序中存在的调试信息，程序测试后没有问题，我们可以使用此命令减小程序体积,调试文件时建议关闭编译器优化选项，有可能会优化掉排查的对象&lt;/p&gt;</description>
     </item>
     
   </channel>

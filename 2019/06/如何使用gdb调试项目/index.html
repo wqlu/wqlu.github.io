@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>如何使用GDB调试项目 | LoveIt 主题</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>如何使用GDB调试项目 | Lu&#39;s Blog</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noodp" />
 <meta name="Description" content="LoveIt 主题演示">
 <link rel="canonical" href="https://simon-lu.github.io/2019/06/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8gdb%E8%B0%83%E8%AF%95%E9%A1%B9%E7%9B%AE/" />
@@ -17,7 +17,8 @@
 <meta name="theme-color" content="#ffffff">
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="如何使用GDB调试项目"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:description" content="-g 可在编译后的程序中保留调试符号信息
+strip hello_server 移除程序中存在的调试信息，程序测试后没有问题，我们可以使用此命令减小程序体积,调试文件时建议关闭编译器优化选项，有可能会优化掉排查的对象"/>
 <script type="application/ld+json">
     {
     "@context": "http://schema.org",
@@ -39,7 +40,7 @@
     
         "keywords": "GDB",
     
-    "wordcount":  2230 ,
+    "wordcount":  2231 ,
     "url": "https:\/\/simon-lu.github.io\/2019\/06\/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8gdb%E8%B0%83%E8%AF%95%E9%A1%B9%E7%9B%AE\/",
     
         "datePublished": "2019-06-03T14:51:25\x2b00:00",
@@ -81,7 +82,7 @@
             <nav class="navbar">
     <div class="navbar-container">
         <div class="navbar-header">
-            <a href="https://simon-lu.github.io/">LoveIt 主题</a>
+            <a href="https://simon-lu.github.io/">Lu&#39;s Blog</a>
         </div>
         <div class="navbar-menu">
             
@@ -103,7 +104,7 @@
 <nav class="navbar-mobile">
      <div class="navbar-container">
         <div class="navbar-header">
-            <div><a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw"></i></a><a href="https://simon-lu.github.io/">LoveIt 主题</a></div>
+            <div><a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw"></i></a><a href="https://simon-lu.github.io/">Lu&#39;s Blog</a></div>
             <div class="menu-toggle" id="menu-toggle">
                 <span></span><span></span><span></span>
             </div>
@@ -144,13 +145,66 @@
             </div>
             <div class="post-meta-other">
                 <i class="far fa-calendar-alt fa-fw"></i><time datetime=2019-06-03>2019-06-03</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>约 2230 字&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>约 2231 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>预计阅读 5 分钟&nbsp;</div>
         </div>
 
         
 
-        
+        <div class="post-toc" id="post-toc">
+                <h2 class="post-toc-title">目录</h2>
+                <div class="post-toc-content">
+                    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#三种调试方式">三种调试方式</a></li>
+<li><a href="#core-文件">core 文件</a></li>
+<li><a href="#常用命令">常用命令</a></li>
+<li><a href="#print-和-ptype">print 和 ptype</a></li>
+<li><a href="#info-和-thread">info 和 thread</a></li>
+<li><a href="#next-step-until-jump">next、step、until、jump</a></li>
+<li><a href="#disassemble">disassemble</a></li>
+<li><a href="#调试技巧">调试技巧</a></li>
+<li><a href="#自定义-gdb-调试命令">自定义 gdb 调试命令</a></li>
+<li><a href="#redis-的调试">Redis 的调试</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+                </div>
+            </div>
+            <div class="post-toc-mobile" id="post-toc-mobile">
+                <details>
+                    <summary><div class="post-toc-title"><span>目录</span><span><i class="details icon fas fa-angle-down"></i></span></div></summary>
+                    <div class="post-toc-content">
+                        
+                        
+                        <nav id="TableOfContentsMobile">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#三种调试方式">三种调试方式</a></li>
+<li><a href="#core-文件">core 文件</a></li>
+<li><a href="#常用命令">常用命令</a></li>
+<li><a href="#print-和-ptype">print 和 ptype</a></li>
+<li><a href="#info-和-thread">info 和 thread</a></li>
+<li><a href="#next-step-until-jump">next、step、until、jump</a></li>
+<li><a href="#disassemble">disassemble</a></li>
+<li><a href="#调试技巧">调试技巧</a></li>
+<li><a href="#自定义-gdb-调试命令">自定义 gdb 调试命令</a></li>
+<li><a href="#redis-的调试">Redis 的调试</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+                    </div>
+                </details>
+            </div>
 
         <div class="post-content">
             
@@ -178,9 +232,8 @@
             
             
             
-            <p>-g 可在编译后的程序中保留调试符号信息
-strip hello_server 移除程序中存在的调试信息，程序测试后没有问题，我们可以使用此命令减小程序体积
-调试文件时建议关闭编译器优化选项，有可能会优化掉排查的对象</p>
+            <p>-g 可在编译后的程序中保留调试符号信息<br />
+strip hello_server 移除程序中存在的调试信息，程序测试后没有问题，我们可以使用此命令减小程序体积,调试文件时建议关闭编译器优化选项，有可能会优化掉排查的对象</p>
 
 <a class="post-dummy-target" id="三种调试方式"></a><h3>三种调试方式</h3>
 
@@ -526,7 +579,7 @@ break [lineNo] if [condition]
                 
                     <span>
     
-        <a href="//twitter.com/share?url=https%3a%2f%2fsimon-lu.github.io%2f2019%2f06%2f%25E5%25A6%2582%25E4%25BD%2595%25E4%25BD%25BF%25E7%2594%25A8gdb%25E8%25B0%2583%25E8%25AF%2595%25E9%25A1%25B9%25E7%259B%25AE%2f&amp;text=%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8GDB%e8%b0%83%e8%af%95%e9%a1%b9%e7%9b%ae&amp;via=xxxx" target="_blank" title="Share on Twitter">
+        <a href="//twitter.com/share?url=https%3a%2f%2fsimon-lu.github.io%2f2019%2f06%2f%25E5%25A6%2582%25E4%25BD%2595%25E4%25BD%25BF%25E7%2594%25A8gdb%25E8%25B0%2583%25E8%25AF%2595%25E9%25A1%25B9%25E7%259B%25AE%2f&amp;text=%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8GDB%e8%b0%83%e8%af%95%e9%a1%b9%e7%9b%ae&amp;via=" target="_blank" title="Share on Twitter">
             <i class="fab fa-twitter fa-fw"></i>
         </a>
     
