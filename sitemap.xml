@@ -1,9 +1,121 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     
         <url>
+            <loc>https://simon-lu.github.io/categories/</loc>
+            
+                <lastmod>2019-11-28T21:32:13+08:00</lastmod>
+            
+            
+                <changefreq>weekly</changefreq>
+            
+            
+                <priority>0.5</priority>
+            
+            
+        </url>
+    
+        <url>
             <loc>https://simon-lu.github.io/</loc>
             
-                <lastmod>2019-08-02T11:04:49+08:00</lastmod>
+                <lastmod>2019-11-28T21:32:13+08:00</lastmod>
+            
+            
+                <changefreq>weekly</changefreq>
+            
+            
+                <priority>0.5</priority>
+            
+            
+        </url>
+    
+        <url>
+            <loc>https://simon-lu.github.io/posts/</loc>
+            
+                <lastmod>2019-11-28T21:32:13+08:00</lastmod>
+            
+            
+                <changefreq>weekly</changefreq>
+            
+            
+                <priority>0.5</priority>
+            
+            
+        </url>
+    
+        <url>
+            <loc>https://simon-lu.github.io/tags/redis/</loc>
+            
+                <lastmod>2019-11-28T21:32:13+08:00</lastmod>
+            
+            
+                <changefreq>weekly</changefreq>
+            
+            
+                <priority>0.5</priority>
+            
+            
+        </url>
+    
+        <url>
+            <loc>https://simon-lu.github.io/tags/</loc>
+            
+                <lastmod>2019-11-28T21:32:13+08:00</lastmod>
+            
+            
+                <changefreq>weekly</changefreq>
+            
+            
+                <priority>0.5</priority>
+            
+            
+        </url>
+    
+        <url>
+            <loc>https://simon-lu.github.io/tags/redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/</loc>
+            
+                <lastmod>2019-11-28T21:32:13+08:00</lastmod>
+            
+            
+                <changefreq>weekly</changefreq>
+            
+            
+                <priority>0.5</priority>
+            
+            
+        </url>
+    
+        <url>
+            <loc>https://simon-lu.github.io/2019/11/redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
+            
+                <lastmod>2019-11-28T21:32:13+08:00</lastmod>
+            
+            
+                <changefreq>weekly</changefreq>
+            
+            
+                <priority>0.5</priority>
+            
+            
+        </url>
+    
+        <url>
+            <loc>https://simon-lu.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
+            
+                <lastmod>2019-11-28T21:32:13+08:00</lastmod>
+            
+            
+                <changefreq>weekly</changefreq>
+            
+            
+                <priority>0.5</priority>
+            
+            
+        </url>
+    
+        <url>
+            <loc>https://simon-lu.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
+            
+                <lastmod>2019-11-28T21:32:13+08:00</lastmod>
             
             
                 <changefreq>weekly</changefreq>
@@ -29,20 +141,6 @@
         </url>
     
         <url>
-            <loc>https://simon-lu.github.io/categories/</loc>
-            
-                <lastmod>2019-06-03T14:51:25+00:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
             <loc>https://simon-lu.github.io/tags/gdb/</loc>
             
                 <lastmod>2019-06-03T14:51:25+00:00</lastmod>
@@ -57,49 +155,7 @@
         </url>
     
         <url>
-            <loc>https://simon-lu.github.io/posts/</loc>
-            
-                <lastmod>2019-06-03T14:51:25+00:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
-            <loc>https://simon-lu.github.io/tags/</loc>
-            
-                <lastmod>2019-06-03T14:51:25+00:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
             <loc>https://simon-lu.github.io/2019/06/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8gdb%E8%B0%83%E8%AF%95%E9%A1%B9%E7%9B%AE/</loc>
-            
-                <lastmod>2019-06-03T14:51:25+00:00</lastmod>
-            
-            
-                <changefreq>weekly</changefreq>
-            
-            
-                <priority>0.5</priority>
-            
-            
-        </url>
-    
-        <url>
-            <loc>https://simon-lu.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
             
                 <lastmod>2019-06-03T14:51:25+00:00</lastmod>
             
