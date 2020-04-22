@@ -23,7 +23,8 @@ strip hello_server 移除程序中存在的调试信息，程序测试后没有�
 - 程序启动时候,记录自己的 pid
 
 ```c
-void writepid() {
+void writepid()
+{
     uint31_t curPid = (uint32_t) getpid();
     FILE* f = fopen("xxxserver.pid", "w");
     assert(f);
@@ -98,13 +99,14 @@ echo "/corefile/core-%e-%p-%t" > /proc/sys/kernel/core_pattern
   如果 jump 跳转的位置后续没有断点，gdb 会执行完跳转处的代码继续执行
   jump 妙用：可以执行一些我们想要执行的代码，可能这些代码在正常逻辑下不会执行,如下：
 
-```c++
-int main() {
+```c
+int main()
+{
     int a = 0;
     if (a != 0 ) {
         printf("if condition\n");
     } else {
-        orintf("else condition\n");
+        printf("else condition\n");
     }
     return 0;
 }
@@ -118,7 +120,7 @@ int main() {
 - set args 和 show args
   gdb filename args 是错误做法，应该是 gdb 附加程序后，在 run 命令前，使用"set args 参数内容"来设置，例如：set args ../redis.conf
   如果单个命令行参数之间含有空格，可以使用引号将参数包裹起来，如：set args "999 xx" "hu jj"
-  清楚参数，直接使用 set args 不加任何参数
+  清除参数,直接使用 set args 不加任何参数
 - tbreak 该断点触发一次就会自动删除
 - watch 通过添加硬件断点来达到监视数据变化的目的，有以下几种形式:
   (1) 整形变量, int i; wathc i
@@ -152,3 +154,4 @@ int main() {
 在当前用户(home)目录下，root(/root),非 root(/home/用户名)下，自定义.gdbinit 文件
 
 ### Redis 的调试
+
