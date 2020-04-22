@@ -20,30 +20,27 @@ strip hello_server 移除程序中存在的调试信息，程序测试后没有�
 
 针对 core 文件，pid 在程序崩溃时候无法获取 pid，尤其多个程序同时崩溃时，解决方法有两个：
 
-- 程序启动时候,记录自己的 pid
-
+1. 程序启动时候,记录自己的 pid
 ```c
 void writepid()
 {
-    uint31_t curPid = (uint32_t) getpid();
-    FILE* f = fopen("xxxserver.pid", "w");
-    assert(f);
-    char szPid[32];
-    snprintf(szPid, sizeof(szPid), "%d", curPid);
-    fwrite(szPid, strlen(szPid), 1, f);
-    fclose(f);
+        uint31_t curPid = (uint32_t) getpid();
+        FILE* f = fopen("xxxserver.pid", "w");
+        assert(f);
+        char szPid[32];
+        snprintf(szPid, sizeof(szPid), "%d", curPid);
+        fwrite(szPid, strlen(szPid), 1, f);
+        fclose(f);
 }
 // 生成的pid记录到xxxserver.pd文件中，崩溃时从此获取
 ```
 
-- 自定义 core 文件的名称和目录
+2. 自定义 core 文件的名称和目录
   /proc/sys/kernel/core_uses_pid 可以控制产生的 core 文件的文件名是否用 pid 作为扩展名，1 为添加，0 则否
   /proc/sys/kernel/core_pattern 可以设置格式化的 core 文件保存位置和文件名，命令如下：
-
 ```bash
 echo "/corefile/core-%e-%p-%t" > /proc/sys/kernel/core_pattern
 ```
-
 %e 代表充程序名，%p 代表 pid, %t 代表时间戳 例如/testcore/core-%e-%p-%t，将生成 core-test-13154-1547445291 这种格式
 
 ### 常用命令
@@ -98,20 +95,18 @@ echo "/corefile/core-%e-%p-%t" > /proc/sys/kernel/core_pattern
 - jump <location> location 可以是行号或者函数的地址，行为是不可控的
   如果 jump 跳转的位置后续没有断点，gdb 会执行完跳转处的代码继续执行
   jump 妙用：可以执行一些我们想要执行的代码，可能这些代码在正常逻辑下不会执行,如下：
-
 ```c
 int main()
 {
-    int a = 0;
-    if (a != 0 ) {
-        printf("if condition\n");
-    } else {
-        printf("else condition\n");
-    }
-    return 0;
+        int a = 0;
+        if (a != 0 ) {
+            printf("if condition\n");
+        } else {
+            printf("else condition\n");
+        }
+        return 0;
 }
 ```
-
 正常是走 else 分支，可以使用 jump 强制走 if,return 0 设为断点，gdb 会停下
 
 ### disassemble

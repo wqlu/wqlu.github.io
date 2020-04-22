@@ -92,7 +92,7 @@ strip hello_server 移除程序中存在的调试信息，程序测试后没有�
             
                 <a class="menu-item" href="https://simon-lu.github.io/tags/" title="">标签</a>
             
-                <a class="menu-item" href="https://simon-lu.github.io/categories/" title="">目录</a>
+                <a class="menu-item" href="https://simon-lu.github.io/categories/" title="">分类</a>
             
                 <a class="menu-item" href="https://simon-lu.github.io/about/" title="">关于</a>
             
@@ -117,7 +117,7 @@ strip hello_server 移除程序中存在的调试信息，程序测试后没有�
             
                 <a class="menu-item" href="https://simon-lu.github.io/tags/" title="">标签</a>
             
-                <a class="menu-item" href="https://simon-lu.github.io/categories/" title="">目录</a>
+                <a class="menu-item" href="https://simon-lu.github.io/categories/" title="">分类</a>
             
                 <a class="menu-item" href="https://simon-lu.github.io/about/" title="">关于</a>
             
@@ -252,7 +252,7 @@ core 文件的默认名字是 core.pid</li>
 
 <p>针对 core 文件，pid 在程序崩溃时候无法获取 pid，尤其多个程序同时崩溃时，解决方法有两个：</p>
 
-<ul>
+<ol>
 <li><p>程序启动时候,记录自己的 pid</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -271,13 +271,13 @@ core 文件的默认名字是 core.pid</li>
 <td class="lntd">
 <pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">writepid</span><span class="p">()</span>
 <span class="p">{</span>
-<span class="n">uint31_t</span> <span class="n">curPid</span> <span class="o">=</span> <span class="p">(</span><span class="n">uint32_t</span><span class="p">)</span> <span class="n">getpid</span><span class="p">();</span>
-<span class="n">FILE</span><span class="o">*</span> <span class="n">f</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">&#34;xxxserver.pid&#34;</span><span class="p">,</span> <span class="s">&#34;w&#34;</span><span class="p">);</span>
-<span class="n">assert</span><span class="p">(</span><span class="n">f</span><span class="p">);</span>
-<span class="kt">char</span> <span class="n">szPid</span><span class="p">[</span><span class="mi">32</span><span class="p">];</span>
-<span class="n">snprintf</span><span class="p">(</span><span class="n">szPid</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">szPid</span><span class="p">),</span> <span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="n">curPid</span><span class="p">);</span>
-<span class="n">fwrite</span><span class="p">(</span><span class="n">szPid</span><span class="p">,</span> <span class="n">strlen</span><span class="p">(</span><span class="n">szPid</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="n">f</span><span class="p">);</span>
-<span class="n">fclose</span><span class="p">(</span><span class="n">f</span><span class="p">);</span>
+    <span class="n">uint31_t</span> <span class="n">curPid</span> <span class="o">=</span> <span class="p">(</span><span class="n">uint32_t</span><span class="p">)</span> <span class="n">getpid</span><span class="p">();</span>
+    <span class="n">FILE</span><span class="o">*</span> <span class="n">f</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">&#34;xxxserver.pid&#34;</span><span class="p">,</span> <span class="s">&#34;w&#34;</span><span class="p">);</span>
+    <span class="n">assert</span><span class="p">(</span><span class="n">f</span><span class="p">);</span>
+    <span class="kt">char</span> <span class="n">szPid</span><span class="p">[</span><span class="mi">32</span><span class="p">];</span>
+    <span class="n">snprintf</span><span class="p">(</span><span class="n">szPid</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">szPid</span><span class="p">),</span> <span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="n">curPid</span><span class="p">);</span>
+    <span class="n">fwrite</span><span class="p">(</span><span class="n">szPid</span><span class="p">,</span> <span class="n">strlen</span><span class="p">(</span><span class="n">szPid</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="n">f</span><span class="p">);</span>
+    <span class="n">fclose</span><span class="p">(</span><span class="n">f</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="o">//</span> <span class="err">生成的</span><span class="n">pid记录到xxxserver</span><span class="p">.</span><span class="n">pd文件中</span><span class="err">，崩溃时从此获取</span></code></pre></td></tr></table>
 </div>
@@ -293,10 +293,9 @@ core 文件的默认名字是 core.pid</li>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&#34;/corefile/core-%e-%p-%t&#34;</span> &gt; /proc/sys/kernel/core_pattern</code></pre></td></tr></table>
 </div>
-</div></li>
-</ul>
-
-<p>%e 代表充程序名，%p 代表 pid, %t 代表时间戳 例如/testcore/core-%e-%p-%t，将生成 core-test-13154-1547445291 这种格式</p>
+</div>
+<p>%e 代表充程序名，%p 代表 pid, %t 代表时间戳 例如/testcore/core-%e-%p-%t，将生成 core-test-13154-1547445291 这种格式</p></li>
+</ol>
 
 <a class="post-dummy-target" id="常用命令"></a><h3>常用命令</h3>
 
@@ -501,19 +500,18 @@ jump 妙用：可以执行一些我们想要执行的代码，可能这些代码
 <td class="lntd">
 <pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
 <span class="p">{</span>
-<span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">{</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;if condition</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;else condition</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;if condition</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;else condition</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span></code></pre></td></tr></table>
 </div>
-</div></li>
+</div>
+<p>正常是走 else 分支，可以使用 jump 强制走 if,return 0 设为断点，gdb 会停下</p></li>
 </ul>
-
-<p>正常是走 else 分支，可以使用 jump 强制走 if,return 0 设为断点，gdb 会停下</p>
 
 <a class="post-dummy-target" id="disassemble"></a><h3>disassemble</h3>
 
