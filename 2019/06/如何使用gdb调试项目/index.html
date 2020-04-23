@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>如何使用GDB调试项目 | 2 &#43; 2 = 5</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noodp" />
+<meta name="Description" content="LoveIt 主题演示">
+<link rel="next" href="https://simon-lu.github.io/2019/11/redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" />
+<link rel="canonical" href="https://simon-lu.github.io/2019/06/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8gdb%E8%B0%83%E8%AF%95%E9%A1%B9%E7%9B%AE/" />
+<link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="如何使用GDB调试项目"/>
+<meta name="twitter:description" content="-g 可在编译后的程序中保留调试符号信息
+strip hello_server 移除程序中存在的调试信息，程序测试后没有问题，我们可以使用此命令减小程序体积,调试文件时建议关闭编译器优化选项，有可能会优化掉排查的对象"/>
+<script type="application/ld+json">
+    {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "headline": "如何使用GDB调试项目",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https:\/\/simon-lu.github.io\/2019\/06\/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8gdb%E8%B0%83%E8%AF%95%E9%A1%B9%E7%9B%AE\/"
+    },
+    
+        "image": {
+            "@type": "ImageObject",
+            "url": "https:\/\/simon-lu.github.io\/cover.png",
+            "width":  800 ,
+            "height":  600 
+        },
+    
+    "genre": "posts",
+    
+        "keywords": "GDB",
+    
+    "wordcount":  2233 ,
+    "url": "https:\/\/simon-lu.github.io\/2019\/06\/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8gdb%E8%B0%83%E8%AF%95%E9%A1%B9%E7%9B%AE\/",
+    
+        "datePublished": "2019-06-03T14:51:25\x2b00:00",
+    
+    
+        "dateModified": "2019-06-03T14:51:25\x2b00:00",
+    
+    
+        "license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.",
+    
+    
+        "publisher": {
+            "@type": "Organization",
+            "name": "XXXX",
+            "logo": {
+            "@type": "ImageObject",
+            "url": "https:\/\/simon-lu.github.io\/logo.png",
+            "width":  127 ,
+            "height":  40 
+            }
+        },
+    
+    
+    "description": ""
+    }
+    </script>
+<link rel="stylesheet" href="/css/style.min.css">
+<link rel="stylesheet" href="/css/lib/fontawesome-free/all.min.min.css">
+
+<link rel="stylesheet" href="/css/lib/animate/animate.min.min.css">
+
+    </head>
+    <body>
+        <script>
+            window.isDark = (window.localStorage && window.localStorage.getItem('theme')) === 'dark';
+            window.isDark && document.body.classList.add('dark-theme');
+        </script>
+        <div class="wrapper">
+            <nav class="navbar">
+    <div class="navbar-container">
+        <div class="navbar-header">
+            <a href="https://simon-lu.github.io/">2 &#43; 2 = 5</a>
+        </div>
+        <div class="navbar-menu">
+            
+            
+                <a class="menu-item" href="https://simon-lu.github.io/posts/" title="">文章</a>
+            
+                <a class="menu-item" href="https://simon-lu.github.io/tags/" title="">标签</a>
+            
+                <a class="menu-item" href="https://simon-lu.github.io/categories/" title="">分类</a>
+            
+                <a class="menu-item" href="https://simon-lu.github.io/about/" title="">关于</a>
+            
+                <a class="menu-item" href="https://hugo-loveit-en.netlify.com" title=""><i class="fas fa-language fa-fw"></i></a>
+            
+            <a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw"></i></a>
+        </div>
+    </div>
+</nav>
+<nav class="navbar-mobile">
+     <div class="navbar-container">
+        <div class="navbar-header">
+            <div><a href="javascript:void(0);" class="theme-switch"><i class="fas fa-adjust fa-rotate-180 fa-fw"></i></a><a href="https://simon-lu.github.io/">2 &#43; 2 = 5</a></div>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="navbar-menu" id="mobile-menu">
+            
+            
+                <a class="menu-item" href="https://simon-lu.github.io/posts/" title="">文章</a>
+            
+                <a class="menu-item" href="https://simon-lu.github.io/tags/" title="">标签</a>
+            
+                <a class="menu-item" href="https://simon-lu.github.io/categories/" title="">分类</a>
+            
+                <a class="menu-item" href="https://simon-lu.github.io/about/" title="">关于</a>
+            
+                <a class="menu-item" href="https://hugo-loveit-en.netlify.com" title=""><i class="fas fa-language fa-fw"></i></a>
+            
+        </div>
+    </div>
+</nav><main class="main">
+                <div class="container">
+                    
+    
+    
+    
+
+    <article class="post-warp">
+        <h1 class="post-title animated flipInX">如何使用GDB调试项目</h1>
+
+        <div class="post-meta">
+            <div class="post-meta-main">
+                
+                <span class="post-category">
+                        收录于
+                        <i class="far fa-folder fa-fw"></i><a href="https://simon-lu.github.io/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+                            
+                    </span>
+            </div>
+            <div class="post-meta-other">
+                <i class="far fa-calendar-alt fa-fw"></i><time datetime=2019-06-03>2019-06-03</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>约 2233 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>预计阅读 5 分钟&nbsp;</div>
+        </div>
+
+        
+
+        <div class="post-toc" id="post-toc">
+                <h2 class="post-toc-title">目录</h2>
+                <div class="post-toc-content">
+                    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#三种调试方式">三种调试方式</a></li>
+<li><a href="#core-文件">core 文件</a></li>
+<li><a href="#常用命令">常用命令</a></li>
+<li><a href="#print-和-ptype">print 和 ptype</a></li>
+<li><a href="#info-和-thread">info 和 thread</a></li>
+<li><a href="#next-step-until-jump">next、step、until、jump</a></li>
+<li><a href="#disassemble">disassemble</a></li>
+<li><a href="#调试技巧">调试技巧</a></li>
+<li><a href="#自定义-gdb-调试命令">自定义 gdb 调试命令</a></li>
+<li><a href="#redis-的调试">Redis 的调试</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+                </div>
+            </div>
+            <div class="post-toc-mobile" id="post-toc-mobile">
+                <details>
+                    <summary><div class="post-toc-title"><span>目录</span><span><i class="details icon fas fa-angle-down"></i></span></div></summary>
+                    <div class="post-toc-content">
+                        
+                        
+                        <nav id="TableOfContentsMobile">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#三种调试方式">三种调试方式</a></li>
+<li><a href="#core-文件">core 文件</a></li>
+<li><a href="#常用命令">常用命令</a></li>
+<li><a href="#print-和-ptype">print 和 ptype</a></li>
+<li><a href="#info-和-thread">info 和 thread</a></li>
+<li><a href="#next-step-until-jump">next、step、until、jump</a></li>
+<li><a href="#disassemble">disassemble</a></li>
+<li><a href="#调试技巧">调试技巧</a></li>
+<li><a href="#自定义-gdb-调试命令">自定义 gdb 调试命令</a></li>
+<li><a href="#redis-的调试">Redis 的调试</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+                    </div>
+                </details>
+            </div>
+
+        <div class="post-content">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <p>-g 可在编译后的程序中保留调试符号信息<br />
+strip hello_server 移除程序中存在的调试信息，程序测试后没有问题，我们可以使用此命令减小程序体积,调试文件时建议关闭编译器优化选项，有可能会优化掉排查的对象</p>
+
+<a class="post-dummy-target" id="三种调试方式"></a><h3>三种调试方式</h3>
+
+<ol>
+<li><em>gdb filename</em> 直接调试目标程序，然后 run</li>
+<li><em>gdb attach pid</em> 程序已经启动，将 gdb 调试器附加到程序上，ps 命令获取改进程的 pid
+结束调试后使用 detach 来分离</li>
+<li><em>gdb filename corename</em> 程序崩溃时有 core 文件产生，可以使用 core 来定位问题
+ulimit -c 查看是否开启了之一机制 ulimit -a 系统最大文件描述符
+&ldquo;ulimit 选项名 设置值&rdquo;来修改，例：ulimit -c unlimited,永久生效需要将此命令加入/etc/profile 文件中
+core 文件的默认名字是 core.pid</li>
+</ol>
+
+<a class="post-dummy-target" id="core-文件"></a><h3>core 文件</h3>
+
+<p>针对 core 文件，pid 在程序崩溃时候无法获取 pid，尤其多个程序同时崩溃时，解决方法有两个：</p>
+
+<ol>
+<li><p>程序启动时候,记录自己的 pid</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">writepid</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">uint31_t</span> <span class="n">curPid</span> <span class="o">=</span> <span class="p">(</span><span class="n">uint32_t</span><span class="p">)</span> <span class="n">getpid</span><span class="p">();</span>
+    <span class="n">FILE</span><span class="o">*</span> <span class="n">f</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="s">&#34;xxxserver.pid&#34;</span><span class="p">,</span> <span class="s">&#34;w&#34;</span><span class="p">);</span>
+    <span class="n">assert</span><span class="p">(</span><span class="n">f</span><span class="p">);</span>
+    <span class="kt">char</span> <span class="n">szPid</span><span class="p">[</span><span class="mi">32</span><span class="p">];</span>
+    <span class="n">snprintf</span><span class="p">(</span><span class="n">szPid</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">szPid</span><span class="p">),</span> <span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="n">curPid</span><span class="p">);</span>
+    <span class="n">fwrite</span><span class="p">(</span><span class="n">szPid</span><span class="p">,</span> <span class="n">strlen</span><span class="p">(</span><span class="n">szPid</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="n">f</span><span class="p">);</span>
+    <span class="n">fclose</span><span class="p">(</span><span class="n">f</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="o">//</span> <span class="err">生成的</span><span class="n">pid记录到xxxserver</span><span class="p">.</span><span class="n">pd文件中</span><span class="err">，崩溃时从此获取</span></code></pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>自定义 core 文件的名称和目录
+/proc/sys/kernel/core_uses_pid 可以控制产生的 core 文件的文件名是否用 pid 作为扩展名，1 为添加，0 则否
+/proc/sys/kernel/core_pattern 可以设置格式化的 core 文件保存位置和文件名，命令如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">echo</span> <span class="s2">&#34;/corefile/core-%e-%p-%t&#34;</span> &gt; /proc/sys/kernel/core_pattern</code></pre></td></tr></table>
+</div>
+</div>
+<p>%e 代表充程序名，%p 代表 pid, %t 代表时间戳 例如/testcore/core-%e-%p-%t，将生成 core-test-13154-1547445291 这种格式</p></li>
+</ol>
+
+<a class="post-dummy-target" id="常用命令"></a><h3>常用命令</h3>
+
+<table>
+<thead>
+<tr>
+<th>命令名称</th>
+<th>缩写</th>
+<th>说明</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>run</td>
+<td>r</td>
+<td>运行</td>
+</tr>
+
+<tr>
+<td>continue</td>
+<td>c</td>
+<td>暂停的程序继续运行</td>
+</tr>
+
+<tr>
+<td>next</td>
+<td>n</td>
+<td>运行到下一行</td>
+</tr>
+
+<tr>
+<td>step</td>
+<td>u</td>
+<td>如果有函数，进入内部</td>
+</tr>
+
+<tr>
+<td>until</td>
+<td>u</td>
+<td>运行到指定行停下来</td>
+</tr>
+
+<tr>
+<td>finish</td>
+<td>fi</td>
+<td>结束当前调用函数，到上一层函数调用处</td>
+</tr>
+
+<tr>
+<td>return</td>
+<td>return</td>
+<td>结束当前调用函数并返回指定值，到上一层函数调用处</td>
+</tr>
+
+<tr>
+<td>jump</td>
+<td>j</td>
+<td>执行流跳转到指定行或地址</td>
+</tr>
+
+<tr>
+<td>print</td>
+<td>p</td>
+<td>打印变量或寄存器值</td>
+</tr>
+
+<tr>
+<td>backtrace</td>
+<td>bt</td>
+<td>查看当前线程调用堆栈</td>
+</tr>
+
+<tr>
+<td>frame</td>
+<td>f</td>
+<td>切换到当前线程调用的指定堆栈，可通过堆栈序号</td>
+</tr>
+
+<tr>
+<td>thread</td>
+<td>thread</td>
+<td>切换到指定线程</td>
+</tr>
+
+<tr>
+<td>break</td>
+<td>b</td>
+<td>添加断点</td>
+</tr>
+
+<tr>
+<td>tbreak</td>
+<td>tb</td>
+<td>添加临时断点</td>
+</tr>
+
+<tr>
+<td>delete</td>
+<td>del</td>
+<td>删除断点</td>
+</tr>
+
+<tr>
+<td>enable</td>
+<td>enable</td>
+<td>启用某个断点</td>
+</tr>
+
+<tr>
+<td>disable</td>
+<td>disable</td>
+<td>禁用某个断点</td>
+</tr>
+
+<tr>
+<td>wathc</td>
+<td>watch</td>
+<td>监视某一个变量或地址的值是否变化</td>
+</tr>
+
+<tr>
+<td>list</td>
+<td>l</td>
+<td>显示源码</td>
+</tr>
+
+<tr>
+<td>info</td>
+<td>info</td>
+<td>显示断点/线程等信息</td>
+</tr>
+
+<tr>
+<td>ptype</td>
+<td>ptype</td>
+<td>查看变量类型</td>
+</tr>
+
+<tr>
+<td>disassemble</td>
+<td>dis</td>
+<td>查看汇编代码</td>
+</tr>
+
+<tr>
+<td>set args</td>
+<td></td>
+<td>设置程序启动命令行参数</td>
+</tr>
+
+<tr>
+<td>show args</td>
+<td></td>
+<td>查看设置的命令行参数</td>
+</tr>
+</tbody>
+</table>
+
+<a class="post-dummy-target" id="print-和-ptype"></a><h3>print 和 ptype</h3>
+
+<ul>
+<li>print 不仅可以显示变量值，也可以进行一定运算表达式计算结果，甚至可以显示一些函数的执行结果</li>
+<li>p &amp;server.port 取地址，在 C++对象中，也可以 p this,也可以 p *this 列出当前对象各个成员的值</li>
+<li>p a+b+c 来打印三个变量的计算结果，func()是可执行函数，也可以 p func()输出该变量的执行结果</li>
+<li>print 也可以修改变量的值</li>
+</ul>
+
+<a class="post-dummy-target" id="info-和-thread"></a><h3>info 和 thread</h3>
+
+<ul>
+<li>info thread 查看当前进程有哪些线程, 带*号表示当前 gdb 作用于哪个线程，谁是主线程可以 bt 查看调用堆栈</li>
+<li>thread 线程编号 切换线程</li>
+<li>info args 产看当前函数的参数值</li>
+</ul>
+
+<a class="post-dummy-target" id="next-step-until-jump"></a><h3>next、step、until、jump</h3>
+
+<ul>
+<li>函数调用方式_cdelc 和_stdcall，C++非静态成员函数的调用方式_thiscall，函数参数的传递本质都是函数参数入栈的过程，者三种入栈方式都是从右往左的</li>
+<li>直接执行完当前函数并回到上一层调用处，使用 finish</li>
+<li>return 与之类似，可以指定该函数返回值
+<em>Note</em>: finish 会执行函数到函数正常退出该函数；而 return 是立即结束当前函数并返回，如果说当前函数还有剩余的代码未执行完毕，也不会执行了</li>
+<li>until 快速执行完中间代码</li>
+
+<li><p>jump <location> location 可以是行号或者函数的地址，行为是不可控的
+如果 jump 跳转的位置后续没有断点，gdb 会执行完跳转处的代码继续执行
+jump 妙用：可以执行一些我们想要执行的代码，可能这些代码在正常逻辑下不会执行,如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;if condition</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&#34;else condition</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>正常是走 else 分支，可以使用 jump 强制走 if,return 0 设为断点，gdb 会停下</p></li>
+</ul>
+
+<a class="post-dummy-target" id="disassemble"></a><h3>disassemble</h3>
+
+<ul>
+<li>disassemble 查看汇编指令，默认为 AT&amp;T 格式，可以通过 show disassembly-flavor 查看，通过 set disassembly-flavor intel 设置为 intel 汇编格式</li>
+<li>set args 和 show args
+gdb filename args 是错误做法，应该是 gdb 附加程序后，在 run 命令前，使用&rdquo;set args 参数内容&rdquo;来设置，例如：set args ../redis.conf
+如果单个命令行参数之间含有空格，可以使用引号将参数包裹起来，如：set args &ldquo;999 xx&rdquo; &ldquo;hu jj&rdquo;
+清除参数,直接使用 set args 不加任何参数</li>
+<li>tbreak 该断点触发一次就会自动删除</li>
+<li>watch 通过添加硬件断点来达到监视数据变化的目的，有以下几种形式:
+(1) 整形变量, int i; wathc i
+(2) 指针类型， char *p; watch p 与 wathc *p,两种是有区别的
+(3) 一个数组或内存区间， char buf[128]; wathc buf</li>
+<li>display 命令监视的变量或者内存地址，每次程序中断下来都会自动输出这些变量或者内存的值
+info display 查看， delete display 清除全部需自动输出的变量，加编号删除某一个
+display \$ebp 添加寄存器 ebp</li>
+</ul>
+
+<a class="post-dummy-target" id="调试技巧"></a><h3>调试技巧</h3>
+
+<ul>
+<li>print 打印结果显示完整
+打印字符串或字符数组时，字符串太长显示不全，使用 set print element 0 命令设置就可以完整显示了</li>
+<li>gdb 调试的程序接收信号
+例如 Ctrl+C(对应信号 SIGINT)，Ctrl+C 会被 gdb 接收到，程序无法接收，两种方式:
+(1) gdb 中使用 signal 函数手动发送信号给程序， signal SIGINT;
+(2) 改变 gdb 信号处理的设置，通过 handle SIGINT nostop print pass 告诉 gdb 接收到 SIGINT 不要停止，传给程序</li>
+<li>函数存在，但是添加断点无效
+这时候需要改变方式，使用代码文件和行号这种方式</li>
+<li>多线程下禁止线程切换
+set scheduler-locking on 将执行流锁定在当前调试线程</li>
+<li>条件断点
+break [lineNo] if [condition]
+还有一种方式，先添加断点，然后使用&rdquo;condition 断点编号 断点触发条件&rdquo;，例如: (gdb)b 11 (gdb) condition 1 i == 500</li>
+<li>gdb 调试多进程
+(1)先调试父进程，子进程 fork 出来后，使用 gdb attach 到子进程，这需要重新开一个 session 窗口调试
+(2)gdb 提供了一个选项 follow-fork,可以使用 show follow-fork mode 查看当前值，也可以通过 set follow-fork mode 设置是当一个进程 fork 出新的子进程时，gdb 是继续调试父进程还是子进程(取值 child)，默认取(parent)</li>
+</ul>
+
+<a class="post-dummy-target" id="自定义-gdb-调试命令"></a><h3>自定义 gdb 调试命令</h3>
+
+<p>在当前用户(home)目录下，root(/root),非 root(/home/用户名)下，自定义.gdbinit 文件</p>
+
+<a class="post-dummy-target" id="redis-的调试"></a><h3>Redis 的调试</h3>
+        </div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>本文于 2019-06-03 更新</span>
+            </div>
+            <div class="post-info-license">
+                
+            </div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md">
+                
+                    
+                        <span><a class="link-to-markdown" href="https://simon-lu.github.io/2019/06/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8gdb%E8%B0%83%E8%AF%95%E9%A1%B9%E7%9B%AE/index.md" target="_blank">阅读原始文档</a></span>
+                    
+                
+            </div>
+            <div class="post-info-share">
+                
+                    <span>
+    
+        <a href="//twitter.com/share?url=https%3a%2f%2fsimon-lu.github.io%2f2019%2f06%2f%25E5%25A6%2582%25E4%25BD%2595%25E4%25BD%25BF%25E7%2594%25A8gdb%25E8%25B0%2583%25E8%25AF%2595%25E9%25A1%25B9%25E7%259B%25AE%2f&amp;text=%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8GDB%e8%b0%83%e8%af%95%e9%a1%b9%e7%9b%ae&amp;via=" target="_blank" title="Share on Twitter">
+            <i class="fab fa-twitter fa-fw"></i>
+        </a>
+    
+    
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fsimon-lu.github.io%2f2019%2f06%2f%25E5%25A6%2582%25E4%25BD%2595%25E4%25BD%25BF%25E7%2594%25A8gdb%25E8%25B0%2583%25E8%25AF%2595%25E9%25A1%25B9%25E7%259B%25AE%2f" target="_blank" title="Share on Facebook">
+            <i class="fab fa-facebook-square fa-fw"></i>
+        </a>
+    
+    
+        <a href="//reddit.com/submit?url=https%3a%2f%2fsimon-lu.github.io%2f2019%2f06%2f%25E5%25A6%2582%25E4%25BD%2595%25E4%25BD%25BF%25E7%2594%25A8gdb%25E8%25B0%2583%25E8%25AF%2595%25E9%25A1%25B9%25E7%259B%25AE%2f&amp;title=%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8GDB%e8%b0%83%e8%af%95%e9%a1%b9%e7%9b%ae" target="_blank" title="Share on Reddit">
+            <i class="fab fa-reddit fa-fw"></i>
+        </a>
+    
+    
+    
+    
+    
+    
+    
+    
+</span>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section>
+            
+                
+                    <span class="tag">
+                        <a href="https://simon-lu.github.io/tags/gdb/"><i class="fas fa-tag fa-fw"></i>GDB</a>
+                    </span>
+                
+            
+        </section>
+        <section>
+            <span><a href="javascript:window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="https://simon-lu.github.io/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        
+            <a href="https://simon-lu.github.io/2019/11/redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="next" rel="next" title="《Redis设计与实现》读书笔记">《Redis设计与实现》读书笔记<i class="fas fa-angle-right fa-fw"></i></a>
+        
+    </div>
+</div>
+
+        <div class="post-comment">
+            
+            
+
+            
+        </div>
+    </article></div>
+            </main>
+            <footer class="footer">
+    <div class="copyright">
+        <div class="copyright-line">
+            由 <a href="https://gohugo.io/" target="_blank" rel="external nofollow noopener noreffer">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="external nofollow noopener noreffer">LoveIt<i class="far fa-heart fa-fw"></i></a>
+        </div>
+        <div class="copyright-line">
+            <i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2018 - 2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://simon-lu.github.io/">Simon</a></span><span class="license">&nbsp;|&nbsp;<a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+    </div>
+</footer>
+
+
+    
+    
+
+
+
+
+    
+    
+
+
+
+
+    
+    
+
+
+
+
+
+    
+    
+
+
+
+    
+    
+
+
+
+    
+    
+
+
+
+
+
+    
+    
+
+
+
+
+
+    
+    
+
+
+
+    
+    
+
+
+
+
+
+    
+    
+
+
+
+
+    
+    
+
+
+
+
+    
+    
+
+
+
+    
+    
+
+
+
+
+
+    
+    
+
+
+<script src="/js/lib/jquery/jquery.slim.min.min.js"></script>
+<script src="/js/lib/lazysizes/lazysizes.min.min.js"></script>
+<script src="/js/lib/smooth-scroll/smooth-scroll.polyfills.min.min.js"></script><script>window.scroll = new SmoothScroll('[data-scroll]', {speed: 300, speedAsDuration: true});</script>
+
+
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+<script src="/js/blog.min.js"></script>
+
+
+    
+</div>
+        <a href="#" class="dynamic-to-top" id="dynamic-to-top" data-scroll><span>&nbsp;</span></a>
+    </body>
+</html>
