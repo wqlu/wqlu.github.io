@@ -37,7 +37,7 @@
                 "url": "http:\/\/example.org\/cover.png",
                 "width":  800 ,
                 "height":  600 
-            },"genre": "posts","keywords": "Ubuntu, 环境配置","wordcount":  527 ,
+            },"genre": "posts","keywords": "Ubuntu, 环境配置","wordcount":  619 ,
         "url": "http:\/\/example.org\/ubuntu%E5%A4%87%E5%BF%98%E5%BD%95\/","datePublished": "2020-04-25","dateModified": "2020-04-25","publisher": {
                 "@type": "Organization",
                 "name": "xxxx",
@@ -97,7 +97,7 @@
                                 <i class="far fa-folder fa-fw"></i>技术
                             </a></span></div>
             <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i><time datetime=2020-04-25>2020-04-25</time>&nbsp;
-                <i class="fas fa-pencil-alt fa-fw"></i>约 527 字&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>约 619 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>预计阅读 2 分钟&nbsp;</div>
         </div><div class="toc" id="toc-auto">
                 <h2 class="toc-title">目录</h2>
@@ -122,6 +122,8 @@
         <li><a href="#5git配置">5.git配置</a></li>
         <li><a href="#6-hugo搭建的博客">6. hugo搭建的博客</a></li>
         <li><a href="#7网速显示">7.网速显示</a></li>
+        <li><a href="#8oh-my-zsh">8.Oh My Zsh</a></li>
+        <li><a href="#9时间同步">9.时间同步</a></li>
       </ul>
     </li>
     <li><a href="#实用的软件">实用的软件</a>
@@ -130,6 +132,7 @@
         <li><a href="#2-美化一下下">2. 美化一下下</a></li>
         <li><a href="#3-浏览器----firefox">3. 浏览器 &ndash; firefox</a></li>
         <li><a href="#4-截图软件----shutter">4. 截图软件 &ndash; shutter</a></li>
+        <li><a href="#5快捷启动----albert">5.快捷启动 &ndash; Albert</a></li>
       </ul>
     </li>
   </ul>
@@ -199,6 +202,29 @@ sudo apt-get update
 sudo apt-get install indicator-sysmonitor
 </code></pre></td></tr></table>
 </div>
+</div><h3 id="8oh-my-zsh">8.Oh My Zsh</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt-get install zsh
+chsh -s <span class="k">$(</span>which zsh<span class="k">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Log out查看是否是默认shell，<code>echo $SHELl</code></p>
+<p>使用<a href="https://github.com/ohmyzsh/ohmyzsh/blob/master/tools/install.sh" target="_blank" rel="noopener noreffer">install.sh</a>
+文件来安装ohmyzshc</p>
+<h3 id="9时间同步">9.时间同步</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo timedatectl set-local-rtc <span class="m">1</span> 
+</code></pre></td></tr></table>
+</div>
 </div><h2 id="实用的软件">实用的软件</h2>
 <h3 id="1-护眼软件----redshift">1. 护眼软件 &ndash; redshift</h3>
 <p>晚上看屏幕还挺舒服，个人感觉比f.lux要好一些</p>
@@ -249,7 +275,20 @@ sudo apt-get install ultra-flat-icons
 </div>
 </div><h3 id="3-浏览器----firefox">3. 浏览器 &ndash; firefox</h3>
 <h3 id="4-截图软件----shutter">4. 截图软件 &ndash; shutter</h3>
-</div><div class="post-footer" id="post-footer">
+<h3 id="5快捷启动----albert">5.快捷启动 &ndash; Albert</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo add-apt-repository ppa:nilarimogard/webupd8
+sudo apt-get update
+sudo apt-get install albert
+</code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">

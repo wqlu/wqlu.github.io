@@ -53,7 +53,22 @@ sudo apt-get update
 sudo apt-get install indicator-sysmonitor
 ```
 
+### 8.Oh My Zsh
 
+```bash
+sudo apt-get install zsh
+chsh -s $(which zsh)
+```
+
+Log out查看是否是默认shell，`echo $SHELl`
+
+使用[install.sh](https://github.com/ohmyzsh/ohmyzsh/blob/master/tools/install.sh)文件来安装ohmyzshc
+
+### 9.时间同步
+
+```bash
+sudo timedatectl set-local-rtc 1 
+```
 
 ## 实用的软件
 
@@ -94,5 +109,13 @@ sudo apt-get install ultra-flat-icons
 ### 3. 浏览器 -- firefox
 
 ### 4. 截图软件 -- shutter
+
+### 5.快捷启动 -- Albert
+
+```bash
+sudo add-apt-repository ppa:nilarimogard/webupd8
+sudo apt-get update
+sudo apt-get install albert
+```
 
 
