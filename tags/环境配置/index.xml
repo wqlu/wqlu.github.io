@@ -2,22 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>环境配置 on 2&#43;2=5</title>
-    <link>http://example.org/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</link>
+    <link>https://example.com/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</link>
     <description>Recent content in 环境配置 on 2&#43;2=5</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
+    <language>en-us</language>
     <lastBuildDate>Sat, 25 Apr 2020 18:46:48 +0800</lastBuildDate>
     
-	<atom:link href="http://example.org/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://example.com/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Ubuntu备忘录</title>
-      <link>http://example.org/ubuntu%E5%A4%87%E5%BF%98%E5%BD%95/</link>
+      <link>https://example.com/2020/ubuntu%E5%A4%87%E5%BF%98%E5%BD%95/</link>
       <pubDate>Sat, 25 Apr 2020 18:46:48 +0800</pubDate>
       
-      <guid>http://example.org/ubuntu%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
-      <description>尝试过Manjaro i3wm一段时间，还是喜欢Ubuntu 16.04经典版本，需要配置许多环境，为了方便以后查看，记录一下过程。 基础环境 1. 连</description>
+      <guid>https://example.com/2020/ubuntu%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
+      <description>尝试过Manjaro i3wm一段时间，还是喜欢Ubuntu 16.04经典版本，需要配置许多环境，为了方便以后查看，记录一下过程。
+基础环境 1. 连接wifi 首先要安装无线驱动，有两种解决方案。一种是连接网线，更新软件源，添加附加驱动；第二种是离线安装驱动，利用U盘目录中的pool-&amp;gt;restricted-&amp;gt;b-&amp;gt;bcmwl下的.deb文件，键入以下命令安装，如果发现缺少依赖，就到pool-&amp;gt;main下去找。
+sudo dpkg -i xxx.deb 2. 输入法 搜狗输入法 或 Rime
+3.改键位映射 由于笔记本Z键失灵，所以把Ctrl_R改为Z
+xmodmap -e &amp;#34;keycode 0x69 = z Z z Z&amp;#34; 4. home下目录更改为英文 5.git配置 sudo apt-get install git git config --global user.name &amp;#34;xxx&amp;#34; git config --global user.email &amp;#34;xxx&amp;#34; ssh-keygen -C &amp;#34;xxx&amp;#34; -t rsa cd ~/.ssh，复制id_rsa.pub的内容
+6. hugo搭建的博客 sudo apt-get install hugo // 不推荐，因为版本过低，去官网下载 下载release版本速度太慢的话，在Windows下使用IDM下载
+7.网速显示 sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor sudo apt-get update sudo apt-get install indicator-sysmonitor 8.</description>
     </item>
     
   </channel>
