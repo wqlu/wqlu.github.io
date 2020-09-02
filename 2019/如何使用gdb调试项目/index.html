@@ -32,6 +32,8 @@
   <link rel="stylesheet" href="/css/main.min.css">
 
 
+
+  
  
 
 <script type="application/ld+json">
@@ -341,7 +343,7 @@ core 文件的默认名字是 core.pid</li>
 <li>return 与之类似，可以指定该函数返回值
 <em>Note</em>: finish 会执行函数到函数正常退出该函数；而 return 是立即结束当前函数并返回，如果说当前函数还有剩余的代码未执行完毕，也不会执行了</li>
 <li>until 快速执行完中间代码</li>
-<li>jump <!-- raw HTML omitted --> location 可以是行号或者函数的地址，行为是不可控的
+<li>jump <location> location 可以是行号或者函数的地址，行为是不可控的
 如果 jump 跳转的位置后续没有断点，gdb 会执行完跳转处的代码继续执行
 jump 妙用：可以执行一些我们想要执行的代码，可能这些代码在正常逻辑下不会执行,如下：</li>
 </ul>
