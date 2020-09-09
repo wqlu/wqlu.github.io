@@ -44,16 +44,6 @@
 
 
   <body>
-
-    <script>
-        if (!window.localStorage || !window.localStorage.getItem('theme')) {
-            window.isDark = true;
-        } else {
-            window.isDark = (window.localStorage && window.localStorage.getItem('theme')) === 'dark';
-        }
-        window.isDark && document.body.classList.add('dark-theme')
-    </script>
-
     <div class="wrapper">
         <nav class="navbar">
     <div class="container">
@@ -137,6 +127,13 @@
          
 		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
     </div>
+    <script>
+       const currentTheme = window.localStorage && window.localStorage.getItem('theme')
+       const isDark = currentTheme === 'dark'
+       if (isDark) {
+          document.body.classList.add('dark-theme')
+       }
+    </script>
 </footer>
 
 

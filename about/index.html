@@ -46,7 +46,7 @@
     "articleSection" : "",
     "name" : "About Me",
     "headline" : "About Me",
-    "description" : " ",
+    "description" : "Github Chart ",
     "inLanguage" : "zh-CN",
     "author" : "Simon Lu",
     "creator" : "Simon Lu",
@@ -57,7 +57,7 @@
     "datePublished": "2019-08-02 11:04:49 \u002b0800 CST",
     "dateModified" : "2019-08-02 11:04:49 \u002b0800 CST",
     "url" : "https:\/\/simon-lu.github.io\/about\/",
-    "wordCount" : "0",
+    "wordCount" : "2",
     "keywords" : [  "2\u002b2=5"]
 }
 </script>
@@ -68,16 +68,6 @@
 
 
   <body>
-
-    <script>
-        if (!window.localStorage || !window.localStorage.getItem('theme')) {
-            window.isDark = true;
-        } else {
-            window.isDark = (window.localStorage && window.localStorage.getItem('theme')) === 'dark';
-        }
-        window.isDark && document.body.classList.add('dark-theme')
-    </script>
-
     <div class="wrapper">
         <nav class="navbar">
     <div class="container">
@@ -131,8 +121,8 @@
 <div class="post-warp archive">
     <h2 class="post-title" style="text-align:right;padding-bottom:2em">About Me</h2>
     <div class="post-content">
-        <p><img src="http://ghchart.rshah.org/simon-lu" alt="simon-lu's Github chart" /></p>
-<script type="text/javascript" src="http://www.douban.com/service/badge/169695823/?selection=latest&amp;picsize=small&amp;hideself=on&amp;show=collection&amp;n=8&amp;hidelogo=on&amp;cat=drama%7Cmovie%7Cbook%7Cmusic&amp;columns=4"></script>
+        <h2 id="github-chart">Github Chart</h2>
+<img src="http://ghchart.rshah.org/simon-lu" alt="simon-lu's Github chart">
 
     </div>
 </div>
@@ -155,6 +145,13 @@
          
 		  <span>Powered by <a href="https://gohugo.io/" target="_blank" rel="external nofollow">Hugo</a> & <a href="https://github.com/liuzc/leaveit" target="_blank" rel="external nofollow">LeaveIt</a></span> 
     </div>
+    <script>
+       const currentTheme = window.localStorage && window.localStorage.getItem('theme')
+       const isDark = currentTheme === 'dark'
+       if (isDark) {
+          document.body.classList.add('dark-theme')
+       }
+    </script>
 </footer>
 
 
