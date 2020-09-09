@@ -13,10 +13,10 @@
     
     <item>
       <title>Ubuntu备忘录</title>
-      <link>https://simon-lu.github.io/2020/ubuntu%E5%A4%87%E5%BF%98%E5%BD%95/</link>
+      <link>https://simon-lu.github.io/2020/ubuntu-note/</link>
       <pubDate>Sat, 25 Apr 2020 18:46:48 +0800</pubDate>
       
-      <guid>https://simon-lu.github.io/2020/ubuntu%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
+      <guid>https://simon-lu.github.io/2020/ubuntu-note/</guid>
       <description>尝试过Manjaro i3wm一段时间，还是喜欢Ubuntu 16.04经典版本，需要配置许多环境，为了方便以后查看，记录一下过程。
 基础环境 1. 连接wifi 首先要安装无线驱动，有两种解决方案。一种是连接网线，更新软件源，添加附加驱动；第二种是离线安装驱动，利用U盘目录中的pool-&amp;gt;restricted-&amp;gt;b-&amp;gt;bcmwl下的.deb文件，键入以下命令安装，如果发现缺少依赖，就到pool-&amp;gt;main下去找。
 sudo dpkg -i xxx.deb 2. 输入法 搜狗输入法 或 Rime
@@ -28,10 +28,10 @@ xmodmap -e &amp;#34;keycode 0x69 = z Z z Z&amp;#34; 4. home下目录更改为英
     
     <item>
       <title>《Redis设计与实现》读书笔记</title>
-      <link>https://simon-lu.github.io/2019/redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
+      <link>https://simon-lu.github.io/2019/redis-note/</link>
       <pubDate>Thu, 28 Nov 2019 21:32:13 +0800</pubDate>
       
-      <guid>https://simon-lu.github.io/2019/redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://simon-lu.github.io/2019/redis-note/</guid>
       <description>&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;每个key-value都是由对象组成的&lt;/p&gt;
@@ -40,10 +40,10 @@ xmodmap -e &amp;#34;keycode 0x69 = z Z z Z&amp;#34; 4. home下目录更改为英
     
     <item>
       <title>如何使用GDB调试项目</title>
-      <link>https://simon-lu.github.io/2019/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8gdb%E8%B0%83%E8%AF%95%E9%A1%B9%E7%9B%AE/</link>
+      <link>https://simon-lu.github.io/2019/how-to-use-gdb/</link>
       <pubDate>Mon, 03 Jun 2019 14:51:25 +0000</pubDate>
       
-      <guid>https://simon-lu.github.io/2019/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8gdb%E8%B0%83%E8%AF%95%E9%A1%B9%E7%9B%AE/</guid>
+      <guid>https://simon-lu.github.io/2019/how-to-use-gdb/</guid>
       <description>&lt;p&gt;-g 可在编译后的程序中保留调试符号信息&lt;br&gt;
 strip hello_server 移除程序中存在的调试信息，程序测试后没有问题，我们可以使用此命令减小程序体积,调试文件时建议关闭编译器优化选项，有可能会优化掉排查的对象&lt;/p&gt;</description>
     </item>

@@ -13,10 +13,10 @@
     
     <item>
       <title>Ubuntu备忘录</title>
-      <link>https://simon-lu.github.io/2020/ubuntu%E5%A4%87%E5%BF%98%E5%BD%95/</link>
+      <link>https://simon-lu.github.io/2020/ubuntu-note/</link>
       <pubDate>Sat, 25 Apr 2020 18:46:48 +0800</pubDate>
       
-      <guid>https://simon-lu.github.io/2020/ubuntu%E5%A4%87%E5%BF%98%E5%BD%95/</guid>
+      <guid>https://simon-lu.github.io/2020/ubuntu-note/</guid>
       <description>尝试过Manjaro i3wm一段时间，还是喜欢Ubuntu 16.04经典版本，需要配置许多环境，为了方便以后查看，记录一下过程。
 基础环境 1. 连接wifi 首先要安装无线驱动，有两种解决方案。一种是连接网线，更新软件源，添加附加驱动；第二种是离线安装驱动，利用U盘目录中的pool-&amp;gt;restricted-&amp;gt;b-&amp;gt;bcmwl下的.deb文件，键入以下命令安装，如果发现缺少依赖，就到pool-&amp;gt;main下去找。
 sudo dpkg -i xxx.deb 2. 输入法 搜狗输入法 或 Rime
