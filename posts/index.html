@@ -45,12 +45,13 @@
             const currentTheme = window.localStorage && window.localStorage.getItem('theme')
             const isDark = currentTheme === 'dark'
             if (isDark) {
-               document.body.classList.add('dark-theme')
+            document.body.classList.add('dark-theme')
             }
-         </script>
-        
-        <div class="wrapper">
-            <nav class="navbar">
+        </script>
+
+        <div id="container">
+            <div class="wrapper">
+                <nav class="navbar">
     
     <div class="container">
         
@@ -130,9 +131,9 @@
         </div>
     </div>
 </nav>
-            <main class="main">
-                <div class="container">
-                    
+                <main class="main">
+                    <div class="container">
+                        
 <div class="post-warp archive">
     
     <h3>2020</h3>
@@ -166,9 +167,9 @@
 
 </div>
 
-                </div>
-            </main>
-            <footer class="footer">
+                    </div>
+                </main>
+                <footer class="footer">
     <div class="copyright">
         &copy;
         
@@ -186,48 +187,140 @@
     </div>
 </footer>
 
-
-
-
-
-
-<script defer src="/js/vendor_main.min.js"></script>
-
-
-
-
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
-<script> pangu.spacingPage();</script>
-
-
-
-
-
+            </div>
+        </div>
+        
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
 
 
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
 
 
 
 <meting-js
-    server="netease"
-    type="playlist"
-    id="36180038"
-    fixed="true"
+    server = "netease"
+    type= "playlist"
+    id= "36180038"
+    fixed=true
     preload="auto"
     order="random">
 </meting-js>
 
 
+<script type="text/javascript">
+$(document).pjax('a[target!=_blank]', '#container', {
+    fragment:'#container', timeout:8000
+}).on('pjax:complete',
+    function() {
+        switchDarkMode()
+        scrollIndicator()
+        switchMobileMenu()
+        addCopyBottons()
+    }
+);
 
 
+switchDarkMode = function () {
+  
+  
+  const themeSwitcher = document.querySelectorAll('.theme-switch')
+  themeSwitcher.forEach(function (themeSwitcherItem) {
+    themeSwitcherItem.addEventListener('click', () => {
+      const currentTheme = window.localStorage && window.localStorage.getItem('theme')
+  const isDark = currentTheme === 'dark'
+      if (!isDark) {
+        document.body.classList.add('dark-theme')
+      } else {
+        document.body.classList.remove('dark-theme')
+      }
+      window.localStorage && window.localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light', )
+    })
+  })     
+}
 
-        </div>
+
+scrollIndicator = function () {
+  const winHeight = window.innerHeight
+  const docHeight = document.documentElement.scrollHeight
+  const progressBar = document.querySelectorAll('.content_progress')
+  progressBar.forEach(function (progressBarItem) {
+    progressBarItem.max = docHeight - winHeight
+    progressBarItem.value = window.scrollY
+  })
+
+  document.addEventListener('scroll', function () {
+    progressBar.forEach(function (progressBarItem) {
+      progressBarItem.max = docHeight - winHeight
+      progressBarItem.value = window.scrollY
+    })
+  })
+}
+
+
+switchMobileMenu = function () {
+  const menuSwitcher = document.querySelectorAll('.menu-toggle')
+  const MobileMenu = document.querySelector('#mobile-menu')
+  menuSwitcher.forEach(function (menuSwitcherItem) {
+    menuSwitcherItem.addEventListener('click', () => {
+      menuSwitcherItem.classList.toggle('active')
+      MobileMenu.classList.toggle('active')
+    })
+  })
+}
+
+
+addCopyBottons = function () {
+  
+  if (navigator && navigator.clipboard) {
+    copyButtons(navigator.clipboard)
+  } else {
+    var script = document.createElement('script')
+    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/clipboard-polyfill/2.7.0/clipboard-polyfill.promise.js'
+    script.integrity = 'sha256-waClS2re9NUbXRsryKoof+F9qc1gjjIhc2eT7ZbIv94='
+    script.crossOrigin = 'anonymous'
+    script.onload = function () {
+      copyButtons(clipboard)
+    }
+
+    document.body.appendChild(script)
+  }
+
+  function copyButtons (clipboard) {
+    document.querySelectorAll('pre > code').forEach(function (codeBlock) {
+      var button = document.createElement('button')
+      button.className = 'copy-code-button'
+      button.type = 'button'
+      button.innerText = 'Copy'
+
+      button.addEventListener('click', function () {
+        clipboard.writeText(codeBlock.innerText).then(function () {
+          
+
+          button.blur()
+
+          button.innerText = 'Copied!'
+
+          setTimeout(function () {
+            button.innerText = 'Copy'
+          }, 2000)
+        }, function (error) {
+          button.innerText = 'Error'
+        })
+      })
+
+      var pre = codeBlock.parentNode
+      if (pre.parentNode.classList.contains('highlight')) {
+        var highlight = pre.parentNode
+        highlight.appendChild(button)
+      }
+    })
+  }
+}
+
+</script>
     </body>
 </html>
