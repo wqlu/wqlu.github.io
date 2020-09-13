@@ -30,8 +30,6 @@
 <link rel="stylesheet" href="/css/main.min.css">
 
 
-<link rel="stylesheet" href="https://simon-lu.github.io/css/_custom.css">
-
     
     
  
@@ -498,7 +496,7 @@ break [lineNo] if [condition]
 <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
 <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 <script type="text/javascript">
-    new Valine({
+    window.valine = new Valine({
         el: '#vcomments' ,
         appId: 'VAKj7pbBgLO64CwuFHW5qp1b-gzGzoHsz',
         appKey: 'RI6nmmeq9hVDSsfVESdshbRg',
@@ -506,7 +504,9 @@ break [lineNo] if [condition]
         verify:  false , 
         avatar:'retro', 
         placeholder: '说点什么吧...',
-        visitor:  true 
+        visitor:  true ,
+        recordIp: true,
+        path: window.location.pathname
     });
   </script>
             
