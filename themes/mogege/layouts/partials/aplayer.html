@@ -1,0 +1,132 @@
+<!-- require APlayer -->
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+<!-- pjax  -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+
+
+{{ if .Site.Params.Aplayer.enable }}
+<meting-js
+    server = "{{ .Site.Params.aplayer.server }}"
+    type= "{{ .Site.Params.aplayer.type }}"
+    id= "{{ .Site.Params.aplayer.id }}"
+    fixed={{ .Site.Params.aplayer.fixed }}
+    preload="{{ .Site.Params.aplayer.preload }}"
+    order="{{ .Site.Params.aplayer.order }}">
+</meting-js>
+{{ end }}
+
+<script type="text/javascript">
+$(document).pjax('a[target!=_blank]', '#container', {
+    fragment:'#container', timeout:8000
+}).on('pjax:complete',
+    function() {
+        switchDarkMode()
+        scrollIndicator()
+        switchMobileMenu()
+        addCopyBottons()
+    }
+);
+
+// Dark Mode
+switchDarkMode = function () {
+  // document.body.classList.toggle('dark-theme', isDark)
+  // 手动切换 Dark Mode
+  const themeSwitcher = document.querySelectorAll('.theme-switch')
+  themeSwitcher.forEach(function (themeSwitcherItem) {
+    themeSwitcherItem.addEventListener('click', () => {
+      const currentTheme = window.localStorage && window.localStorage.getItem('theme')
+  const isDark = currentTheme === 'dark'
+      if (!isDark) {
+        document.body.classList.add('dark-theme')
+      } else {
+        document.body.classList.remove('dark-theme')
+      }
+      window.localStorage && window.localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light', )
+    })
+  })     
+}
+
+// 顶部阅读进度条
+scrollIndicator = function () {
+  const winHeight = window.innerHeight
+  const docHeight = document.documentElement.scrollHeight
+  const progressBar = document.querySelectorAll('.content_progress')
+  progressBar.forEach(function (progressBarItem) {
+    progressBarItem.max = docHeight - winHeight
+    progressBarItem.value = window.scrollY
+  })
+
+  document.addEventListener('scroll', function () {
+    progressBar.forEach(function (progressBarItem) {
+      progressBarItem.max = docHeight - winHeight
+      progressBarItem.value = window.scrollY
+    })
+  })
+}
+
+// 开关移动端菜单
+switchMobileMenu = function () {
+  const menuSwitcher = document.querySelectorAll('.menu-toggle')
+  const MobileMenu = document.querySelector('#mobile-menu')
+  menuSwitcher.forEach(function (menuSwitcherItem) {
+    menuSwitcherItem.addEventListener('click', () => {
+      menuSwitcherItem.classList.toggle('active')
+      MobileMenu.classList.toggle('active')
+    })
+  })
+}
+
+// 为代码块添加 Copy 按钮
+addCopyBottons = function () {
+  // Check if the browser supports navigator.clipboard
+  if (navigator && navigator.clipboard) {
+    copyButtons(navigator.clipboard)
+  } else {
+    var script = document.createElement('script')
+    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/clipboard-polyfill/2.7.0/clipboard-polyfill.promise.js'
+    script.integrity = 'sha256-waClS2re9NUbXRsryKoof+F9qc1gjjIhc2eT7ZbIv94='
+    script.crossOrigin = 'anonymous'
+    script.onload = function () {
+      copyButtons(clipboard)
+    }
+
+    document.body.appendChild(script)
+  }
+
+  function copyButtons (clipboard) {
+    document.querySelectorAll('pre > code').forEach(function (codeBlock) {
+      var button = document.createElement('button')
+      button.className = 'copy-code-button'
+      button.type = 'button'
+      button.innerText = 'Copy'
+
+      button.addEventListener('click', function () {
+        clipboard.writeText(codeBlock.innerText).then(function () {
+          /* Chrome doesn't seem to blur automatically,
+                       leaving the button in a focused state. */
+          button.blur()
+
+          button.innerText = 'Copied!'
+
+          setTimeout(function () {
+            button.innerText = 'Copy'
+          }, 2000)
+        }, function (error) {
+          button.innerText = 'Error'
+        })
+      })
+
+      var pre = codeBlock.parentNode
+      if (pre.parentNode.classList.contains('highlight')) {
+        var highlight = pre.parentNode
+        highlight.appendChild(button)
+      }
+    })
+  }
+}
+
+</script>

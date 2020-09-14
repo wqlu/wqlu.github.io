@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+    {{ partial "head.html" . }}
+    <body class="">
+
+        <script>
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme')
+            const isDark = currentTheme === 'dark'
+            if (isDark) {
+            document.body.classList.add('dark-theme')
+            }
+        </script>
+
+        <div id="container">
+            <div class="wrapper">
+                {{ partial "header.html" . }}
+                <main class="main">
+                    <div class="container">
+                        {{ block "content" . }}{{ end }}
+                    </div>
+                </main>
+                {{ partial "footer.html" . }}
+            </div>
+        </div>
+        {{ partial "aplayer.html" . }}
+    </body>
+</html>
