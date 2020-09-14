@@ -9,9 +9,9 @@
     
     
     
-    <link rel="prev" href="https://simon-lu.github.io/2019/redis-note/" />
-    <link rel="next" href="https://simon-lu.github.io/2020/hugo-travisci/" />
-    <link rel="canonical" href="https://simon-lu.github.io/2020/ubuntu-note/" />
+    <link rel="prev" href="https://simon-lu.github.io/2020/ubuntu-note/" />
+    
+    <link rel="canonical" href="https://simon-lu.github.io/2020/hugo-travisci/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -22,10 +22,10 @@
     <title>
         
         
-            Ubuntu备忘录 | 2&#43;2=5
+            使用Travis CI简化博客流程 | 2&#43;2=5
         
     </title>
-    <meta name="title" content="Ubuntu备忘录 | 2&#43;2=5">
+    <meta name="title" content="使用Travis CI简化博客流程 | 2&#43;2=5">
     
 <link rel="stylesheet" href="/css/main.min.css">
 
@@ -45,9 +45,9 @@
          "@id": "https:\/\/simon-lu.github.io"
     },
     "articleSection" : "posts",
-    "name" : "Ubuntu备忘录",
-    "headline" : "Ubuntu备忘录",
-    "description" : "尝试过Manjaro i3wm一段时间，还是喜欢Ubuntu 16.04经典版本，需要配置许多环境，为了方便以后查看，记录一下过程。 基础环境 1. 连",
+    "name" : "使用Travis CI简化博客流程",
+    "headline" : "使用Travis CI简化博客流程",
+    "description" : "隐藏文字 \u0026ndash;\u0026gt; 之前为了 hello",
     "inLanguage" : "zh-CN",
     "author" : "Simon Lu",
     "creator" : "Simon Lu",
@@ -55,11 +55,11 @@
     "accountablePerson" : "Simon Lu",
     "copyrightHolder" : "Simon Lu",
     "copyrightYear" : "2020",
-    "datePublished": "2020-04-25 18:46:48 \u002b0800 \u002b0800",
-    "dateModified" : "2020-04-25 18:46:48 \u002b0800 \u002b0800",
-    "url" : "https:\/\/simon-lu.github.io\/2020\/ubuntu-note\/",
-    "wordCount" : "595",
-    "keywords" : [ "Ubuntu","环境配置", "2\u002b2=5"]
+    "datePublished": "2020-09-15 02:01:49 \u002b0800 \u002b0800",
+    "dateModified" : "2020-09-15 02:01:49 \u002b0800 \u002b0800",
+    "url" : "https:\/\/simon-lu.github.io\/2020\/hugo-travisci\/",
+    "wordCount" : "10",
+    "keywords" : [  "2\u002b2=5"]
 }
 </script>
 
@@ -166,12 +166,12 @@
                         
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">Ubuntu备忘录</h1>
+        <h1 class="post-title" itemprop="name headline">使用Travis CI简化博客流程</h1>
         <div class="post-meta">
                 Written 
                 
                 <span class="post-time">
-                on <time datetime=2020-04-25 itemprop="datePublished">April 25, 2020</time>
+                on <time datetime=2020-09-15 itemprop="datePublished">September 15, 2020</time>
                 </span>
                 in
                 
@@ -180,11 +180,11 @@
                         
                         
                         
-                          <a href="https://simon-lu.github.io/categories/%E6%8A%80%E6%9C%AF/"> 技术 </a>
+                          <a href="https://simon-lu.github.io/categories/">  </a>
                         
                         
                 </span>
-                <span class="post-word-count">595 words</span>
+                <span class="post-word-count">10 words</span>
         </div>
     </header>
 
@@ -204,60 +204,26 @@
         
         
 
-        <p>尝试过Manjaro i3wm一段时间，还是喜欢Ubuntu 16.04经典版本，需要配置许多环境，为了方便以后查看，记录一下过程。</p>
-<h2 id="基础环境">基础环境</h2>
-<h3 id="1-连接wifi">1. 连接wifi</h3>
-<p>首先要安装无线驱动，有两种解决方案。一种是连接网线，更新软件源，添加附加驱动；第二种是离线安装驱动，利用U盘目录中的<code>pool-&gt;restricted-&gt;b-&gt;bcmwl</code>下的<code>.deb</code>文件，键入以下命令安装，如果发现缺少依赖，就到<code>pool-&gt;main</code>下去找。</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo dpkg -i xxx.deb
-</code></pre></div><h3 id="2-输入法">2. 输入法</h3>
-<p>搜狗输入法 或 Rime</p>
-<h3 id="3改键位映射">3.改键位映射</h3>
-<p>由于笔记本Z键失灵，所以把Ctrl_R改为Z</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">xmodmap -e <span style="color:#e6db74">&#34;keycode 0x69 = z Z z Z&#34;</span>
-</code></pre></div><h3 id="4-home下目录更改为英文">4. home下目录更改为英文</h3>
-<h3 id="5git配置">5.git配置</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get install git
-git config --global user.name <span style="color:#e6db74">&#34;xxx&#34;</span>
-git config --global user.email <span style="color:#e6db74">&#34;xxx&#34;</span>
-ssh-keygen -C <span style="color:#e6db74">&#34;xxx&#34;</span> -t rsa
-</code></pre></div><p><code>cd ~/.ssh</code>，复制<code>id_rsa.pub的内容</code></p>
-<h3 id="6-hugo搭建的博客">6. hugo搭建的博客</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get install hugo // 不推荐，因为版本过低，去官网下载
-</code></pre></div><p>下载release版本速度太慢的话，在Windows下使用IDM下载</p>
-<h3 id="7网速显示">7.网速显示</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo add-apt-repository ppa:fossfreedom/indicator-sysmonitor
-sudo apt-get update
-sudo apt-get install indicator-sysmonitor
-</code></pre></div><h3 id="8oh-my-zsh">8.Oh My Zsh</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get install zsh
-chsh -s <span style="color:#66d9ef">$(</span>which zsh<span style="color:#66d9ef">)</span>
-</code></pre></div><p>Log out查看是否是默认shell，<code>echo $SHELl</code></p>
-<p>使用<a href="https://github.com/ohmyzsh/ohmyzsh/blob/master/tools/install.sh">install.sh</a>文件来安装ohmyzshc</p>
-<h3 id="9时间同步">9.时间同步</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo timedatectl set-local-rtc <span style="color:#ae81ff">1</span> 
-</code></pre></div><h2 id="实用的软件">实用的软件</h2>
-<h3 id="1-护眼软件----redshift">1. 护眼软件 &ndash; redshift</h3>
-<p>晚上看屏幕还挺舒服，个人感觉比f.lux要好一些</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get install redshift
-</code></pre></div><h3 id="2-美化一下下">2. 美化一下下</h3>
-<p>更换壁纸</p>
-<p>安装软件</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get install unity-tweak-tool
-</code></pre></div><p>安装主题</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo add-apt-repository ppa:noobslab/themes
-sudo apt-get update
-sudo apt-get install flatabulous-theme
-</code></pre></div><p>更换图标</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo add-apt-repository ppa:noobslab/icons
-sudo apt-get update
-sudo apt-get install ultra-flat-icons
-</code></pre></div><h3 id="3-浏览器----firefox">3. 浏览器 &ndash; firefox</h3>
-<h3 id="4-截图软件----shutter">4. 截图软件 &ndash; shutter</h3>
-<h3 id="5快捷启动----albert">5.快捷启动 &ndash; Albert</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo add-apt-repository ppa:nilarimogard/webupd8
-sudo apt-get update
-sudo apt-get install albert
-</code></pre></div>
+        <!--
+<span class="spoiler" > 隐藏文字 </span>
+
+
+
+
+<div><iframe id="biliplayer" src="//player.bilibili.com/player.html?aid=AV%e5%8f%b7&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" > </iframe></div>
+
+ <!-- 嵌入 BiliBili 视频 -->
+<p>&ndash;&gt;</p>
+<p>之前为了</p>
+<span class="spoiler" > hello </span>
+
+
+
+
+<div><iframe id="biliplayer" src="//player.bilibili.com/player.html?aid=2271112&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" > </iframe></div>
+
+
+
     </div>
 
     <div class="post-copyright">
@@ -271,7 +237,7 @@ sudo apt-get install albert
             
             <p class="copyright-item">
                     <span>Link:</span>
-                    <a href=https://simon-lu.github.io/2020/ubuntu-note/>https://simon-lu.github.io/2020/ubuntu-note/</span>
+                    <a href=https://simon-lu.github.io/2020/hugo-travisci/>https://simon-lu.github.io/2020/hugo-travisci/</span>
             </p>
             
             
@@ -284,17 +250,6 @@ sudo apt-get install albert
 
     <div class="post-tags">
         
-            <section>
-            <i class="iconfont icon-tag"></i>Tag(s):
-            
-            <span class="tag"><a href="https://simon-lu.github.io/tags/ubuntu/">
-                    #Ubuntu</a></span>
-            
-            <span class="tag"><a href="https://simon-lu.github.io/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">
-                    #环境配置</a></span>
-            
-            </section>
-        
         <section>
                 <a href="javascript:window.history.back();">back</a></span> ·
                 <span><a href="https://simon-lu.github.io">home</a></span>
@@ -303,34 +258,12 @@ sudo apt-get install albert
 
     <div class="post-nav">
         
-        <a href="https://simon-lu.github.io/2019/redis-note/" class="prev" rel="prev" title="《Redis设计与实现》读书笔记"><i class="iconfont icon-left"></i>&nbsp;《Redis设计与实现》读书笔记</a>
+        <a href="https://simon-lu.github.io/2020/ubuntu-note/" class="prev" rel="prev" title="Ubuntu备忘录"><i class="iconfont icon-left"></i>&nbsp;Ubuntu备忘录</a>
         
-        
-        <a href="https://simon-lu.github.io/2020/hugo-travisci/" class="next" rel="next" title="使用Travis CI简化博客流程">使用Travis CI简化博客流程&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 
     <div class="post-comment">
-        
-            
-                <div id="vcomments"></div>
-<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-<script type="text/javascript">
-    window.valine = new Valine({
-        el: '#vcomments' ,
-        appId: 'VAKj7pbBgLO64CwuFHW5qp1b-gzGzoHsz',
-        appKey: 'RI6nmmeq9hVDSsfVESdshbRg',
-        notify:  false , 
-        verify:  false , 
-        avatar:'retro', 
-        placeholder: '说点什么吧...',
-        visitor:  true ,
-        recordIp: true,
-        path: window.location.pathname
-    });
-  </script>
-            
         
 
     </div>
