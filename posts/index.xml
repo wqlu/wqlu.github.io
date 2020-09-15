@@ -13,7 +13,7 @@
       <pubDate>Tue, 15 Sep 2020 02:01:49 +0800</pubDate>
       
       <guid>https://simon-lu.github.io/2020/hugo-travisci/</guid>
-      <description>隐藏文字 &amp;ndash;&amp;gt; 之前为了 hello</description>
+      <description>隐藏文字 -- before 建立了两个repo, 一个是github page，另一个my_blog保存博客源代码，使用脚本来管理两个仓库，每次的更改都向两个仓</description>
     </item>
     
     <item>

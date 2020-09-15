@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hugo on 2&#43;2=5</title>
+    <link>https://simon-lu.github.io/tags/hugo/</link>
+    <description>Recent content in hugo on 2&#43;2=5</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 15 Sep 2020 02:01:49 +0800</lastBuildDate><atom:link href="https://simon-lu.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用Travis CI简化博客流程</title>
+      <link>https://simon-lu.github.io/2020/hugo-travisci/</link>
+      <pubDate>Tue, 15 Sep 2020 02:01:49 +0800</pubDate>
+      
+      <guid>https://simon-lu.github.io/2020/hugo-travisci/</guid>
+      <description>隐藏文字 -- before 建立了两个repo, 一个是github page，另一个my_blog保存博客源代码，使用脚本来管理两个仓库，每次的更改都向两个仓</description>
+    </item>
+    
+  </channel>
+</rss>

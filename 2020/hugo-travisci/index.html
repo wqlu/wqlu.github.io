@@ -47,7 +47,7 @@
     "articleSection" : "posts",
     "name" : "使用Travis CI简化博客流程",
     "headline" : "使用Travis CI简化博客流程",
-    "description" : "隐藏文字 \u0026ndash;\u0026gt; 之前为了 hello",
+    "description" : "隐藏文字 -- before 建立了两个repo, 一个是github page，另一个my_blog保存博客源代码，使用脚本来管理两个仓库，每次的更改都向两个仓",
     "inLanguage" : "zh-CN",
     "author" : "Simon Lu",
     "creator" : "Simon Lu",
@@ -58,8 +58,8 @@
     "datePublished": "2020-09-15 02:01:49 \u002b0800 \u002b0800",
     "dateModified" : "2020-09-15 02:01:49 \u002b0800 \u002b0800",
     "url" : "https:\/\/simon-lu.github.io\/2020\/hugo-travisci\/",
-    "wordCount" : "10",
-    "keywords" : [  "2\u002b2=5"]
+    "wordCount" : "253",
+    "keywords" : [ "hugo", "2\u002b2=5"]
 }
 </script>
 
@@ -180,11 +180,11 @@
                         
                         
                         
-                          <a href="https://simon-lu.github.io/categories/">  </a>
+                          <a href="https://simon-lu.github.io/categories/%E6%8A%80%E6%9C%AF/"> 技术 </a>
                         
                         
                 </span>
-                <span class="post-word-count">10 words</span>
+                <span class="post-word-count">253 words</span>
         </div>
     </header>
 
@@ -194,6 +194,8 @@
         
         
 
+        
+          <img src="https://raw.githubusercontent.com/simon-lu/ImgRepo/master/Blog/hugo-travisci-01.jpg" class="featured_image">
         
         
         
@@ -212,17 +214,13 @@
 
 <div><iframe id="biliplayer" src="//player.bilibili.com/player.html?aid=AV%e5%8f%b7&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" > </iframe></div>
 
- <!-- 嵌入 BiliBili 视频 -->
-<p>&ndash;&gt;</p>
-<p>之前为了</p>
-<span class="spoiler" > hello </span>
 
-
-
-
-<div><iframe id="biliplayer" src="//player.bilibili.com/player.html?aid=2271112&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" > </iframe></div>
-
-
+-->
+<h2 id="before">before</h2>
+<p>建立了两个repo, 一个是github page，另一个my_blog保存博客源代码，使用脚本来管理两个仓库，每次的更改都向两个仓库提交commit，不是那么的方便，后来发现了Travis CI。</p>
+<h2 id="after">after</h2>
+<p>由于有在多个系统上写博客的习惯，所以上述的流程显的过于繁琐，现在在github page仓库建立blog分支管理源代码，使用Travis CI监控blog分支的变化，自动构建hugo环境，部署到github page master。</p>
+<p>整个流程简化到在github page blog分支写博客，提交即可，不用再关心其他的东西。</p>
 
     </div>
 
@@ -250,6 +248,14 @@
 
     <div class="post-tags">
         
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s):
+            
+            <span class="tag"><a href="https://simon-lu.github.io/tags/hugo/">
+                    #hugo</a></span>
+            
+            </section>
+        
         <section>
                 <a href="javascript:window.history.back();">back</a></span> ·
                 <span><a href="https://simon-lu.github.io">home</a></span>
@@ -264,6 +270,26 @@
     </div>
 
     <div class="post-comment">
+        
+            
+                <div id="vcomments"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+<script type="text/javascript">
+    window.valine = new Valine({
+        el: '#vcomments' ,
+        appId: 'VAKj7pbBgLO64CwuFHW5qp1b-gzGzoHsz',
+        appKey: 'RI6nmmeq9hVDSsfVESdshbRg',
+        notify:  false , 
+        verify:  false , 
+        avatar:'retro', 
+        placeholder: '说点什么吧...',
+        visitor:  true ,
+        recordIp: true,
+        path: window.location.pathname
+    });
+  </script>
+            
         
 
     </div>
