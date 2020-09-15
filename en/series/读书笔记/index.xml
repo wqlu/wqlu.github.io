@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>读书笔记 on Hugo Zzo Theme</title>
-    <link>http://example.org/en/series/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
+    <link>http://simon-lu.github.io/en/series/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
     <description>Recent content in 读书笔记 on Hugo Zzo Theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 28 Nov 2019 21:32:13 +0800</lastBuildDate>
     
-        <atom:link href="http://example.org/en/series/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://simon-lu.github.io/en/series/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>《Redis设计与实现》读书笔记</title>
-        <link>http://example.org/en/posts/redis-note/</link>
+        <link>http://simon-lu.github.io/en/posts/redis-note/</link>
         <pubDate>Thu, 28 Nov 2019 21:32:13 +0800</pubDate>
         <author>wq.lu@outlook.com (simon-lu)</author>
         <atom:modified>Thu, 28 Nov 2019 21:32:13 +0800</atom:modified>
-        <guid>http://example.org/en/posts/redis-note/</guid>
+        <guid>http://simon-lu.github.io/en/posts/redis-note/</guid>
         <description>&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;每个key-value都是由对象组成的&lt;/p&gt;

@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>gdb on Hugo Zzo Theme</title>
-    <link>http://example.org/en/tags/gdb/</link>
+    <link>http://simon-lu.github.io/en/tags/gdb/</link>
     <description>Recent content in gdb on Hugo Zzo Theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 03 Jun 2019 14:51:25 +0000</lastBuildDate>
     
-        <atom:link href="http://example.org/en/tags/gdb/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://simon-lu.github.io/en/tags/gdb/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>如何使用GDB调试项目</title>
-        <link>http://example.org/en/posts/how-to-use-gdb/</link>
+        <link>http://simon-lu.github.io/en/posts/how-to-use-gdb/</link>
         <pubDate>Mon, 03 Jun 2019 14:51:25 +0000</pubDate>
         <author>wq.lu@outlook.com (simon-lu)</author>
         <atom:modified>Mon, 03 Jun 2019 14:51:25 +0000</atom:modified>
-        <guid>http://example.org/en/posts/how-to-use-gdb/</guid>
+        <guid>http://simon-lu.github.io/en/posts/how-to-use-gdb/</guid>
         <description>&lt;p&gt;-g 可在编译后的程序中保留调试符号信息&lt;br /&gt;
 strip hello_server 移除程序中存在的调试信息，程序测试后没有问题，我们可以使用此命令减小程序体积,调试文件时建议关闭编译器优化选项，有可能会优化掉排查的对象&lt;/p&gt;</description>
         

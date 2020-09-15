@@ -3,306 +3,306 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/en/showcase/hugo/hugo-theme-zzo/</loc>
+    <loc>http://simon-lu.github.io/en/showcase/hugo/hugo-theme-zzo/</loc>
     <lastmod>2020-01-19T21:13:42+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/showcase/hugo/hugo-theme-zdoc/</loc>
+    <loc>http://simon-lu.github.io/en/showcase/hugo/hugo-theme-zdoc/</loc>
     <lastmod>2020-01-19T21:13:42+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/</loc>
+    <loc>http://simon-lu.github.io/en/</loc>
     <lastmod>2020-09-15T02:01:49+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://example.org/ko/"
+                href="http://simon-lu.github.io/ko/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/"
+                href="http://simon-lu.github.io/en/"
                 />
   </url>
   
   <url>
-    <loc>http://example.org/en/categories/</loc>
+    <loc>http://simon-lu.github.io/en/categories/</loc>
     <lastmod>2020-09-15T02:01:49+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://example.org/ko/categories/"
+                href="http://simon-lu.github.io/ko/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/categories/"
+                href="http://simon-lu.github.io/en/categories/"
                 />
   </url>
   
   <url>
-    <loc>http://example.org/en/tags/hugo/</loc>
+    <loc>http://simon-lu.github.io/en/tags/hugo/</loc>
     <lastmod>2020-09-15T02:01:49+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/posts/</loc>
+    <loc>http://simon-lu.github.io/en/posts/</loc>
     <lastmod>2020-09-15T02:01:49+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://example.org/ko/posts/"
+                href="http://simon-lu.github.io/ko/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/posts/"
+                href="http://simon-lu.github.io/en/posts/"
                 />
   </url>
   
   <url>
-    <loc>http://example.org/en/tags/</loc>
+    <loc>http://simon-lu.github.io/en/tags/</loc>
     <lastmod>2020-09-15T02:01:49+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://example.org/ko/tags/"
+                href="http://simon-lu.github.io/ko/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/tags/"
+                href="http://simon-lu.github.io/en/tags/"
                 />
   </url>
   
   <url>
-    <loc>http://example.org/en/posts/hugo-travisci/</loc>
+    <loc>http://simon-lu.github.io/en/posts/hugo-travisci/</loc>
     <lastmod>2020-09-15T02:01:49+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <loc>http://simon-lu.github.io/en/categories/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2020-09-15T02:01:49+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/tags/ubuntu/</loc>
+    <loc>http://simon-lu.github.io/en/tags/ubuntu/</loc>
     <lastmod>2020-04-25T18:46:48+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/posts/ubuntu-note/</loc>
+    <loc>http://simon-lu.github.io/en/posts/ubuntu-note/</loc>
     <lastmod>2020-04-25T18:46:48+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
+    <loc>http://simon-lu.github.io/en/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2020-04-25T18:46:48+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/publication/article/</loc>
+    <loc>http://simon-lu.github.io/en/publication/article/</loc>
     <lastmod>2020-03-05T14:08:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/publication/book/</loc>
+    <loc>http://simon-lu.github.io/en/publication/book/</loc>
     <lastmod>2020-03-05T14:08:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/publication/misc/</loc>
+    <loc>http://simon-lu.github.io/en/publication/misc/</loc>
     <lastmod>2020-03-05T14:08:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/publication/</loc>
+    <loc>http://simon-lu.github.io/en/publication/</loc>
     <lastmod>2020-03-05T14:08:48+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/showcase/hugo/</loc>
+    <loc>http://simon-lu.github.io/en/showcase/hugo/</loc>
     <lastmod>2020-01-19T21:04:11+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/showcase/</loc>
+    <loc>http://simon-lu.github.io/en/showcase/</loc>
     <lastmod>2020-01-19T15:43:38+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/tags/redis/</loc>
+    <loc>http://simon-lu.github.io/en/tags/redis/</loc>
     <lastmod>2019-11-28T21:32:13+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/series/</loc>
+    <loc>http://simon-lu.github.io/en/series/</loc>
     <lastmod>2019-11-28T21:32:13+08:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://example.org/ko/series/"
+                href="http://simon-lu.github.io/ko/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/series/"
+                href="http://simon-lu.github.io/en/series/"
                 />
   </url>
   
   <url>
-    <loc>http://example.org/en/tags/redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/</loc>
+    <loc>http://simon-lu.github.io/en/tags/redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/</loc>
     <lastmod>2019-11-28T21:32:13+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/posts/redis-note/</loc>
+    <loc>http://simon-lu.github.io/en/posts/redis-note/</loc>
     <lastmod>2019-11-28T21:32:13+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/series/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
+    <loc>http://simon-lu.github.io/en/series/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2019-11-28T21:32:13+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/gallery/cartoon/</loc>
+    <loc>http://simon-lu.github.io/en/gallery/cartoon/</loc>
     <lastmod>2019-10-31T10:20:16+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://example.org/ko/gallery/cartoon/"
+                href="http://simon-lu.github.io/ko/gallery/cartoon/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/gallery/cartoon/"
+                href="http://simon-lu.github.io/en/gallery/cartoon/"
                 />
   </url>
   
   <url>
-    <loc>http://example.org/en/gallery/</loc>
+    <loc>http://simon-lu.github.io/en/gallery/</loc>
     <lastmod>2019-10-31T10:20:16+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://example.org/ko/gallery/"
+                href="http://simon-lu.github.io/ko/gallery/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/gallery/"
+                href="http://simon-lu.github.io/en/gallery/"
                 />
   </url>
   
   <url>
-    <loc>http://example.org/en/gallery/photo/</loc>
+    <loc>http://simon-lu.github.io/en/gallery/photo/</loc>
     <lastmod>2019-10-31T10:20:16+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://example.org/ko/gallery/photo/"
+                href="http://simon-lu.github.io/ko/gallery/photo/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/gallery/photo/"
+                href="http://simon-lu.github.io/en/gallery/photo/"
                 />
   </url>
   
   <url>
-    <loc>http://example.org/en/presentation/dir/fourth/</loc>
+    <loc>http://simon-lu.github.io/en/presentation/dir/fourth/</loc>
     <lastmod>2019-10-30T20:48:10+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/presentation/</loc>
+    <loc>http://simon-lu.github.io/en/presentation/</loc>
     <lastmod>2019-10-30T20:48:10+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/presentation/third/</loc>
+    <loc>http://simon-lu.github.io/en/presentation/third/</loc>
     <lastmod>2019-10-30T20:46:30+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/presentation/second/</loc>
+    <loc>http://simon-lu.github.io/en/presentation/second/</loc>
     <lastmod>2019-10-30T20:45:24+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/presentation/first/</loc>
+    <loc>http://simon-lu.github.io/en/presentation/first/</loc>
     <lastmod>2019-10-30T19:45:20+09:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/archive/</loc>
+    <loc>http://simon-lu.github.io/en/archive/</loc>
     <lastmod>2019-10-19T11:44:14+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://example.org/ko/archive/"
+                href="http://simon-lu.github.io/ko/archive/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/archive/"
+                href="http://simon-lu.github.io/en/archive/"
                 />
   </url>
   
   <url>
-    <loc>http://example.org/en/tags/gdb/</loc>
+    <loc>http://simon-lu.github.io/en/tags/gdb/</loc>
     <lastmod>2019-06-03T14:51:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/posts/how-to-use-gdb/</loc>
+    <loc>http://simon-lu.github.io/en/posts/how-to-use-gdb/</loc>
     <lastmod>2019-06-03T14:51:25+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/about/</loc>
+    <loc>http://simon-lu.github.io/en/about/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://example.org/ko/about/"
+                href="http://simon-lu.github.io/ko/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/about/"
+                href="http://simon-lu.github.io/en/about/"
                 />
   </url>
   
   <url>
-    <loc>http://example.org/en/publication/article/article_any_folder_name_1/</loc>
+    <loc>http://simon-lu.github.io/en/publication/article/article_any_folder_name_1/</loc>
     <lastmod>2018-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/publication/book/book_any_folder_name_1/</loc>
+    <loc>http://simon-lu.github.io/en/publication/book/book_any_folder_name_1/</loc>
     <lastmod>2017-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/publication/misc/misc_any_folder_name_1/</loc>
+    <loc>http://simon-lu.github.io/en/publication/misc/misc_any_folder_name_1/</loc>
     <lastmod>2016-11-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/en/tags/index/</loc>
+    <loc>http://simon-lu.github.io/en/tags/index/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="http://example.org/ko/tags/index/"
+                href="http://simon-lu.github.io/ko/tags/index/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://example.org/en/tags/index/"
+                href="http://simon-lu.github.io/en/tags/index/"
                 />
   </url>
   
