@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>ubuntu on Hugo Zzo Theme</title>
-    <link>http://simon-lu.github.io/en/tags/ubuntu/</link>
+    <link>https://simon-lu.github.io/en/tags/ubuntu/</link>
     <description>Recent content in ubuntu on Hugo Zzo Theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Sat, 25 Apr 2020 18:46:48 +0800</lastBuildDate>
     
-        <atom:link href="http://simon-lu.github.io/en/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://simon-lu.github.io/en/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>Ubuntu备忘录</title>
-        <link>http://simon-lu.github.io/en/posts/ubuntu-note/</link>
+        <link>https://simon-lu.github.io/en/posts/ubuntu-note/</link>
         <pubDate>Sat, 25 Apr 2020 18:46:48 +0800</pubDate>
         <author>wq.lu@outlook.com (simon-lu)</author>
         <atom:modified>Sat, 25 Apr 2020 18:46:48 +0800</atom:modified>
-        <guid>http://simon-lu.github.io/en/posts/ubuntu-note/</guid>
+        <guid>https://simon-lu.github.io/en/posts/ubuntu-note/</guid>
         <description>尝试过Manjaro i3wm一段时间，还是喜欢Ubuntu 16.04经典版本，需要配置许多环境，为了方便以后查看，记录一下过程。 基础环境 1. 连</description>
         
         <dc:creator>simon-lu</dc:creator>
