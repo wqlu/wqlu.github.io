@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://example.org/en/showcase/hugo/hugo-theme-zzo/</loc>
+    <lastmod>2020-01-19T21:13:42+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/showcase/hugo/hugo-theme-zdoc/</loc>
+    <lastmod>2020-01-19T21:13:42+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/</loc>
+    <lastmod>2020-09-15T02:01:49+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://example.org/ko/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://example.org/en/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/categories/</loc>
+    <lastmod>2020-09-15T02:01:49+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://example.org/ko/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://example.org/en/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/tags/hugo/</loc>
+    <lastmod>2020-09-15T02:01:49+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/posts/</loc>
+    <lastmod>2020-09-15T02:01:49+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://example.org/ko/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://example.org/en/posts/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/tags/</loc>
+    <lastmod>2020-09-15T02:01:49+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://example.org/ko/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://example.org/en/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/posts/hugo-travisci/</loc>
+    <lastmod>2020-09-15T02:01:49+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2020-09-15T02:01:49+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/tags/ubuntu/</loc>
+    <lastmod>2020-04-25T18:46:48+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/posts/ubuntu-note/</loc>
+    <lastmod>2020-04-25T18:46:48+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
+    <lastmod>2020-04-25T18:46:48+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/publication/article/</loc>
+    <lastmod>2020-03-05T14:08:48+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/publication/book/</loc>
+    <lastmod>2020-03-05T14:08:48+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/publication/misc/</loc>
+    <lastmod>2020-03-05T14:08:48+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/publication/</loc>
+    <lastmod>2020-03-05T14:08:48+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/showcase/hugo/</loc>
+    <lastmod>2020-01-19T21:04:11+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/showcase/</loc>
+    <lastmod>2020-01-19T15:43:38+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/tags/redis/</loc>
+    <lastmod>2019-11-28T21:32:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/series/</loc>
+    <lastmod>2019-11-28T21:32:13+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://example.org/ko/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://example.org/en/series/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/tags/redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/</loc>
+    <lastmod>2019-11-28T21:32:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/posts/redis-note/</loc>
+    <lastmod>2019-11-28T21:32:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/series/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2019-11-28T21:32:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/gallery/cartoon/</loc>
+    <lastmod>2019-10-31T10:20:16+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://example.org/ko/gallery/cartoon/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://example.org/en/gallery/cartoon/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/gallery/</loc>
+    <lastmod>2019-10-31T10:20:16+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://example.org/ko/gallery/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://example.org/en/gallery/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/gallery/photo/</loc>
+    <lastmod>2019-10-31T10:20:16+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://example.org/ko/gallery/photo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://example.org/en/gallery/photo/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/presentation/dir/fourth/</loc>
+    <lastmod>2019-10-30T20:48:10+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/presentation/</loc>
+    <lastmod>2019-10-30T20:48:10+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/presentation/third/</loc>
+    <lastmod>2019-10-30T20:46:30+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/presentation/second/</loc>
+    <lastmod>2019-10-30T20:45:24+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/presentation/first/</loc>
+    <lastmod>2019-10-30T19:45:20+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/archive/</loc>
+    <lastmod>2019-10-19T11:44:14+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://example.org/ko/archive/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://example.org/en/archive/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/tags/gdb/</loc>
+    <lastmod>2019-06-03T14:51:25+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/posts/how-to-use-gdb/</loc>
+    <lastmod>2019-06-03T14:51:25+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/about/</loc>
+    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://example.org/ko/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://example.org/en/about/"
+                />
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/publication/article/article_any_folder_name_1/</loc>
+    <lastmod>2018-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/publication/book/book_any_folder_name_1/</loc>
+    <lastmod>2017-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/publication/misc/misc_any_folder_name_1/</loc>
+    <lastmod>2016-11-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/en/tags/index/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="http://example.org/ko/tags/index/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://example.org/en/tags/index/"
+                />
+  </url>
+  
+</urlset>

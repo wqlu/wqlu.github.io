@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Posts on Hugo Zzo Theme</title>
+    <link>http://example.org/en/posts/</link>
+    <description>Recent content in Posts on Hugo Zzo Theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>wq.lu@outlook.com (simon-lu)</managingEditor>
+    <webMaster>wq.lu@outlook.com (simon-lu)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Tue, 15 Sep 2020 02:01:49 +0800</lastBuildDate>
+    
+        <atom:link href="http://example.org/en/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>使用Travis CI简化博客流程</title>
+        <link>http://example.org/en/posts/hugo-travisci/</link>
+        <pubDate>Tue, 15 Sep 2020 02:01:49 +0800</pubDate>
+        <author>wq.lu@outlook.com (simon-lu)</author>
+        <atom:modified>Tue, 15 Sep 2020 02:01:49 +0800</atom:modified>
+        <guid>http://example.org/en/posts/hugo-travisci/</guid>
+        <description>before 建立了两个repo, 一个是github page，另一个my_blog保存博客源代码，使用脚本来管理两个仓库，每次的更改都向两个仓库提交co</description>
+        
+        <dc:creator>simon-lu</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>hugo</category>
+            
+          
+        
+        
+          
+            
+              <category>技术</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>Ubuntu备忘录</title>
+        <link>http://example.org/en/posts/ubuntu-note/</link>
+        <pubDate>Sat, 25 Apr 2020 18:46:48 +0800</pubDate>
+        <author>wq.lu@outlook.com (simon-lu)</author>
+        <atom:modified>Sat, 25 Apr 2020 18:46:48 +0800</atom:modified>
+        <guid>http://example.org/en/posts/ubuntu-note/</guid>
+        <description>尝试过Manjaro i3wm一段时间，还是喜欢Ubuntu 16.04经典版本，需要配置许多环境，为了方便以后查看，记录一下过程。 基础环境 1. 连</description>
+        
+        <dc:creator>simon-lu</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>ubuntu</category>
+            
+          
+            
+              <category>环境配置</category>
+            
+          
+        
+        
+          
+            
+              <category>技术</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>《Redis设计与实现》读书笔记</title>
+        <link>http://example.org/en/posts/redis-note/</link>
+        <pubDate>Thu, 28 Nov 2019 21:32:13 +0800</pubDate>
+        <author>wq.lu@outlook.com (simon-lu)</author>
+        <atom:modified>Thu, 28 Nov 2019 21:32:13 +0800</atom:modified>
+        <guid>http://example.org/en/posts/redis-note/</guid>
+        <description>&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;每个key-value都是由对象组成的&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+        
+        <dc:creator>simon-lu</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>redis</category>
+            
+          
+            
+              <category>《Redis设计与实现》</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+              <category>读书笔记</category>
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>如何使用GDB调试项目</title>
+        <link>http://example.org/en/posts/how-to-use-gdb/</link>
+        <pubDate>Mon, 03 Jun 2019 14:51:25 +0000</pubDate>
+        <author>wq.lu@outlook.com (simon-lu)</author>
+        <atom:modified>Mon, 03 Jun 2019 14:51:25 +0000</atom:modified>
+        <guid>http://example.org/en/posts/how-to-use-gdb/</guid>
+        <description>&lt;p&gt;-g 可在编译后的程序中保留调试符号信息&lt;br /&gt;
+strip hello_server 移除程序中存在的调试信息，程序测试后没有问题，我们可以使用此命令减小程序体积,调试文件时建议关闭编译器优化选项，有可能会优化掉排查的对象&lt;/p&gt;</description>
+        
+        <dc:creator>simon-lu</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>gdb</category>
+            
+          
+        
+        
+          
+            
+              <category>技术</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
