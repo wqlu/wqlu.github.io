@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>hugo on ~</title>
+    <link>https://simon-lu.github.io/tags/hugo/</link>
+    <description>Recent content in hugo on ~</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>wq.lu@outlook.com (simon-lu)</managingEditor>
+    <webMaster>wq.lu@outlook.com (simon-lu)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Tue, 15 Sep 2020 02:01:49 +0800</lastBuildDate>
+    
+        <atom:link href="https://simon-lu.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>使用Travis CI简化博客流程</title>
+        <link>https://simon-lu.github.io/posts/hugo-travisci/</link>
+        <pubDate>Tue, 15 Sep 2020 02:01:49 +0800</pubDate>
+        <author>wq.lu@outlook.com (simon-lu)</author>
+        <atom:modified>Tue, 15 Sep 2020 02:01:49 +0800</atom:modified>
+        <guid>https://simon-lu.github.io/posts/hugo-travisci/</guid>
+        <description>before 建立了两个repo, 一个是github page，另一个my_blog保存博客源代码，使用脚本来管理两个仓库，每次的更改都向两个仓库提交co</description>
+        
+        <dc:creator>simon-lu</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>hugo</category>
+            
+          
+        
+        
+          
+            
+              <category>技术</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

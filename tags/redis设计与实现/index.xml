@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>《Redis设计与实现》 on ~</title>
+    <link>https://simon-lu.github.io/tags/redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/</link>
+    <description>Recent content in 《Redis设计与实现》 on ~</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>wq.lu@outlook.com (simon-lu)</managingEditor>
+    <webMaster>wq.lu@outlook.com (simon-lu)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Thu, 28 Nov 2019 21:32:13 +0800</lastBuildDate>
+    
+        <atom:link href="https://simon-lu.github.io/tags/redis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>《Redis设计与实现》读书笔记</title>
+        <link>https://simon-lu.github.io/posts/redis-note/</link>
+        <pubDate>Thu, 28 Nov 2019 21:32:13 +0800</pubDate>
+        <author>wq.lu@outlook.com (simon-lu)</author>
+        <atom:modified>Thu, 28 Nov 2019 21:32:13 +0800</atom:modified>
+        <guid>https://simon-lu.github.io/posts/redis-note/</guid>
+        <description>&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;每个key-value都是由对象组成的&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+        
+        <dc:creator>simon-lu</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>redis</category>
+            
+          
+            
+              <category>《Redis设计与实现》</category>
+            
+          
+        
+        
+          
+            
+          
+        
+        
+          
+            
+              <category>读书笔记</category>
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
