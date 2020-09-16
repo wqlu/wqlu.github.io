@@ -114,6 +114,4 @@ draft: false
     </div>
 </div>
 
-<p>My Github chart:</p>
-
 <p><img src="https://ghchart.rshah.org/simon-lu" alt="simon-lu's Github chart" style="width: 100%;"></p>
