@@ -548,6 +548,8 @@ break [lineNo] if [condition]
 <script src="https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
 
 
+<script src="https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js" integrity="sha256-j+yj56cdEY2CwkVtGyz18fNybFGpMGJ8JxG3GSyO2+I=" crossorigin="anonymous"></script>
+
 
 <meting-js
     server = "netease"
@@ -568,6 +570,7 @@ $(document).pjax('a[target!=_blank]', '#container', {
         scrollIndicator()
         switchMobileMenu()
         addCopyBottons()
+        pangu.spacingPage();
     }
 );
 
