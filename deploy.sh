@@ -2,7 +2,7 @@
 
 commit_message=$1
 
-if [-d "/public/" ];then
+if [ -d "/public/" ];then
     rm -rf public
 else
     echo "public not exist"
