@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Redis on 2&#43;2=5</title>
+    <link>https://simon-lu.github.io/tags/redis/</link>
+    <description>Recent content in Redis on 2&#43;2=5</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 28 Nov 2019 21:32:13 +0800</lastBuildDate><atom:link href="https://simon-lu.github.io/tags/redis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>《Redis设计与实现》读书笔记</title>
+      <link>https://simon-lu.github.io/2019/redis-note/</link>
+      <pubDate>Thu, 28 Nov 2019 21:32:13 +0800</pubDate>
+      
+      <guid>https://simon-lu.github.io/2019/redis-note/</guid>
+      <description>&lt;h2 id=&#34;引言&#34;&gt;引言&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;每个key-value都是由对象组成的&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
