@@ -27,6 +27,7 @@ $(document).pjax('a[target!=_blank]', '#container', {
         scrollIndicator()
         switchMobileMenu()
         addCopyBottons()
+        loadValine()
     }
 );
 
@@ -126,6 +127,22 @@ addCopyBottons = function () {
       }
     })
   }
+}
+
+// 加载评论
+loadValine = function () {
+  window.valine = new Valine({
+        el: '#vcomments' ,
+        appId: '{{ .Site.Params.valine.appId }}',
+        appKey: '{{ .Site.Params.valine.appKey }}',
+        notify: {{ .Site.Params.valine.notify }}, 
+        verify: {{ .Site.Params.valine.verify }}, 
+        avatar:'{{ .Site.Params.valine.avatar }}', 
+        placeholder: '{{ .Site.Params.valine.placeholder }}',
+        visitor: {{ .Site.Params.valine.visitor }},
+        recordIp: true,
+        path: window.location.pathname
+    });
 }
 
 </script>
