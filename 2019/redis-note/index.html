@@ -272,20 +272,6 @@
                 <div id="vcomments"></div>
 <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
 <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-<script type="text/javascript">
-    window.valine = new Valine({
-        el: '#vcomments' ,
-        appId: 'VAKj7pbBgLO64CwuFHW5qp1b-gzGzoHsz',
-        appKey: 'RI6nmmeq9hVDSsfVESdshbRg',
-        notify:  false , 
-        verify:  false , 
-        avatar:'retro', 
-        placeholder: '说点什么吧...',
-        visitor:  true ,
-        recordIp: true,
-        path: window.location.pathname
-    });
-  </script>
             
         
 
@@ -342,6 +328,7 @@ $(document).pjax('a[target!=_blank]', '#container', {
         scrollIndicator()
         switchMobileMenu()
         addCopyBottons()
+        loadValine()
     }
 );
 
@@ -441,6 +428,22 @@ addCopyBottons = function () {
       }
     })
   }
+}
+
+
+loadValine = function () {
+  window.valine = new Valine({
+        el: '#vcomments' ,
+        appId: 'VAKj7pbBgLO64CwuFHW5qp1b-gzGzoHsz',
+        appKey: 'RI6nmmeq9hVDSsfVESdshbRg',
+        notify:  false , 
+        verify:  false , 
+        avatar:'retro', 
+        placeholder: '说点什么吧...',
+        visitor:  true ,
+        recordIp: true,
+        path: window.location.pathname
+    });
 }
 
 </script>
