@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on 2&#43;2=5</title>
+    <link>https://simon-lu.github.io/tags/linux/</link>
+    <description>Recent content in linux on 2&#43;2=5</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 18 May 2019 15:54:56 +0000</lastBuildDate><atom:link href="https://simon-lu.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>linux服务器端开发常用的命令</title>
+      <link>https://simon-lu.github.io/2019/commands-in-server-dev/</link>
+      <pubDate>Sat, 18 May 2019 15:54:56 +0000</pubDate>
+      
+      <guid>https://simon-lu.github.io/2019/commands-in-server-dev/</guid>
+      <description>nc nc -v -p 9999 127.0.0.1 3000 ps和top ps ps -ef | grep 相应的进程名称 UID（用户id）、 PID（进程id）、PPID（ 进程的父进程id）、C（ 占用cpu百分比</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu下面的日常</title>
+      <link>https://simon-lu.github.io/2018/in-ubuntu/</link>
+      <pubDate>Tue, 24 Apr 2018 16:32:24 +0000</pubDate>
+      
+      <guid>https://simon-lu.github.io/2018/in-ubuntu/</guid>
+      <description>软件图标 更新了pycharm到2018.1版本，但是任务栏的图标仍然是2017版本的，于是删除了2017版本，重新创建了一个图标 sudo vi /usr/share/applications/pycharm.desktop 填写以</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu16.04安装双显卡驱动GT750M</title>
+      <link>https://simon-lu.github.io/1/dual-graphics-driver-in-ubuntu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://simon-lu.github.io/1/dual-graphics-driver-in-ubuntu/</guid>
+      <description>安装GT750官方驱动 可自由切换独显和核心显卡 具体步骤： 1.安装显卡切换软件 打开终端，输入以下命令 sudo add-apt-repository ppa:nilarimogard/webupd8 sudo apt-get update sudo apt-get install prime-indicator 安装完毕后，重启。状态</description>
+    </item>
+    
+  </channel>
+</rss>

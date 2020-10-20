@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>工作 on 2&#43;2=5</title>
+    <link>https://simon-lu.github.io/categories/%E5%B7%A5%E4%BD%9C/</link>
+    <description>Recent content in 工作 on 2&#43;2=5</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 20 Oct 2020 21:26:16 +0800</lastBuildDate><atom:link href="https://simon-lu.github.io/categories/%E5%B7%A5%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>二叉树的遍历</title>
+      <link>https://simon-lu.github.io/2020/binary-tree-traversal/</link>
+      <pubDate>Tue, 20 Oct 2020 21:26:16 +0800</pubDate>
+      
+      <guid>https://simon-lu.github.io/2020/binary-tree-traversal/</guid>
+      <description>二叉树的遍历是面试和刷题中常见的问题，二叉树常用的为以下几种方式，其中前序、中序和后序都有递归和迭代两种方式，递归比较简单，主要记录一下迭代</description>
+    </item>
+    
+    <item>
+      <title>从一段代码的运行结果说起</title>
+      <link>https://simon-lu.github.io/2019/begin-with-a-piece-of-code/</link>
+      <pubDate>Thu, 26 Sep 2019 22:29:48 +0000</pubDate>
+      
+      <guid>https://simon-lu.github.io/2019/begin-with-a-piece-of-code/</guid>
+      <description>本来是一道面试题目，想深究一下，加深自己对函数调用过程的理解，题目代码如下： class A { public: void f1() { cout &amp;lt;&amp;lt; &amp;#34;f1 function&amp;#34; &amp;lt;&amp;lt; endl; } void setA(int x) { a = x; cout &amp;lt;&amp;lt; &amp;#34;setA() function&amp;#34; &amp;lt;&amp;lt; endl; } int getA() { cout</description>
+    </item>
+    
+    <item>
+      <title>后台面试题目总结</title>
+      <link>https://simon-lu.github.io/2019/summary-of-interview-questions/</link>
+      <pubDate>Sat, 17 Aug 2019 18:50:22 +0000</pubDate>
+      
+      <guid>https://simon-lu.github.io/2019/summary-of-interview-questions/</guid>
+      <description>一、C/C++语言部分 static关键字 在C语言中，关键字static可以用来修饰变量和函数，其中： static加在局部变量的前面改变其存储</description>
+    </item>
+    
+    <item>
+      <title>linux服务器端开发常用的命令</title>
+      <link>https://simon-lu.github.io/2019/commands-in-server-dev/</link>
+      <pubDate>Sat, 18 May 2019 15:54:56 +0000</pubDate>
+      
+      <guid>https://simon-lu.github.io/2019/commands-in-server-dev/</guid>
+      <description>nc nc -v -p 9999 127.0.0.1 3000 ps和top ps ps -ef | grep 相应的进程名称 UID（用户id）、 PID（进程id）、PPID（ 进程的父进程id）、C（ 占用cpu百分比</description>
+    </item>
+    
+    <item>
+      <title>LeetCode中遇到的问题</title>
+      <link>https://simon-lu.github.io/2019/leetcode-107/</link>
+      <pubDate>Mon, 11 Mar 2019 01:19:45 +0000</pubDate>
+      
+      <guid>https://simon-lu.github.io/2019/leetcode-107/</guid>
+      <description>LeetCode 107 vector的insert问题 在LeetCode 107题目中，本来是一个简单的遍历问题，但是由于我对vector的insert用法的不熟</description>
+    </item>
+    
+    <item>
+      <title>C语言常考知识点</title>
+      <link>https://simon-lu.github.io/2018/c-interview/</link>
+      <pubDate>Fri, 20 Apr 2018 19:49:56 +0000</pubDate>
+      
+      <guid>https://simon-lu.github.io/2018/c-interview/</guid>
+      <description>实习经历 #define和const的区别 编译器对二者的处理方式不一样 define实在预编译处理阶段直接进行替换，而const常量实在编译运行</description>
+    </item>
+    
+  </channel>
+</rss>

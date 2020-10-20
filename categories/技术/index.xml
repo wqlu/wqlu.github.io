@@ -47,5 +47,68 @@
 strip hello_server 移除程序中存在的调试信息，程序测试后没有问题，我们可以使用此命令减小程序体积,调试文件时建议关闭编译器优化选项，有可能会优化掉排查的对象&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>《深度探索C&#43;&#43;对象模型》读书笔记</title>
+      <link>https://simon-lu.github.io/2019/inside-the-c-object-model/</link>
+      <pubDate>Mon, 06 May 2019 20:39:58 +0000</pubDate>
+      
+      <guid>https://simon-lu.github.io/2019/inside-the-c-object-model/</guid>
+      <description>第一章 关于对象 关于封装后的布局成本 封装后Point3d并没有增加成本，data member直接内含在每一个class object中，memb</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; STL和泛型编程</title>
+      <link>https://simon-lu.github.io/2018/c-stl/</link>
+      <pubDate>Tue, 15 May 2018 13:17:06 +0000</pubDate>
+      
+      <guid>https://simon-lu.github.io/2018/c-stl/</guid>
+      <description>headers C++ Standard Library &amp;gt; Standard Template Librry 标准库以header files形式呈现 C++标准库的header files不带(.h),例如 #include&amp;lt;vector&amp;gt; 新式C header files不带(.h)</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;面向对象学习笔记(下)</title>
+      <link>https://simon-lu.github.io/2018/c-oop-1/</link>
+      <pubDate>Sat, 12 May 2018 00:09:50 +0000</pubDate>
+      
+      <guid>https://simon-lu.github.io/2018/c-oop-1/</guid>
+      <description>conversion function 没有返回类型 class Fraction { public: // 要加const，分子和分母并不会改变 // 由于已经有了double(),虽然是返回double类型，但是可以不写 operator double() const</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;面向对象学习笔记(上)</title>
+      <link>https://simon-lu.github.io/2018/c-oop-2/</link>
+      <pubDate>Thu, 10 May 2018 14:21:17 +0000</pubDate>
+      
+      <guid>https://simon-lu.github.io/2018/c-oop-2/</guid>
+      <description>推荐书籍 《C++ Primer》 《Effective C++》 头文件与类 Header的防卫式声明： 以complex.h为例 #ifndef __COMPLEX__ #define __COMPLEX__ ... ... #endif constructor 尽量使</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu下面的日常</title>
+      <link>https://simon-lu.github.io/2018/in-ubuntu/</link>
+      <pubDate>Tue, 24 Apr 2018 16:32:24 +0000</pubDate>
+      
+      <guid>https://simon-lu.github.io/2018/in-ubuntu/</guid>
+      <description>软件图标 更新了pycharm到2018.1版本，但是任务栏的图标仍然是2017版本的，于是删除了2017版本，重新创建了一个图标 sudo vi /usr/share/applications/pycharm.desktop 填写以</description>
+    </item>
+    
+    <item>
+      <title>git常用命令总结</title>
+      <link>https://simon-lu.github.io/1/summary-of-git-command/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://simon-lu.github.io/1/summary-of-git-command/</guid>
+      <description>在github上merge了一个pull request后，想要更新本地仓库，却发现报这样的错误： Please, commit your changes or stash them before you can merge.Aborting 这个原因就是本地的仓库</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu16.04安装双显卡驱动GT750M</title>
+      <link>https://simon-lu.github.io/1/dual-graphics-driver-in-ubuntu/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://simon-lu.github.io/1/dual-graphics-driver-in-ubuntu/</guid>
+      <description>安装GT750官方驱动 可自由切换独显和核心显卡 具体步骤： 1.安装显卡切换软件 打开终端，输入以下命令 sudo add-apt-repository ppa:nilarimogard/webupd8 sudo apt-get update sudo apt-get install prime-indicator 安装完毕后，重启。状态</description>
+    </item>
+    
   </channel>
 </rss>

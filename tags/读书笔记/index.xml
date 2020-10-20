@@ -19,5 +19,14 @@
 &lt;/blockquote&gt;</description>
     </item>
     
+    <item>
+      <title>《深度探索C&#43;&#43;对象模型》读书笔记</title>
+      <link>https://simon-lu.github.io/2019/inside-the-c-object-model/</link>
+      <pubDate>Mon, 06 May 2019 20:39:58 +0000</pubDate>
+      
+      <guid>https://simon-lu.github.io/2019/inside-the-c-object-model/</guid>
+      <description>第一章 关于对象 关于封装后的布局成本 封装后Point3d并没有增加成本，data member直接内含在每一个class object中，memb</description>
+    </item>
+    
   </channel>
 </rss>
