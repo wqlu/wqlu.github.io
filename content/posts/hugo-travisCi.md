@@ -3,7 +3,7 @@ title: "使用Travis CI简化博客流程"
 date: 2020-09-15T02:01:49+08:00
 draft: false
 tags: [hugo]
-categories: ["技术"]
+categories: [技术]
 featured_image: https://raw.githubusercontent.com/simon-lu/ImgRepo/master/Blog/hugo-travisci-01.jpg
 description: 
 showComments: true
