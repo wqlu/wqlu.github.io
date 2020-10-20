@@ -22,6 +22,9 @@
                 {{- end }}
                 <span class="post-word-count">{{ .WordCount }} words</span>
         </div>
+        {{ if ( .Site.Params.toc | default true ) }}
+            {{ partial "toc.html" . }}
+        {{ end }}
     </header>
 
     <div class="post-content">

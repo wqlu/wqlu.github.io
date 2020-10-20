@@ -11,13 +11,6 @@ license: ""
 tags: [GDB]
 categories: [技术]
 
-featured_image: ""
-featured_image_preview: ""
-
-showComments: true
-toc: true
-autoCollapseToc: true
-math: false
 ---
 
 -g 可在编译后的程序中保留调试符号信息  

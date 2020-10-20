@@ -15,9 +15,6 @@ featured_image: ""
 featured_image_preview: ""
 
 showComments: true
-toc: true
-autoCollapseToc: true
-math: false
 ---
 
 ## 引言
