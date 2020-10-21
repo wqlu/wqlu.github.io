@@ -27,10 +27,10 @@
     
     <item>
       <title>Ubuntu16.04安装双显卡驱动GT750M</title>
-      <link>https://simon-lu.github.io/1/dual-graphics-driver-in-ubuntu/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <link>https://simon-lu.github.io/2018/dual-graphics-driver-in-ubuntu/</link>
+      <pubDate>Mon, 15 Jan 2018 15:29:16 +0800</pubDate>
       
-      <guid>https://simon-lu.github.io/1/dual-graphics-driver-in-ubuntu/</guid>
+      <guid>https://simon-lu.github.io/2018/dual-graphics-driver-in-ubuntu/</guid>
       <description>安装GT750官方驱动 可自由切换独显和核心显卡 具体步骤： 1.安装显卡切换软件 打开终端，输入以下命令 sudo add-apt-repository ppa:nilarimogard/webupd8 sudo apt-get update sudo apt-get install prime-indicator 安装完毕后，重启。状态</description>
     </item>
     

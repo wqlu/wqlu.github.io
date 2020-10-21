@@ -9,9 +9,9 @@
     
     
     
-    <link rel="prev" href="https://simon-lu.github.io/1/dual-graphics-driver-in-ubuntu/" />
-    <link rel="next" href="https://simon-lu.github.io/2018/c-interview/" />
-    <link rel="canonical" href="https://simon-lu.github.io/1/summary-of-git-command/" />
+    
+    <link rel="next" href="https://simon-lu.github.io/2018/summary-of-git-command/" />
+    <link rel="canonical" href="https://simon-lu.github.io/2018/dual-graphics-driver-in-ubuntu/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -22,10 +22,10 @@
     <title>
         
         
-            git常用命令总结 | 2&#43;2=5
+            Ubuntu16.04安装双显卡驱动GT750M | 2&#43;2=5
         
     </title>
-    <meta name="title" content="git常用命令总结 | 2&#43;2=5">
+    <meta name="title" content="Ubuntu16.04安装双显卡驱动GT750M | 2&#43;2=5">
     
 <link rel="stylesheet" href="/css/main.min.css">
 
@@ -45,21 +45,21 @@
          "@id": "https:\/\/simon-lu.github.io"
     },
     "articleSection" : "posts",
-    "name" : "git常用命令总结",
-    "headline" : "git常用命令总结",
-    "description" : "在github上merge了一个pull request后，想要更新本地仓库，却发现报这样的错误： Please, commit your changes or stash them before you can merge.Aborting 这个原因就是本地的仓库",
+    "name" : "Ubuntu16.04安装双显卡驱动GT750M",
+    "headline" : "Ubuntu16.04安装双显卡驱动GT750M",
+    "description" : "安装GT750官方驱动 可自由切换独显和核心显卡 具体步骤： 1.安装显卡切换软件 打开终端，输入以下命令 sudo add-apt-repository ppa:nilarimogard\/webupd8 sudo apt-get update sudo apt-get install prime-indicator 安装完毕后，重启。状态",
     "inLanguage" : "zh-CN",
     "author" : "Simon Lu",
     "creator" : "Simon Lu",
     "publisher": "Simon Lu",
     "accountablePerson" : "Simon Lu",
     "copyrightHolder" : "Simon Lu",
-    "copyrightYear" : "0001",
-    "datePublished": "0001-01-01 00:00:00 \u002b0000 UTC",
-    "dateModified" : "0001-01-01 00:00:00 \u002b0000 UTC",
-    "url" : "https:\/\/simon-lu.github.io\/1\/summary-of-git-command\/",
-    "wordCount" : "201",
-    "keywords" : [ "git", "2\u002b2=5"]
+    "copyrightYear" : "2018",
+    "datePublished": "2018-01-15 15:29:16 \u002b0800 \u002b0800",
+    "dateModified" : "2018-01-15 15:29:16 \u002b0800 \u002b0800",
+    "url" : "https:\/\/simon-lu.github.io\/2018\/dual-graphics-driver-in-ubuntu\/",
+    "wordCount" : "618",
+    "keywords" : [ "linux", "2\u002b2=5"]
 }
 </script>
 
@@ -166,12 +166,12 @@
                         
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">git常用命令总结</h1>
+        <h1 class="post-title" itemprop="name headline">Ubuntu16.04安装双显卡驱动GT750M</h1>
         <div class="post-meta">
                 Written 
                 
                 <span class="post-time">
-                on <time datetime=0001-01-01 itemprop="datePublished">January 1, 0001</time>
+                on <time datetime=2018-01-15 itemprop="datePublished">January 15, 2018</time>
                 </span>
                 in
                 
@@ -184,7 +184,7 @@
                         
                         
                 </span>
-                <span class="post-word-count">201 words</span>
+                <span class="post-word-count">618 words</span>
         </div>
         
             <div class="post-toc" id="post-toc">
@@ -195,8 +195,12 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#远程仓库的使用">远程仓库的使用</a></li>
-        <li><a href="#ssh登录报错-packet_write_waitconnection-to-xxxx-port-22-broken-pipe">SSH登录报错 packet_write_wait:Connection to x.x.x.x port 22 Broken pipe</a></li>
+        <li><a href="#1安装显卡切换软件-打开终端输入以下命令">1.安装显卡切换软件 打开终端，输入以下命令</a></li>
+        <li><a href="#2禁用系统默认驱动">2.禁用系统默认驱动</a></li>
+        <li><a href="#3安装gt750m官方驱动">3.安装GT750M官方驱动</a></li>
+        <li><a href="#4测试">4.测试</a></li>
+        <li><a href="#5后续问题">5.后续问题</a></li>
+        <li><a href="#参考博客">参考博客</a></li>
       </ul>
     </li>
   </ul>
@@ -223,25 +227,44 @@
         
         
 
-        <p>在github上merge了一个pull request后，想要更新本地仓库，却发现报这样的错误：</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Please, commit your changes or stash them before you can merge.Aborting
-</code></pre></div><p>这个原因就是本地的仓库也进行了一些修改，产生了一些冲突，我们可以采用以下方法来解决： 第一种：放弃本地的修改，直接覆盖</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git reset --hard  
-git pull origin master:master
-</code></pre></div><h3 id="远程仓库的使用">远程仓库的使用</h3>
+        <blockquote>
+<p>安装GT750官方驱动 可自由切换独显和核心显卡</p>
+</blockquote>
+<p>具体步骤：</p>
+<h3 id="1安装显卡切换软件-打开终端输入以下命令">1.安装显卡切换软件 打开终端，输入以下命令</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo add-apt-repository ppa:nilarimogard/webupd8
+sudo apt-get update
+sudo apt-get install prime-indicator
+</code></pre></div><p>安装完毕后，重启。状态栏会出现切换显卡的图标，但由于驱动尚未安装，所以无法切换。</p>
+<h3 id="2禁用系统默认驱动">2.禁用系统默认驱动</h3>
+<p>系统默认是安装了开源的nouveau驱动，只能使用集成显卡，将其屏蔽后，才能安装NVIDIA的闭源驱动，输入以下命令</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo chmod <span style="color:#ae81ff">666</span> /etc/modprobe.d/blacklist.conf 
+sudo vi /etc/modprobe.d/blacklist.conf
+</code></pre></div><p>在blacklist.conf文件末尾添加以下内容：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">blacklist nouveau
+</code></pre></div><h3 id="3安装gt750m官方驱动">3.安装GT750M官方驱动</h3>
+<p>打开 系统设置&gt;软件和更新&gt;附加驱动，查看系统推荐的驱动版本，默认使用的开源版本，记录下标有(专有,tested)项的版本驱动，我的是nvidia-384 按Ctrl+Alt+F1进入命令模式，登录后，输入以下命令</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo service lightdm stop
+sudo apt-get install nvidia-384
+sudo service lightdm start
+</code></pre></div><p>完成后，进入图形系统，重启就好。</p>
+<h3 id="4测试">4.测试</h3>
+<p>进入系统后，可以使用状态栏的显卡切换按钮，Quick switch graphics，每次切换显卡都需要重新登录才可以，至此，结束。</p>
+<h3 id="5后续问题">5.后续问题</h3>
+<p>在安装完显卡驱动后，偶尔会出现软件窗口无法调整大小的情况，解决方案如下： 首先，安装compiz配置管理器：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get install cimpizconfig-settings-manager
+</code></pre></div><p>然后，打开配置管理器：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo csm
+</code></pre></div><p>在通用&rsquo;genetal&rsquo;选项中启用OpenGL，并启用插件，然后返回桌面 重置compiz：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">dconf reset -f /org/compiz
+</code></pre></div><p>最后，注销重启。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">gnome-session-quit
+</code></pre></div><h3 id="参考博客">参考博客</h3>
 <ol>
-<li>查看远程仓库</li>
+<li><a href="http://blog.csdn.net/feishicheng/article/details/70662094">ubuntu16.04 笔记本 安装双显卡驱动GTX960M 可快捷切换</a></li>
+<li><a href="http://blog.csdn.net/red_stone1/article/details/78727096">Ubuntu16.04环境下PyTorch简易安装教程</a></li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remoote -v
-</code></pre></div><ol start="2">
-<li>修改操作</li>
-</ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git remote remove origin
-git remote add origin xxx.git
-</code></pre></div><h3 id="ssh登录报错-packet_write_waitconnection-to-xxxx-port-22-broken-pipe">SSH登录报错 packet_write_wait:Connection to x.x.x.x port 22 Broken pipe</h3>
-<p>在客户端的~/.ssh文件夹下面新建config,添加下面的配置</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ServerAliveInterval <span style="color:#ae81ff">60</span>
-</code></pre></div>
+
     </div>
 
     <div class="post-copyright">
@@ -255,7 +278,7 @@ git remote add origin xxx.git
             
             <p class="copyright-item">
                     <span>Link:</span>
-                    <a href=https://simon-lu.github.io/1/summary-of-git-command/>https://simon-lu.github.io/1/summary-of-git-command/</span>
+                    <a href=https://simon-lu.github.io/2018/dual-graphics-driver-in-ubuntu/>https://simon-lu.github.io/2018/dual-graphics-driver-in-ubuntu/</span>
             </p>
             
             
@@ -271,8 +294,8 @@ git remote add origin xxx.git
             <section>
             <i class="iconfont icon-tag"></i>Tag(s):
             
-            <span class="tag"><a href="https://simon-lu.github.io/tags/git/">
-                    #git</a></span>
+            <span class="tag"><a href="https://simon-lu.github.io/tags/linux/">
+                    #linux</a></span>
             
             </section>
         
@@ -284,10 +307,8 @@ git remote add origin xxx.git
 
     <div class="post-nav">
         
-        <a href="https://simon-lu.github.io/1/dual-graphics-driver-in-ubuntu/" class="prev" rel="prev" title="Ubuntu16.04安装双显卡驱动GT750M"><i class="iconfont icon-left"></i>&nbsp;Ubuntu16.04安装双显卡驱动GT750M</a>
         
-        
-        <a href="https://simon-lu.github.io/2018/c-interview/" class="next" rel="next" title="C语言常考知识点">C语言常考知识点&nbsp;<i class="iconfont icon-right"></i></a>
+        <a href="https://simon-lu.github.io/2018/summary-of-git-command/" class="next" rel="next" title="git常用命令总结">git常用命令总结&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 

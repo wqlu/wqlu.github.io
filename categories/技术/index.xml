@@ -94,19 +94,19 @@ strip hello_server 移除程序中存在的调试信息，程序测试后没有�
     
     <item>
       <title>git常用命令总结</title>
-      <link>https://simon-lu.github.io/1/summary-of-git-command/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <link>https://simon-lu.github.io/2018/summary-of-git-command/</link>
+      <pubDate>Sat, 17 Mar 2018 08:50:16 +0800</pubDate>
       
-      <guid>https://simon-lu.github.io/1/summary-of-git-command/</guid>
+      <guid>https://simon-lu.github.io/2018/summary-of-git-command/</guid>
       <description>在github上merge了一个pull request后，想要更新本地仓库，却发现报这样的错误： Please, commit your changes or stash them before you can merge.Aborting 这个原因就是本地的仓库</description>
     </item>
     
     <item>
       <title>Ubuntu16.04安装双显卡驱动GT750M</title>
-      <link>https://simon-lu.github.io/1/dual-graphics-driver-in-ubuntu/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <link>https://simon-lu.github.io/2018/dual-graphics-driver-in-ubuntu/</link>
+      <pubDate>Mon, 15 Jan 2018 15:29:16 +0800</pubDate>
       
-      <guid>https://simon-lu.github.io/1/dual-graphics-driver-in-ubuntu/</guid>
+      <guid>https://simon-lu.github.io/2018/dual-graphics-driver-in-ubuntu/</guid>
       <description>安装GT750官方驱动 可自由切换独显和核心显卡 具体步骤： 1.安装显卡切换软件 打开终端，输入以下命令 sudo add-apt-repository ppa:nilarimogard/webupd8 sudo apt-get update sudo apt-get install prime-indicator 安装完毕后，重启。状态</description>
     </item>
     
