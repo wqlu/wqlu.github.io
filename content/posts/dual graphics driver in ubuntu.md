@@ -1,6 +1,6 @@
 ---
 title: Ubuntu16.04安装双显卡驱动GT750M
-date: 2018-01-15 15:29
+date: 2018-01-15T15:29:16+08:00
 tags: [linux]
 categories: [技术]
 ---

@@ -1,6 +1,6 @@
 ---
 title: git常用命令总结
-date: 2018-03-17 08:50
+date: 2018-03-17T08:50:16+08:00
 tags: [git]
 categories: [技术]
 ---
