@@ -101,7 +101,7 @@ draft: false
         <ul>
 	<li><p><span class="iconfont icon-mail"></span> Email: <a href="mailto:wq.lu@outlook.com"
                     rel="nofollow noreferrer" target="_blank">wq.lu@outlook.com</a></p></li>
-	<li><p><span class="iconfont icon-github"></span> GitHub: <a href="https://github.com/simon-lu"
+	<li><p><span class="iconfont icon-git"></span> GitHub: <a href="https://github.com/simon-lu"
                         rel="nofollow noreferrer" target="_blank">simon-lu</a></p></li>
         </ul>
     </div>
