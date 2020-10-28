@@ -34,16 +34,11 @@ preserveTaxonomyNames = true
     name = "Tags"
     url = "/tags/"
     weight = 3
-
-  [[menu.main]]
-    name = "Pastime"
-    url = "/pastime/"
-    weight = 4
-
+    
   [[menu.main]]
     name = "About"
     url = "/about/"
-    weight = 5
+    weight = 4
 
 [params]
     since = 2020
