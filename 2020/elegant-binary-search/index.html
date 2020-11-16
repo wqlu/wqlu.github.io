@@ -9,9 +9,9 @@
     
     
     
+    <link rel="prev" href="https://simon-lu.github.io/2020/binary-tree-traversal/" />
     
-    
-    <link rel="canonical" href="https://simon-lu.github.io/posts/" />
+    <link rel="canonical" href="https://simon-lu.github.io/2020/elegant-binary-search/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -22,10 +22,10 @@
     <title>
         
         
-            Posts | 2&#43;2=5
+            优雅的二分查找写法 | 2&#43;2=5
         
     </title>
-    <meta name="title" content="Posts | 2&#43;2=5">
+    <meta name="title" content="优雅的二分查找写法 | 2&#43;2=5">
     
 <link rel="stylesheet" href="/css/main.min.css">
 
@@ -33,11 +33,35 @@
 <link rel="stylesheet" href="https://simon-lu.github.io/css/aplayer.css">
 
     
-    <link rel="alternate" href="/posts/index.xml" type="application/rss+xml" title="2&#43;2=5">
-    <link rel="feed" href="/posts/index.xml" type="application/rss+xml" title="2&#43;2=5">
-    
     
  
+
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "BlogPosting",
+    "mainEntityOfPage": {
+         "@type": "WebPage",
+         "@id": "https:\/\/simon-lu.github.io"
+    },
+    "articleSection" : "posts",
+    "name" : "优雅的二分查找写法",
+    "headline" : "优雅的二分查找写法",
+    "description" : "隐藏文字 二分查找是一种很常用的算法，记住一个优雅写法的模板能够让我们更便利刷题。在花花的视频里看到了这种写法，感觉很好用，记录一下 这种写法针",
+    "inLanguage" : "zh-CN",
+    "author" : "Simon Lu",
+    "creator" : "Simon Lu",
+    "publisher": "Simon Lu",
+    "accountablePerson" : "Simon Lu",
+    "copyrightHolder" : "Simon Lu",
+    "copyrightYear" : "2020",
+    "datePublished": "2020-11-16 13:57:15 \u002b0800 \u002b0800",
+    "dateModified" : "2020-11-16 13:57:15 \u002b0800 \u002b0800",
+    "url" : "https:\/\/simon-lu.github.io\/2020\/elegant-binary-search\/",
+    "wordCount" : "218",
+    "keywords" : [ "leetcode", "2\u002b2=5"]
+}
+</script>
 
 
   </head>
@@ -55,6 +79,8 @@
             <div class="wrapper">
                 <nav class="navbar">
     
+        <progress class="content_progress" max="0" value="0"></progress>
+    
     <div class="container">
         
             <div class="navbar-header header-back2home-logo">
@@ -69,7 +95,7 @@
                 
                 <span class="menu">
                 
-                <a class="menu-item active" href="/posts/" title="">Blog</a>
+                <a class="menu-item" href="/posts/" title="">Blog</a>
                 
                 <a class="menu-item" href="/categories/" title="">Categories</a>
                 
@@ -84,6 +110,8 @@
     </div>
 </nav>
 <nav class="navbar-mobile" id="nav-mobile" style="display: none">
+    
+        <progress class="content_progress" max="0" value="0"></progress>
     
      <div class="container">
         <div class="navbar">
@@ -102,7 +130,7 @@
                 <nav class="mb-md">
                     
                     
-                        <a class="menu-item active" href="/posts/" title="">
+                        <a class="menu-item" href="/posts/" title="">
                             <h3>Blog</h3>
                             <div class="menu-active"></div>
                         </a>
@@ -129,140 +157,150 @@
                 <main class="main">
                     <div class="container">
                         
-<div class="post-warp archive">
-    
-    <h3>2020</h3>
+<article class="post-warp" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">优雅的二分查找写法</h1>
+        <div class="post-meta">
+                Written
+                
+                <span class="post-time">
+                on <time datetime=2020-11-16 itemprop="datePublished">November 16, 2020</time>
+                </span>
+                in
+                
+                <i class="iconfont icon-folder"></i>
+                <span class="post-category">
+                        
+                        
+                        
+                          <a href="https://simon-lu.github.io/categories/%E5%B7%A5%E4%BD%9C/"> 工作 </a>
+                        
+                        
+                </span>
+                <span class="post-word-count">218 words</span>
 
-    
-    <article class="archive-item">
-        <a href="/2020/elegant-binary-search/" class="archive-item-link">优雅的二分查找写法</a>
-        <span class="archive-item-date">
-            November 16, 2020
-        </span>
-    </article>
-    
-    <article class="archive-item">
-        <a href="/2020/binary-tree-traversal/" class="archive-item-link">二叉树的遍历</a>
-        <span class="archive-item-date">
-            October 20, 2020
-        </span>
-    </article>
-    
-    <article class="archive-item">
-        <a href="/2020/hugo-travisci/" class="archive-item-link">使用Travis CI简化博客流程</a>
-        <span class="archive-item-date">
-            September 15, 2020
-        </span>
-    </article>
-    
-    <article class="archive-item">
-        <a href="/2020/ubuntu-note/" class="archive-item-link">Ubuntu备忘录</a>
-        <span class="archive-item-date">
-            April 25, 2020
-        </span>
-    </article>
-     
-    <h3>2019</h3>
+                
+                    
+                    <a href="https://github.com/simon-lu/simon-lu.github.io/edit/blog/content/posts/elegant-binary-search.md" target="_blank" rel="noopener">
+                        <i class="iconfont icon-edit"></i>
+                    </a>
+                
 
-    
-    <article class="archive-item">
-        <a href="/2019/redis-note/" class="archive-item-link">《Redis设计与实现》读书笔记</a>
-        <span class="archive-item-date">
-            November 28, 2019
-        </span>
-    </article>
-    
-    <article class="archive-item">
-        <a href="/2019/begin-with-a-piece-of-code/" class="archive-item-link">从一段代码的运行结果说起</a>
-        <span class="archive-item-date">
-            September 26, 2019
-        </span>
-    </article>
-    
-    <article class="archive-item">
-        <a href="/2019/summary-of-interview-questions/" class="archive-item-link">后台面试题目总结</a>
-        <span class="archive-item-date">
-            August 17, 2019
-        </span>
-    </article>
-    
-    <article class="archive-item">
-        <a href="/2019/how-to-use-gdb/" class="archive-item-link">如何使用GDB调试项目</a>
-        <span class="archive-item-date">
-            June 3, 2019
-        </span>
-    </article>
-    
-    <article class="archive-item">
-        <a href="/2019/commands-in-server-dev/" class="archive-item-link">linux服务器端开发常用的命令</a>
-        <span class="archive-item-date">
-            May 18, 2019
-        </span>
-    </article>
-    
-    <article class="archive-item">
-        <a href="/2019/inside-the-c-object-model/" class="archive-item-link">《深度探索C&#43;&#43;对象模型》读书笔记</a>
-        <span class="archive-item-date">
-            May 6, 2019
-        </span>
-    </article>
-    
-    <article class="archive-item">
-        <a href="/2019/leetcode-107/" class="archive-item-link">LeetCode中遇到的问题</a>
-        <span class="archive-item-date">
-            March 11, 2019
-        </span>
-    </article>
-     
-    <h3>2018</h3>
-
-    
-    <article class="archive-item">
-        <a href="/2018/c-stl/" class="archive-item-link">C&#43;&#43; STL和泛型编程</a>
-        <span class="archive-item-date">
-            May 15, 2018
-        </span>
-    </article>
-     
-    
-
-<ul class="pagination">
-    
-    
-    
-    
-    
-    
-    
-    
+        </div>
         
-        
-    
-    
-    <li class="page-item active">
-        <span class="page-link">
-            <a href="/posts/">1</a></li>
-        </span>
-    
-    
-    
-    
-    
-    
-        
-        
-    
-    
-    <li class="page-item ">
-        <span class="page-link">
-            <a href="/posts/page/2/">2</a></li>
-        </span>
-    
-    
-</ul>
-
+            <div class="post-toc" id="post-toc">
+	<h2 class="post-toc-title">Content</h2>
+	
+	<div
+		class="post-toc-content always-active">
+		<nav id="TableOfContents"></nav>
+	</div>
 </div>
 
+        
+    </header>
+
+    <div class="post-content">
+        
+
+        
+        
+
+        
+        
+        
+        
+        
+
+        
+        
+        
+
+        <!--
+<span class="spoiler" > 隐藏文字 </span>
+
+
+
+
+<div><iframe id="biliplayer" src="//player.bilibili.com/player.html?aid=AV%e5%8f%b7&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" > </iframe></div>
+
+ <!-- 嵌入 BiliBili 视频 -->
+<p>二分查找是一种很常用的算法，记住一个优雅写法的模板能够让我们更便利刷题。在<a href="https://space.bilibili.com/9880352">花花</a>的视频里看到了这种写法，感觉很好用，记录一下</p>
+<p>这种写法针对的搜索区间是左闭右开的<code>[l, r)</code>，输入搜索的条件，找到第一个满足此条件的下标，如果没有找到的话，则会返回<code>r</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">auto</span> binary_search <span style="color:#f92672">=</span> [<span style="color:#f92672">&amp;</span>](<span style="color:#66d9ef">int</span> l, <span style="color:#66d9ef">int</span> r, function<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">bool</span> (<span style="color:#66d9ef">int</span>)<span style="color:#f92672">&gt;</span> cond) {
+    <span style="color:#66d9ef">while</span> (l <span style="color:#f92672">&lt;</span> r) {
+        <span style="color:#66d9ef">int</span> m <span style="color:#f92672">=</span> l <span style="color:#f92672">+</span> (r <span style="color:#f92672">-</span> l) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
+        <span style="color:#66d9ef">if</span> (cond(m)) r <span style="color:#f92672">=</span> m;
+        <span style="color:#66d9ef">else</span> l <span style="color:#f92672">=</span> m <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+    }
+    <span style="color:#66d9ef">return</span> l;
+};
+
+<span style="color:#75715e">// 用法示例
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> p <span style="color:#f92672">=</span> binary_search(<span style="color:#ae81ff">0</span>, n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, [<span style="color:#f92672">&amp;</span>](<span style="color:#66d9ef">int</span> i) <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">bool</span> {
+    <span style="color:#66d9ef">return</span> v[i] <span style="color:#f92672">&gt;</span> v[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>]; <span style="color:#75715e">// 在[0,n-1)里找第一个满足此条件的index
+</span><span style="color:#75715e"></span>});
+</code></pre></div><p>原视频如下：</p>
+
+
+
+
+<div><iframe id="biliplayer" src="//player.bilibili.com/player.html?bvid=BV1m5411V7x7&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" > </iframe></div>
+
+
+
+    </div>
+
+    <div class="post-copyright">
+            
+            <p class="copyright-item">
+                <span>Author:</span>
+                <span>Simon Lu </span>
+                </p>
+            
+
+            
+            <p class="copyright-item">
+                    <span>Link:</span>
+                    <a href=https://simon-lu.github.io/2020/elegant-binary-search/>https://simon-lu.github.io/2020/elegant-binary-search/</span>
+            </p>
+            
+            
+            <p class="copyright-item lincese">
+                本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+            </p>
+            
+    </div>
+
+
+    <div class="post-tags">
+        
+            <section>
+            <i class="iconfont icon-tag"></i>Tag(s):
+            
+            <span class="tag"><a href="https://simon-lu.github.io/tags/leetcode/">
+                    #leetcode</a></span>
+            
+            </section>
+        
+        <section>
+                <a href="javascript:window.history.back();">back</a></span> ·
+                <span><a href="https://simon-lu.github.io">home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+        
+        <a href="https://simon-lu.github.io/2020/binary-tree-traversal/" class="prev" rel="prev" title="二叉树的遍历"><i class="iconfont icon-left"></i>&nbsp;二叉树的遍历</a>
+        
+        
+    </div>
+
+    <div class="post-comment">
+        
+
+    </div>
+</article>
                     </div>
                 </main>
                 <footer class="footer">
