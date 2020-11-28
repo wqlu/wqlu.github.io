@@ -6,7 +6,16 @@
     <description>Recent content in Posts on 2&#43;2=5</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 16 Nov 2020 13:57:15 +0800</lastBuildDate><atom:link href="https://simon-lu.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Nov 2020 18:59:32 +0800</lastBuildDate><atom:link href="https://simon-lu.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>树状数组/BIT/Fenwick树</title>
+      <link>https://simon-lu.github.io/2020/binary_indexed_tree/</link>
+      <pubDate>Sat, 28 Nov 2020 18:59:32 +0800</pubDate>
+      
+      <guid>https://simon-lu.github.io/2020/binary_indexed_tree/</guid>
+      <description>介绍 Fenwick树主要是用来解决数组前缀和的问题，其主要思想是在每个节点存储部分和和通过从叶节点到根节点遍历得到总和，树的高度为log(n</description>
+    </item>
+    
     <item>
       <title>优雅的二分查找写法</title>
       <link>https://simon-lu.github.io/2020/elegant-binary-search/</link>

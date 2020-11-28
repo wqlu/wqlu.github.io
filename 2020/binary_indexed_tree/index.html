@@ -9,9 +9,9 @@
     
     
     
-    <link rel="prev" href="https://simon-lu.github.io/2020/binary-tree-traversal/" />
-    <link rel="next" href="https://simon-lu.github.io/2020/binary_indexed_tree/" />
-    <link rel="canonical" href="https://simon-lu.github.io/2020/elegant-binary-search/" />
+    <link rel="prev" href="https://simon-lu.github.io/2020/elegant-binary-search/" />
+    
+    <link rel="canonical" href="https://simon-lu.github.io/2020/binary_indexed_tree/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -22,10 +22,10 @@
     <title>
         
         
-            优雅的二分查找写法 | 2&#43;2=5
+            树状数组/BIT/Fenwick树 | 2&#43;2=5
         
     </title>
-    <meta name="title" content="优雅的二分查找写法 | 2&#43;2=5">
+    <meta name="title" content="树状数组/BIT/Fenwick树 | 2&#43;2=5">
     
 <link rel="stylesheet" href="/css/main.min.css">
 
@@ -45,9 +45,9 @@
          "@id": "https:\/\/simon-lu.github.io"
     },
     "articleSection" : "posts",
-    "name" : "优雅的二分查找写法",
-    "headline" : "优雅的二分查找写法",
-    "description" : "隐藏文字 二分查找是一种很常用的算法，记住一个优雅写法的模板能够让我们更便利刷题。在花花的视频里看到了这种写法，感觉很好用，记录一下 这种写法针",
+    "name" : "树状数组\/BIT\/Fenwick树",
+    "headline" : "树状数组\/BIT\/Fenwick树",
+    "description" : "介绍 Fenwick树主要是用来解决数组前缀和的问题，其主要思想是在每个节点存储部分和和通过从叶节点到根节点遍历得到总和，树的高度为log(n",
     "inLanguage" : "zh-CN",
     "author" : "Simon Lu",
     "creator" : "Simon Lu",
@@ -55,11 +55,11 @@
     "accountablePerson" : "Simon Lu",
     "copyrightHolder" : "Simon Lu",
     "copyrightYear" : "2020",
-    "datePublished": "2020-11-16 13:57:15 \u002b0800 \u002b0800",
-    "dateModified" : "2020-11-16 13:57:15 \u002b0800 \u002b0800",
-    "url" : "https:\/\/simon-lu.github.io\/2020\/elegant-binary-search\/",
-    "wordCount" : "218",
-    "keywords" : [ "leetcode", "2\u002b2=5"]
+    "datePublished": "2020-11-28 18:59:32 \u002b0800 \u002b0800",
+    "dateModified" : "2020-11-28 18:59:32 \u002b0800 \u002b0800",
+    "url" : "https:\/\/simon-lu.github.io\/2020\/binary_indexed_tree\/",
+    "wordCount" : "600",
+    "keywords" : [ "leetcode","数据结构", "2\u002b2=5"]
 }
 </script>
 
@@ -159,12 +159,12 @@
                         
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">优雅的二分查找写法</h1>
+        <h1 class="post-title" itemprop="name headline">树状数组/BIT/Fenwick树</h1>
         <div class="post-meta">
                 Written
                 
                 <span class="post-time">
-                on <time datetime=2020-11-16 itemprop="datePublished">November 16, 2020</time>
+                on <time datetime=2020-11-28 itemprop="datePublished">November 28, 2020</time>
                 </span>
                 in
                 
@@ -177,11 +177,11 @@
                         
                         
                 </span>
-                <span class="post-word-count">218 words</span>
+                <span class="post-word-count">600 words</span>
 
                 
                     
-                    <a href="https://github.com/simon-lu/simon-lu.github.io/edit/blog/content/posts/elegant-binary-search.md" target="_blank" rel="noopener">
+                    <a href="https://github.com/simon-lu/simon-lu.github.io/edit/blog/content/posts/Binary_Indexed_Tree.md" target="_blank" rel="noopener">
                         <i class="iconfont icon-edit"></i>
                     </a>
                 
@@ -193,7 +193,19 @@
 	
 	<div
 		class="post-toc-content always-active">
-		<nav id="TableOfContents"></nav>
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#介绍">介绍</a></li>
+    <li><a href="#原理">原理</a>
+      <ul>
+        <li><a href="#update">Update</a></li>
+        <li><a href="#query">Query</a></li>
+      </ul>
+    </li>
+    <li><a href="#实现">实现</a></li>
+    <li><a href="#应用">应用</a></li>
+  </ul>
+</nav>
 	</div>
 </div>
 
@@ -205,50 +217,92 @@
 
         
         
-
-        
-        
-        
-        
+            
         
 
         
         
         
+        
+        
 
-        <!--
-<span class="spoiler" > 隐藏文字 </span>
+        
+        
+        
 
-
-
-
-<div><iframe id="biliplayer" src="//player.bilibili.com/player.html?aid=AV%e5%8f%b7&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" > </iframe></div>
-
- <!-- 嵌入 BiliBili 视频 -->
-<p>二分查找是一种很常用的算法，记住一个优雅写法的模板能够让我们更便利刷题。在<a href="https://space.bilibili.com/9880352">花花</a>的视频里看到了这种写法，感觉很好用，记录一下</p>
-<p>这种写法针对的搜索区间是左闭右开的<code>[l, r)</code>，输入搜索的条件，找到第一个满足此条件的下标，如果没有找到的话，则会返回<code>r</code></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">auto</span> binary_search <span style="color:#f92672">=</span> [<span style="color:#f92672">&amp;</span>](<span style="color:#66d9ef">int</span> l, <span style="color:#66d9ef">int</span> r, function<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">bool</span> (<span style="color:#66d9ef">int</span>)<span style="color:#f92672">&gt;</span> cond) {
-    <span style="color:#66d9ef">while</span> (l <span style="color:#f92672">&lt;</span> r) {
-        <span style="color:#66d9ef">int</span> m <span style="color:#f92672">=</span> l <span style="color:#f92672">+</span> (r <span style="color:#f92672">-</span> l) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
-        <span style="color:#66d9ef">if</span> (cond(m)) r <span style="color:#f92672">=</span> m;
-        <span style="color:#66d9ef">else</span> l <span style="color:#f92672">=</span> m <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+        <h2 id="介绍">介绍</h2>
+<p>Fenwick树主要是用来解决数组前缀和的问题，其主要思想是在每个节点存储<code>部分和</code>和通过从叶节点到根节点遍历得到总和，树的高度为<code>log(n)</code>，主要有两个操作：<code>Query</code>和<code>Update</code>，时间复杂度均为<code>log(n)</code></p>
+<h2 id="原理">原理</h2>
+<h3 id="update">Update</h3>
+<p>对某一节点的值进行修改，对应的sum值也会改变，同时依次更改到根节点所经过的所有节点值。</p>
+<h3 id="query">Query</h3>
+<p>在query的时候，树是另外一种的形态。需要计算从该节点到根节点所有值的和，即为前<code>i</code>的和<code>sum[i]</code></p>
+<p><img src="https://raw.githubusercontent.com/simon-lu/ImgRepo/master/Blog/FinwickTree.png" alt="FinwickTree" loading="lazy" ></p>
+<h2 id="实现">实现</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FenwickTree</span> {
+<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+  FenwickTree(<span style="color:#66d9ef">int</span> n) <span style="color:#f92672">:</span> sums_(n<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">0</span>) {}
+ 
+  <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">update</span>(<span style="color:#66d9ef">int</span> i, <span style="color:#66d9ef">int</span> delta) {
+    <span style="color:#66d9ef">while</span> (i <span style="color:#f92672">&lt;</span> sums_.size()) {
+      sums_[i] <span style="color:#f92672">+=</span> delta;
+      i <span style="color:#f92672">+=</span> lowbit(i);
     }
-    <span style="color:#66d9ef">return</span> l;
+  }
+  
+  <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">query</span>(<span style="color:#66d9ef">int</span> i) <span style="color:#66d9ef">const</span> {
+    <span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">while</span> (i <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) {
+      sum <span style="color:#f92672">+=</span> sums_[i];
+      i <span style="color:#f92672">-=</span> lowbit(i);
+    }
+    <span style="color:#66d9ef">return</span> sum;
+  }
+  
+<span style="color:#66d9ef">private</span><span style="color:#f92672">:</span>
+  <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">inline</span> <span style="color:#66d9ef">int</span> lowbit(<span style="color:#66d9ef">int</span> x) { <span style="color:#66d9ef">return</span> x<span style="color:#f92672">&amp;</span>(<span style="color:#f92672">-</span>x); }
+  vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> sums_;
 };
+</code></pre></div><h2 id="应用">应用</h2>
+<ol>
+<li>
+<p><a href="https://leetcode-cn.com/problems/reverse-pairs/">LeetCode 493.翻转对</a></p>
+<p>给定一个数组<code>nums</code>，如果<code>i &lt; j</code>且<code>nums[i] &gt; 2*nums[j]</code>， 我们将<code>(i, j)</code>称为一个重要的翻转对。返回给定数组的重要翻转对的数量。</p>
+<p><strong>示例1：</strong></p>
+<blockquote>
+<p><strong>输入：</strong> [1, 3, 2, 3, 1]</p>
+<p><strong>输出：</strong> 2</p>
+</blockquote>
+<p><strong>思路</strong>:</p>
+<p>主要是计算对于每一个<code>2*num[j]</code>，统计有多少个之前出现过的<code>num[i]</code>大于它。首先统计所有的<code>nums[i]</code>和<code>2*nums[i]</code>，并且去重处理。由于数据的范围较大，需要利用哈希表进行离散化处理，映射到连续的整数区间。最后也是最重要的是，利用树状数组来计算统计，并且更新数组。</p>
+</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+  <span style="color:#66d9ef">int</span> reversePairs(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> nums) {
+    set<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span><span style="color:#f92672">&gt;</span> allNumbers;
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> x : nums) {
+      allNumbers.insert(x);
+      allNumbers.insert((<span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span>)x <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>);
+    }
+    <span style="color:#75715e">// 利用哈希表进行离散化
+</span><span style="color:#75715e"></span>    unordered_map<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span>, <span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> values;
+    <span style="color:#66d9ef">int</span> idx <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> x : allNumbers) {
+      values[x] <span style="color:#f92672">=</span> <span style="color:#f92672">++</span>idx;
+    }
 
-<span style="color:#75715e">// 用法示例
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> p <span style="color:#f92672">=</span> binary_search(<span style="color:#ae81ff">0</span>, n <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>, [<span style="color:#f92672">&amp;</span>](<span style="color:#66d9ef">int</span> i) <span style="color:#f92672">-&gt;</span> <span style="color:#66d9ef">bool</span> {
-    <span style="color:#66d9ef">return</span> v[i] <span style="color:#f92672">&gt;</span> v[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>]; <span style="color:#75715e">// 在[0,n-1)里找第一个满足此条件的index
-</span><span style="color:#75715e"></span>});
-</code></pre></div><p>原视频如下：</p>
-
-
-
-
-<div><iframe id="biliplayer" src="//player.bilibili.com/player.html?bvid=BV1m5411V7x7&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" loading="lazy" > </iframe></div>
-
-
-
+    <span style="color:#66d9ef">int</span> ret <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    FenwickTree <span style="color:#a6e22e">bit</span>(values.size());
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> nums.size(); i<span style="color:#f92672">++</span>) {
+      <span style="color:#66d9ef">int</span> left <span style="color:#f92672">=</span> values[(<span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span>)nums[i] <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>], right <span style="color:#f92672">=</span> values.size();
+      ret <span style="color:#f92672">+=</span> bit.query(right) <span style="color:#f92672">-</span> bit.query(left);
+      bit.update(values[nums[i]], <span style="color:#ae81ff">1</span>);
+    }
+    <span style="color:#66d9ef">return</span> ret;
+  }
+};
+</code></pre></div>
     </div>
 
     <div class="post-copyright">
@@ -262,7 +316,7 @@
             
             <p class="copyright-item">
                     <span>Link:</span>
-                    <a href=https://simon-lu.github.io/2020/elegant-binary-search/>https://simon-lu.github.io/2020/elegant-binary-search/</span>
+                    <a href=https://simon-lu.github.io/2020/binary_indexed_tree/>https://simon-lu.github.io/2020/binary_indexed_tree/</span>
             </p>
             
             
@@ -281,6 +335,9 @@
             <span class="tag"><a href="https://simon-lu.github.io/tags/leetcode/">
                     #leetcode</a></span>
             
+            <span class="tag"><a href="https://simon-lu.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                    #数据结构</a></span>
+            
             </section>
         
         <section>
@@ -291,10 +348,8 @@
 
     <div class="post-nav">
         
-        <a href="https://simon-lu.github.io/2020/binary-tree-traversal/" class="prev" rel="prev" title="二叉树的遍历"><i class="iconfont icon-left"></i>&nbsp;二叉树的遍历</a>
+        <a href="https://simon-lu.github.io/2020/elegant-binary-search/" class="prev" rel="prev" title="优雅的二分查找写法"><i class="iconfont icon-left"></i>&nbsp;优雅的二分查找写法</a>
         
-        
-        <a href="https://simon-lu.github.io/2020/binary_indexed_tree/" class="next" rel="next" title="树状数组/BIT/Fenwick树">树状数组/BIT/Fenwick树&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 
