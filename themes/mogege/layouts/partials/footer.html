@@ -5,7 +5,11 @@
         <span itemprop="copyrightYear">{{.}} - {{ now.Year }}</span>
         {{ end }}
         <span class="with-love">
-    	 <i class="iconfont icon-love"></i>
+            {{with .Site.Params.ideaURL }}
+            <a href="{{ . }}" target="_blank" rel="noopener">
+               <i class="iconfont icon-love"></i>
+            </a>
+            {{ end }}
          </span>
          {{ if .Site.Params.author }}
             <span class="author" itemprop="copyrightHolder"><a href="{{ .Site.BaseURL }}">{{ .Site.Params.author  }}</a> | </span>

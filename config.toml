@@ -60,6 +60,7 @@ preserveTaxonomyNames = true
 
     repoEditURL = "https://github.com/simon-lu/simon-lu.github.io/edit/blog"
 
+		ideaURL = "https://github.com/simon-lu/simon-lu.github.io/issues"
 
 [params.social]
     GitHub = "simon-lu"
