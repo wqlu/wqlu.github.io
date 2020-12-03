@@ -148,7 +148,7 @@
     new Bmdb({
       type: &#39;books&#39;,
       selector: &#39;.post-content&#39;,
-      secret: &#39;CsRIN3silIbjX40SRLcrlmktf4AH38l6aGuIcTQ0gVSODyzUxluOAeVjL2zIlgr8,
+      secret: &#39;CsRIN3silIbjX40SRLcrlmktf4AH38l6aGuIcTQ0gVSODyzUxluOAeVjL2zIlgr8&#39;,
       noMoreText: &#39;没有更多数据了&#39;,
       limit: 30
     })
