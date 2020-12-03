@@ -1,5 +1,6 @@
 ---
 title: "我的阅读"
+menu: main
 ---
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iMuFeng/bmdb@1.8.0/dist/Bmdb.min.css">
