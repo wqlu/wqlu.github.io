@@ -14,7 +14,7 @@ categories: [技术]
 featured_image: ""
 featured_image_preview: ""
 
-showComments: true
+showComments: false
 ---
 
 ## 引言

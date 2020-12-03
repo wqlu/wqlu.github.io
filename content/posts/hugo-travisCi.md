@@ -6,7 +6,7 @@ tags: [hugo]
 categories: [技术]
 featured_image: https://raw.githubusercontent.com/simon-lu/ImgRepo/master/Blog/hugo-travisci-01.jpg
 description: 
-showComments: true
+showComments: false
 ---
 
 <!--

@@ -107,7 +107,7 @@
     </div>
 
     <div class="post-comment">
-        {{ if ( $.Params.showComments | default true ) }}
+        {{ if ( $.Params.showComments | default false ) }}
             {{ if ne .Site.DisqusShortname "" }}
                 {{ template "_internal/disqus.html" . }}
             {{ else if .Site.Params.Valine.enable }}

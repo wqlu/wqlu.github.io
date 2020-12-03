@@ -9,7 +9,7 @@ categories: [技术]
 featured_image: ''
 featured_image_preview: ''
 
-showComments: true
+showComments: false
 ---
 
 尝试过Manjaro i3wm一段时间，还是喜欢Ubuntu 16.04经典版本，需要配置许多环境，为了方便以后查看，记录一下过程。

@@ -1,7 +1,6 @@
 ---
 title: 从一段代码的运行结果说起
 categories: [工作]
-comments: true
 date: 2019-09-26 22:29:48
 tags: [C/C++]
 categories: [工作]
