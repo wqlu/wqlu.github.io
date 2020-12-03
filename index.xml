@@ -136,27 +136,7 @@
     </item>
     
     <item>
-      <title>我的观影</title>
-      <link>https://simon-lu.github.io/movies/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://simon-lu.github.io/movies/</guid>
-      <description>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/gh/iMuFeng/bmdb@1.8.0/dist/Bmdb.min.css&#34;&gt;
-&lt;script type=&#34;text/javascript&#34; src=&#39;https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js&#39;&gt;&lt;/script&gt;
-&lt;script type=&#34;text/javascript&#34; src=&#39;https://cdn.jsdelivr.net/gh/iMuFeng/bmdb@1.8.0/dist/Bmdb.min.js&#39;&gt;&lt;/script&gt;
-&lt;script type=&#34;text/javascript&#34;&gt;
-    new Bmdb({
-      type: &#39;movies&#39;,
-      selector: &#39;.post-content&#39;,
-      secret: &#39;CsRIN3silIbjX40SRLcrlmktf4AH38l6aGuIcTQ0gVSODyzUxluOAeVjL2zIlgr8&#39;,
-      noMoreText: &#39;没有更多数据了&#39;,
-      limit: 30
-    })
-&lt;/script&gt;</description>
-    </item>
-    
-    <item>
-      <title>我的阅读</title>
+      <title>Books</title>
       <link>https://simon-lu.github.io/books/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -169,6 +149,26 @@
       type: &#39;books&#39;,
       selector: &#39;.post-content&#39;,
       secret: &#39;CsRIN3silIbjX40SRLcrlmktf4AH38l6aGuIcTQ0gVSODyzUxluOAeVjL2zIlgr8,
+      noMoreText: &#39;没有更多数据了&#39;,
+      limit: 30
+    })
+&lt;/script&gt;</description>
+    </item>
+    
+    <item>
+      <title>Movies</title>
+      <link>https://simon-lu.github.io/movies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://simon-lu.github.io/movies/</guid>
+      <description>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdn.jsdelivr.net/gh/iMuFeng/bmdb@1.8.0/dist/Bmdb.min.css&#34;&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#39;https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js&#39;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#39;https://cdn.jsdelivr.net/gh/iMuFeng/bmdb@1.8.0/dist/Bmdb.min.js&#39;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34;&gt;
+    new Bmdb({
+      type: &#39;movies&#39;,
+      selector: &#39;.post-content&#39;,
+      secret: &#39;CsRIN3silIbjX40SRLcrlmktf4AH38l6aGuIcTQ0gVSODyzUxluOAeVjL2zIlgr8&#39;,
       noMoreText: &#39;没有更多数据了&#39;,
       limit: 30
     })
