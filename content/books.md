@@ -10,7 +10,7 @@ menu: main
     new Bmdb({
       type: 'books',
       selector: '.post-content',
-      secret: 'CsRIN3silIbjX40SRLcrlmktf4AH38l6aGuIcTQ0gVSODyzUxluOAeVjL2zIlgr8,
+      secret: 'CsRIN3silIbjX40SRLcrlmktf4AH38l6aGuIcTQ0gVSODyzUxluOAeVjL2zIlgr8',
       noMoreText: '没有更多数据了',
       limit: 30
     })
