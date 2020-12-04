@@ -6,7 +6,16 @@
     <description>Recent content in leetcode on 2&#43;2=5</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 28 Nov 2020 18:59:32 +0800</lastBuildDate><atom:link href="https://simon-lu.github.io/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Dec 2020 21:28:01 +0800</lastBuildDate><atom:link href="https://simon-lu.github.io/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode 659.分割数组为连续子序列</title>
+      <link>https://simon-lu.github.io/2020/leetcode659/</link>
+      <pubDate>Fri, 04 Dec 2020 21:28:01 +0800</pubDate>
+      
+      <guid>https://simon-lu.github.io/2020/leetcode659/</guid>
+      <description>给你一个按升序排序的整数数组num（可能包含重复数字），请你将它们分割成一个或多个子序列，其中每个子序列都由连续整数组成且长度至少为 3 。 如果</description>
+    </item>
+    
     <item>
       <title>树状数组/BIT/Fenwick树</title>
       <link>https://simon-lu.github.io/2020/binary_indexed_tree/</link>
@@ -18,28 +27,28 @@
     
     <item>
       <title>优雅的二分查找写法</title>
-      <link>https://simon-lu.github.io/2020/elegant-binary-search/</link>
+      <link>https://simon-lu.github.io/2020/elegant_binary_search/</link>
       <pubDate>Mon, 16 Nov 2020 13:57:15 +0800</pubDate>
       
-      <guid>https://simon-lu.github.io/2020/elegant-binary-search/</guid>
+      <guid>https://simon-lu.github.io/2020/elegant_binary_search/</guid>
       <description>隐藏文字 二分查找是一种很常用的算法，记住一个优雅写法的模板能够让我们更便利刷题。在花花的视频里看到了这种写法，感觉很好用，记录一下 这种写法针</description>
     </item>
     
     <item>
       <title>二叉树的遍历</title>
-      <link>https://simon-lu.github.io/2020/binary-tree-traversal/</link>
+      <link>https://simon-lu.github.io/2020/binary_tree_traversal/</link>
       <pubDate>Tue, 20 Oct 2020 21:26:16 +0800</pubDate>
       
-      <guid>https://simon-lu.github.io/2020/binary-tree-traversal/</guid>
+      <guid>https://simon-lu.github.io/2020/binary_tree_traversal/</guid>
       <description>二叉树的遍历是面试和刷题中常见的问题，二叉树常用的为以下几种方式，其中前序、中序和后序都有递归和迭代两种方式，递归比较简单，主要记录一下迭代</description>
     </item>
     
     <item>
       <title>LeetCode中遇到的问题</title>
-      <link>https://simon-lu.github.io/2019/leetcode-107/</link>
+      <link>https://simon-lu.github.io/2019/leetcode107/</link>
       <pubDate>Mon, 11 Mar 2019 01:19:45 +0000</pubDate>
       
-      <guid>https://simon-lu.github.io/2019/leetcode-107/</guid>
+      <guid>https://simon-lu.github.io/2019/leetcode107/</guid>
       <description>LeetCode 107 vector的insert问题 在LeetCode 107题目中，本来是一个简单的遍历问题，但是由于我对vector的insert用法的不熟</description>
     </item>
     
