@@ -18,6 +18,18 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iMuFeng/bmdb@1.8.0/dist/Bmdb.min.css">
+    <script type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+    <script type="text/javascript" src='https://cdn.jsdelivr.net/gh/iMuFeng/bmdb@1.8.0/dist/Bmdb.min.js'></script>  
+    
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <title>
@@ -200,15 +212,6 @@
             </div>
         </div>
         
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
-
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
-
-
 <meting-js
     server = "netease"
     type= "playlist"
@@ -224,14 +227,37 @@ $(document).pjax('a[target!=_blank]', '#container', {
     fragment:'#container', timeout:8000
 }).on('pjax:complete',
     function() {
-        switchDarkMode()
-        scrollIndicator()
-        switchMobileMenu()
-        addCopyBottons()
-        loadValine()
-        loadToc()
+      switchDarkMode()
+      scrollIndicator()
+      switchMobileMenu()
+      addCopyBottons()
+      
+      loadBmdb()
+      loadToc()
     }
 );
+
+
+loadBmdb = function() {
+  var path = window.location.pathname
+  if (path === '/movies/') {
+    new Bmdb({
+      type: 'movies',
+      selector: '.post-content',
+      secret: 'CsRIN3silIbjX40SRLcrlmktf4AH38l6aGuIcTQ0gVSODyzUxluOAeVjL2zIlgr8',
+      noMoreText: '没有更多数据了',
+      limit: 30
+    })
+  } else if (path === '/books/') {
+    new Bmdb({
+      type: 'books',
+      selector: '.post-content',
+      secret: 'CsRIN3silIbjX40SRLcrlmktf4AH38l6aGuIcTQ0gVSODyzUxluOAeVjL2zIlgr8',
+      noMoreText: '没有更多数据了',
+      limit: 30
+    })
+  }
+}
 
 
 switchDarkMode = function () {
@@ -346,7 +372,6 @@ loadValine = function () {
         path: window.location.pathname
     });
 }
-
 
 
 loadToc = function () {
