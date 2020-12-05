@@ -247,20 +247,20 @@
 <p>如果可以完成上述分割，则返回<code>true</code>；否则，返回<code>false</code>。</p>
 <p><strong>示例1：</strong></p>
 <blockquote>
-<p><strong>输入：</strong> [1,2,3,3,4,5]
-<strong>输出：</strong> True
-<strong>解释：</strong> 可以分割出[1,2,3],[3,4,5]</p>
+<p><strong>输入：</strong> [1,2,3,3,4,5]</p>
+<p><strong>输出：</strong> True</p>
+<p><strong>解释：</strong> 可以分割出[1,2,3],[3,4,5]</p>
 </blockquote>
 <p><strong>示例2：</strong></p>
 <blockquote>
-<p><strong>输入：</strong> [1,2,3,3,4,4,5,5]
-<strong>输出：</strong> True
-<strong>解释：</strong> 可以分割出[1,2,3,4,5],[3,4,5]</p>
+<p><strong>输入：</strong> [1,2,3,3,4,4,5,5]</p>
+<p><strong>输出：</strong> True</p>
+<p><strong>解释：</strong> 可以分割出[1,2,3,4,5],[3,4,5]</p>
 </blockquote>
 <p><strong>示例1：</strong></p>
 <blockquote>
-<p><strong>输入：</strong> [1,2,3,3,4,4,5]
-<strong>输出：</strong> False</p>
+<p><strong>输入：</strong> [1,2,3,3,4,4,5]</p>
+<p><strong>输出：</strong> False</p>
 </blockquote>
 <p><strong>思路：</strong></p>
 <p>主要是利用hash map和小根堆的特性，借助<code>&lt;key:int, value:min_heap&gt;</code>来帮助我们记录以<code>key</code>结尾的所有序列的长度，选择一个短的加入进去。最后，遍历map，看是否有不符合的队列存在。</p>
