@@ -6,7 +6,16 @@
     <description>Recent content in 工作 on 2&#43;2=5</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 04 Dec 2020 21:28:01 +0800</lastBuildDate><atom:link href="https://simon-lu.github.io/categories/%E5%B7%A5%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 12 Dec 2020 02:30:02 +0800</lastBuildDate><atom:link href="https://simon-lu.github.io/categories/%E5%B7%A5%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Leetcode 376.摆动序列</title>
+      <link>https://simon-lu.github.io/2020/leetcode376/</link>
+      <pubDate>Sat, 12 Dec 2020 02:30:02 +0800</pubDate>
+      
+      <guid>https://simon-lu.github.io/2020/leetcode376/</guid>
+      <description>如果连续数字之间的差严格地在正数和负数之间交替，则数字序列称为摆动序列。第一个差（如果存在的话）可能是正数或负数。少于两个元素的序列也是摆动</description>
+    </item>
+    
     <item>
       <title>LeetCode 659.分割数组为连续子序列</title>
       <link>https://simon-lu.github.io/2020/leetcode659/</link>

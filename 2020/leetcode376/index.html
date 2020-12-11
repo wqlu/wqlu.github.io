@@ -10,9 +10,9 @@
     
     
     
-    <link rel="prev" href="https://simon-lu.github.io/2020/binary_indexed_tree/" />
-    <link rel="next" href="https://simon-lu.github.io/2020/leetcode376/" />
-    <link rel="canonical" href="https://simon-lu.github.io/2020/leetcode659/" />
+    <link rel="prev" href="https://simon-lu.github.io/2020/leetcode659/" />
+    
+    <link rel="canonical" href="https://simon-lu.github.io/2020/leetcode376/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -35,10 +35,10 @@
     <title>
         
         
-            LeetCode 659.分割数组为连续子序列 | 2&#43;2=5
+            Leetcode 376.摆动序列 | 2&#43;2=5
         
     </title>
-    <meta name="title" content="LeetCode 659.分割数组为连续子序列 | 2&#43;2=5">
+    <meta name="title" content="Leetcode 376.摆动序列 | 2&#43;2=5">
     
 <link rel="stylesheet" href="/css/main.min.css">
 
@@ -58,9 +58,9 @@
          "@id": "https:\/\/simon-lu.github.io"
     },
     "articleSection" : "posts",
-    "name" : "LeetCode 659.分割数组为连续子序列",
-    "headline" : "LeetCode 659.分割数组为连续子序列",
-    "description" : "给你一个按升序排序的整数数组num（可能包含重复数字），请你将它们分割成一个或多个子序列，其中每个子序列都由连续整数组成且长度至少为 3 。 如果",
+    "name" : "Leetcode 376.摆动序列",
+    "headline" : "Leetcode 376.摆动序列",
+    "description" : "如果连续数字之间的差严格地在正数和负数之间交替，则数字序列称为摆动序列。第一个差（如果存在的话）可能是正数或负数。少于两个元素的序列也是摆动",
     "inLanguage" : "zh-CN",
     "author" : "Simon Lu",
     "creator" : "Simon Lu",
@@ -68,10 +68,10 @@
     "accountablePerson" : "Simon Lu",
     "copyrightHolder" : "Simon Lu",
     "copyrightYear" : "2020",
-    "datePublished": "2020-12-04 21:28:01 \u002b0800 \u002b0800",
-    "dateModified" : "2020-12-04 21:28:01 \u002b0800 \u002b0800",
-    "url" : "https:\/\/simon-lu.github.io\/2020\/leetcode659\/",
-    "wordCount" : "368",
+    "datePublished": "2020-12-12 02:30:02 \u002b0800 \u002b0800",
+    "dateModified" : "2020-12-12 02:30:02 \u002b0800 \u002b0800",
+    "url" : "https:\/\/simon-lu.github.io\/2020\/leetcode376\/",
+    "wordCount" : "696",
     "keywords" : [ "leetcode", "2\u002b2=5"]
 }
 </script>
@@ -186,12 +186,12 @@
                         
 <article class="post-warp" itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">LeetCode 659.分割数组为连续子序列</h1>
+        <h1 class="post-title" itemprop="name headline">Leetcode 376.摆动序列</h1>
         <div class="post-meta">
                 Written
                 
                 <span class="post-time">
-                on <time datetime=2020-12-04 itemprop="datePublished">December 4, 2020</time>
+                on <time datetime=2020-12-12 itemprop="datePublished">December 12, 2020</time>
                 </span>
                 in
                 
@@ -204,11 +204,11 @@
                         
                         
                 </span>
-                <span class="post-word-count">368 words</span>
+                <span class="post-word-count">696 words</span>
 
                 
                     
-                    <a href="https://github.com/simon-lu/simon-lu.github.io/edit/blog/content/posts/leetcode659.md" target="_blank" rel="noopener">
+                    <a href="https://github.com/simon-lu/simon-lu.github.io/edit/blog/content/posts/leetcode376.md" target="_blank" rel="noopener">
                         <i class="iconfont icon-edit"></i>
                     </a>
                 
@@ -243,51 +243,76 @@
         
         
 
-        <p>给你一个按升序排序的整数数组<code>num</code>（可能包含重复数字），请你将它们分割成一个或多个子序列，其中每个子序列都由连续整数组成且长度至少为 3 。</p>
-<p>如果可以完成上述分割，则返回<code>true</code>；否则，返回<code>false</code>。</p>
+        <p>如果连续数字之间的差严格地在正数和负数之间交替，则数字序列称为<strong>摆动序列</strong>。第一个差（如果存在的话）可能是正数或负数。少于两个元素的序列也是摆动序列。</p>
+<p>例如，<code>[1,7,4,9,2,5]</code>是一个摆动序列，因为差值<code>(6,-3,5,-7,3)</code>是正负交替出现的。相反，<code>[1,4,,2,5]</code>和<code>[1,7,4,5,5]</code>不是摆动序列，第一个序列是因为它的前两个差值都是正数，第二个序列是应为它的最后一个差值为零。</p>
+<p>给定一个整数序列，返回作为摆动序列的最长子序列的长度。通过从原始序列删除一些（也可以不删除）元素来获得子序列，剩下的元素保持其原始顺序。</p>
 <p><strong>示例1：</strong></p>
 <blockquote>
-<p><strong>输入：</strong> [1,2,3,3,4,5]</p>
-<p><strong>输出：</strong> True</p>
-<p><strong>解释：</strong> 可以分割出[1,2,3],[3,4,5]</p>
+<p><strong>输入：</strong>[1,7,4,9,2,5]</p>
+<p><strong>输出：</strong> 6</p>
+<p><strong>解释：</strong> 整个序列均为摆动序列</p>
 </blockquote>
 <p><strong>示例2：</strong></p>
 <blockquote>
-<p><strong>输入：</strong> [1,2,3,3,4,4,5,5]</p>
-<p><strong>输出：</strong> True</p>
-<p><strong>解释：</strong> 可以分割出[1,2,3,4,5],[3,4,5]</p>
-</blockquote>
-<p><strong>示例1：</strong></p>
-<blockquote>
-<p><strong>输入：</strong> [1,2,3,3,4,4,5]</p>
-<p><strong>输出：</strong> False</p>
+<p><strong>输入：</strong>[1,17,5,10,13,15,10,5,16,8]</p>
+<p><strong>输出：</strong> 7</p>
+<p><strong>解释：</strong> 该序列包含几个长度为7的摆动序列，其中一个可为[1,17,10,13,10,16,8]。</p>
 </blockquote>
 <p><strong>思路：</strong></p>
-<p>主要是利用hash map和小根堆的特性，借助<code>&lt;key:int, value:min_heap&gt;</code>来帮助我们记录以<code>key</code>结尾的所有序列的长度，选择一个短的加入进去。最后，遍历map，看是否有不符合的队列存在。</p>
+<blockquote>
+<p>使用动态规划，定义两种状态：</p>
+<ol>
+<li>
+<p><code>dp[i][0]</code>表示从<code>nums[0]</code>到<code>nums[i]</code>的最长摆动序列长度，且<code>nums[i]&lt;nums[i-1]</code></p>
+</li>
+<li>
+<p><code>dp[i][1]</code>表示从<code>nums[0]</code>到<code>nums[i]</code>的最长摆动序列长度，且<code>nums[i]&gt;nums[i-1]</code></p>
+</li>
+</ol>
+</blockquote>
 <p><strong>代码：</strong></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">typedef</span> priority_queue<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span>, vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span>, greater<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;</span> min_heap;
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
 <span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
-    <span style="color:#66d9ef">bool</span> isPossible(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> nums) {
+    <span style="color:#66d9ef">int</span> wiggleMaxLength(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> nums) {
         <span style="color:#66d9ef">int</span> N <span style="color:#f92672">=</span> nums.size();
-        <span style="color:#66d9ef">if</span> (N <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>) <span style="color:#66d9ef">return</span> false;
-        unordered_map<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span>, min_heap<span style="color:#f92672">&gt;</span> m;
-        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span> <span style="color:#f92672">&amp;</span>n : nums) {
-            <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>m.count(n)) m[n] <span style="color:#f92672">=</span> min_heap();
-            <span style="color:#66d9ef">if</span> (m.count(n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)) {
-                m[n].push(m[n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>].top() <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
-                m[n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>].pop();
-                <span style="color:#66d9ef">if</span> (m[n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>].empty()) {
-                    m.erase(n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>);
-                }
+        <span style="color:#66d9ef">if</span> (N <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">return</span> N;
+        <span style="color:#66d9ef">int</span> dp[N][<span style="color:#ae81ff">2</span>];
+        dp[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+        dp[<span style="color:#ae81ff">0</span>][<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;</span> N; <span style="color:#f92672">++</span>i) {
+            <span style="color:#66d9ef">if</span> (nums[i] <span style="color:#f92672">&gt;</span> nums[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]) {
+                dp[i][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> dp[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">0</span>];
+                dp[i][<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> dp[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">0</span>]<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>;
+            } <span style="color:#66d9ef">else</span> <span style="color:#a6e22e">if</span> (nums[i] <span style="color:#f92672">&lt;</span> nums[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]) {
+                dp[i][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> dp[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">1</span>]<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>;
+                dp[i][<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> dp[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">1</span>];
             } <span style="color:#66d9ef">else</span> {
-                m[n].push(<span style="color:#ae81ff">1</span>);
+                dp[i][<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> dp[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">0</span>];
+                dp[i][<span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> dp[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">1</span>];
             }
-        
-        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">auto</span> <span style="color:#f92672">&amp;</span>it : m) {
-            <span style="color:#66d9ef">if</span> (it.second.top() <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">3</span>) <span style="color:#66d9ef">return</span> false;
         }
-        <span style="color:#66d9ef">return</span> true;
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">max</span>(dp[N<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">0</span>], dp[N<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>][<span style="color:#ae81ff">1</span>]);
+    }
+};
+</code></pre></div><p><strong>解法2：</strong></p>
+<blockquote>
+<p>利用波的思想，波峰和波谷的间隔永远只有1</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
+<span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
+    <span style="color:#66d9ef">int</span> wiggleMaxLength(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&amp;</span> nums) {
+        <span style="color:#66d9ef">int</span> N <span style="color:#f92672">=</span> nums.size();
+        <span style="color:#66d9ef">if</span> (N <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">1</span>) <span style="color:#66d9ef">return</span> N;
+        <span style="color:#66d9ef">int</span> up <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>, down <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;</span> N; <span style="color:#f92672">++</span>i) {
+            <span style="color:#66d9ef">if</span> (nums[i] <span style="color:#f92672">&gt;</span> nums[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]) {
+                up <span style="color:#f92672">=</span> down <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>; <span style="color:#75715e">// 如果连续递增的话，相当于跳过
+</span><span style="color:#75715e"></span>            }
+            <span style="color:#66d9ef">if</span> (nums[i] <span style="color:#f92672">&lt;</span> nums[i<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]) {
+                down <span style="color:#f92672">=</span> up <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+            }
+        }
+        <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">max</span>(up, down);
     }
 };
 </code></pre></div>
@@ -304,7 +329,7 @@
             
             <p class="copyright-item">
                     <span>Link:</span>
-                    <a href=https://simon-lu.github.io/2020/leetcode659/>https://simon-lu.github.io/2020/leetcode659/</span>
+                    <a href=https://simon-lu.github.io/2020/leetcode376/>https://simon-lu.github.io/2020/leetcode376/</span>
             </p>
             
             
@@ -333,10 +358,8 @@
 
     <div class="post-nav">
         
-        <a href="https://simon-lu.github.io/2020/binary_indexed_tree/" class="prev" rel="prev" title="树状数组/BIT/Fenwick树"><i class="iconfont icon-left"></i>&nbsp;树状数组/BIT/Fenwick树</a>
+        <a href="https://simon-lu.github.io/2020/leetcode659/" class="prev" rel="prev" title="LeetCode 659.分割数组为连续子序列"><i class="iconfont icon-left"></i>&nbsp;LeetCode 659.分割数组为连续子序列</a>
         
-        
-        <a href="https://simon-lu.github.io/2020/leetcode376/" class="next" rel="next" title="Leetcode 376.摆动序列">Leetcode 376.摆动序列&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 
