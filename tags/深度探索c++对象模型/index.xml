@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>深度探索C&#43;&#43;对象模型 on 2&#43;2=5</title>
-    <link>https://simon-lu.github.io/tags/%E6%B7%B1%E5%BA%A6%E6%8E%A2%E7%B4%A2c&#43;&#43;%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/</link>
+    <link>https://wqlu.github.io/tags/%E6%B7%B1%E5%BA%A6%E6%8E%A2%E7%B4%A2c&#43;&#43;%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/</link>
     <description>Recent content in 深度探索C&#43;&#43;对象模型 on 2&#43;2=5</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 06 May 2019 20:39:58 +0000</lastBuildDate><atom:link href="https://simon-lu.github.io/tags/%E6%B7%B1%E5%BA%A6%E6%8E%A2%E7%B4%A2c++%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 May 2019 20:39:58 +0000</lastBuildDate><atom:link href="https://wqlu.github.io/tags/%E6%B7%B1%E5%BA%A6%E6%8E%A2%E7%B4%A2c++%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>《深度探索C&#43;&#43;对象模型》读书笔记</title>
-      <link>https://simon-lu.github.io/2019/inside_the_c-_object_model/</link>
+      <link>https://wqlu.github.io/2019/inside_the_c-_object_model/</link>
       <pubDate>Mon, 06 May 2019 20:39:58 +0000</pubDate>
       
-      <guid>https://simon-lu.github.io/2019/inside_the_c-_object_model/</guid>
+      <guid>https://wqlu.github.io/2019/inside_the_c-_object_model/</guid>
       <description>第一章 关于对象 关于封装后的布局成本 封装后Point3d并没有增加成本，data member直接内含在每一个class object中，memb</description>
     </item>
     

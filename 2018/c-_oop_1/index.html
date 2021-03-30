@@ -10,9 +10,9 @@
     
     
     
-    <link rel="prev" href="https://simon-lu.github.io/2018/c-_oop_2/" />
-    <link rel="next" href="https://simon-lu.github.io/2018/c-_stl/" />
-    <link rel="canonical" href="https://simon-lu.github.io/2018/c-_oop_1/" />
+    <link rel="prev" href="https://wqlu.github.io/2018/c-_oop_2/" />
+    <link rel="next" href="https://wqlu.github.io/2018/c-_stl/" />
+    <link rel="canonical" href="https://wqlu.github.io/2018/c-_oop_1/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -43,7 +43,7 @@
 <link rel="stylesheet" href="/css/main.min.css">
 
 
-<link rel="stylesheet" href="https://simon-lu.github.io/css/aplayer.css">
+<link rel="stylesheet" href="https://wqlu.github.io/css/aplayer.css">
 
     
     
@@ -55,7 +55,7 @@
     "@type" : "BlogPosting",
     "mainEntityOfPage": {
          "@type": "WebPage",
-         "@id": "https:\/\/simon-lu.github.io"
+         "@id": "https:\/\/wqlu.github.io"
     },
     "articleSection" : "posts",
     "name" : "C\u002b\u002b面向对象学习笔记(下)",
@@ -70,7 +70,7 @@
     "copyrightYear" : "2018",
     "datePublished": "2018-05-12 00:09:50 \u002b0000 UTC",
     "dateModified" : "2018-05-12 00:09:50 \u002b0000 UTC",
-    "url" : "https:\/\/simon-lu.github.io\/2018\/c-_oop_1\/",
+    "url" : "https:\/\/wqlu.github.io\/2018\/c-_oop_1\/",
     "wordCount" : "1982",
     "keywords" : [ "C\/C\u002b\u002b", "2\u002b2=5"]
 }
@@ -98,7 +98,7 @@
         
             <div class="navbar-header header-back2home-logo">
                 <span class="logo_mark" >>$</span>
-                <a href="https://simon-lu.github.io">
+                <a href="https://wqlu.github.io">
                     <span class="logo_text" >cd /home/</span>
                     <span class="logo_cursor" ></span>
                 </a>
@@ -133,7 +133,7 @@
      <div class="container">
         <div class="navbar">
             <div class="navbar-header header-logo">
-                    <a href="https://simon-lu.github.io">2&#43;2=5</a>
+                    <a href="https://wqlu.github.io">2&#43;2=5</a>
             </div>
             <div class="navbar-right">
                 <div><a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-DarkMode"></i></a></div>
@@ -200,7 +200,7 @@
                         
                         
                         
-                          <a href="https://simon-lu.github.io/categories/%E6%8A%80%E6%9C%AF/"> 技术 </a>
+                          <a href="https://wqlu.github.io/categories/%E6%8A%80%E6%9C%AF/"> 技术 </a>
                         
                         
                 </span>
@@ -208,7 +208,7 @@
 
                 
                     
-                    <a href="https://github.com/simon-lu/simon-lu.github.io/edit/blog/content/posts/c&#43;&#43;_oop_1.md" target="_blank" rel="noopener">
+                    <a href="https://github.com/wqlu/wqlu.github.io/edit/blog/content/posts/c&#43;&#43;_oop_1.md" target="_blank" rel="noopener">
                         <i class="iconfont icon-edit"></i>
                     </a>
                 
@@ -408,13 +408,13 @@ ite <span style="color:#f92672">=</span> find(c.begin(), c.end(), target);
 <p>对象和其reference的大小、地址都相同(全都是假象)<br>
 <em>多用于参数传递，而不是声明变量</em><br>
 引用底层传递的其实是指针，速度比较快</p>
-<p><img src="https://raw.githubusercontent.com/simon-lu/ImgRepo/master/Blog/reference.png" alt="reference" loading="lazy" ></p>
+<p><img src="https://raw.githubusercontent.com/wqlu/ImgRepo/master/Blog/reference.png" alt="reference" loading="lazy" ></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">// 两者不能同时存在，由于是same signature(不包含返回类型)
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">double</span> <span style="color:#a6e22e">imag</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">double</span><span style="color:#f92672">&amp;</span> im) { ... }
 <span style="color:#66d9ef">double</span> <span style="color:#a6e22e">imag</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">double</span> im) { ... } <span style="color:#75715e">// 会有二义
 </span></code></pre></div><p><strong>const是函数签名的一部分，一个有const,一个没有const的是可以共存的</strong></p>
 <h3 id="对象模型object-model关于vptr和vtbl">对象模型(Object Model)：关于vptr和vtbl</h3>
-<p><img src="https://raw.githubusercontent.com/simon-lu/ImgRepo/master/Blog/vptr.png" alt="vptr" loading="lazy" ></p>
+<p><img src="https://raw.githubusercontent.com/wqlu/ImgRepo/master/Blog/vptr.png" alt="vptr" loading="lazy" ></p>
 <p>只要有一个虚函数，就会有指针，不管有多少个，只会有一个vptr<br>
 父类有虚函数，子类也一定有</p>
 <p>静态绑定会被编译器编译成call address
@@ -427,11 +427,11 @@ ite <span style="color:#f92672">=</span> find(c.begin(), c.end(), target);
 </ol>
 <p>走的是下图的路线，注意是A*,调用不同的虚函数来创建不同的形状
 p就是this pointe<br>
-<img src="https://raw.githubusercontent.com/simon-lu/ImgRepo/master/Blog/%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A.png" alt="动态绑定" loading="lazy" ></p>
+<img src="https://raw.githubusercontent.com/wqlu/ImgRepo/master/Blog/%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A.png" alt="动态绑定" loading="lazy" ></p>
 <h3 id="关于this">关于this</h3>
 <p>通过对象来调用一个函数，对象的地址就是this<br>
 下面的例子满足三个条件
-<img src="https://raw.githubusercontent.com/simon-lu/ImgRepo/master/Blog/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3this.png" alt="深入理解this" loading="lazy" ></p>
+<img src="https://raw.githubusercontent.com/wqlu/ImgRepo/master/Blog/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3this.png" alt="深入理解this" loading="lazy" ></p>
 <h3 id="谈谈const">谈谈const</h3>
 <p><strong>const object是不能调用non-const member functions,编译器无法通过</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">const</span> String <span style="color:#a6e22e">str</span>(<span style="color:#e6db74">&#34;hello world&#34;</span>);
@@ -461,7 +461,7 @@ COW: Copy On Write
 即使operator delete() 未能一一对应operator new(),也不会报错，意思是，你放弃了处理ctor发出的异常。</p>
 <h3 id="basic_string使用newextra扩充申请量">basic_string使用new(extra)扩充申请量</h3>
 <p>Rep是用来的计数引用的</p>
-<p><img src="https://raw.githubusercontent.com/simon-lu/ImgRepo/master/Blog/basic_string.png" alt="basic_string" loading="lazy" ></p>
+<p><img src="https://raw.githubusercontent.com/wqlu/ImgRepo/master/Blog/basic_string.png" alt="basic_string" loading="lazy" ></p>
 
     </div>
 
@@ -476,7 +476,7 @@ COW: Copy On Write
             
             <p class="copyright-item">
                     <span>Link:</span>
-                    <a href=https://simon-lu.github.io/2018/c-_oop_1/>https://simon-lu.github.io/2018/c-_oop_1/</span>
+                    <a href=https://wqlu.github.io/2018/c-_oop_1/>https://wqlu.github.io/2018/c-_oop_1/</span>
             </p>
             
             
@@ -492,23 +492,23 @@ COW: Copy On Write
             <section>
             <i class="iconfont icon-tag"></i>Tag(s):
             
-            <span class="tag"><a href="https://simon-lu.github.io/tags/c/c&#43;&#43;/">
+            <span class="tag"><a href="https://wqlu.github.io/tags/c/c&#43;&#43;/">
                     #C/C&#43;&#43;</a></span>
             
             </section>
         
         <section>
                 <a href="javascript:window.history.back();">back</a></span> ·
-                <span><a href="https://simon-lu.github.io">home</a></span>
+                <span><a href="https://wqlu.github.io">home</a></span>
         </section>
     </div>
 
     <div class="post-nav">
         
-        <a href="https://simon-lu.github.io/2018/c-_oop_2/" class="prev" rel="prev" title="C&#43;&#43;面向对象学习笔记(上)"><i class="iconfont icon-left"></i>&nbsp;C&#43;&#43;面向对象学习笔记(上)</a>
+        <a href="https://wqlu.github.io/2018/c-_oop_2/" class="prev" rel="prev" title="C&#43;&#43;面向对象学习笔记(上)"><i class="iconfont icon-left"></i>&nbsp;C&#43;&#43;面向对象学习笔记(上)</a>
         
         
-        <a href="https://simon-lu.github.io/2018/c-_stl/" class="next" rel="next" title="C&#43;&#43; STL和泛型编程">C&#43;&#43; STL和泛型编程&nbsp;<i class="iconfont icon-right"></i></a>
+        <a href="https://wqlu.github.io/2018/c-_stl/" class="next" rel="next" title="C&#43;&#43; STL和泛型编程">C&#43;&#43; STL和泛型编程&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 
@@ -527,13 +527,13 @@ COW: Copy On Write
         
         <span class="with-love">
             
-            <a href="https://github.com/simon-lu/simon-lu.github.io/issues" target="_blank" rel="noopener">
+            <a href="https://github.com/wqlu/wqlu.github.io/issues" target="_blank" rel="noopener">
                <i class="iconfont icon-love"></i>
             </a>
             
          </span>
          
-            <span class="author" itemprop="copyrightHolder"><a href="https://simon-lu.github.io">Simon Lu</a> | </span>
+            <span class="author" itemprop="copyrightHolder"><a href="https://wqlu.github.io">Simon Lu</a> | </span>
          
 
          

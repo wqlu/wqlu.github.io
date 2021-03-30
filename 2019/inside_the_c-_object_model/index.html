@@ -10,9 +10,9 @@
     
     
     
-    <link rel="prev" href="https://simon-lu.github.io/2019/leetcode107/" />
-    <link rel="next" href="https://simon-lu.github.io/2019/commands_in_server_dev/" />
-    <link rel="canonical" href="https://simon-lu.github.io/2019/inside_the_c-_object_model/" />
+    <link rel="prev" href="https://wqlu.github.io/2019/leetcode107/" />
+    <link rel="next" href="https://wqlu.github.io/2019/commands_in_server_dev/" />
+    <link rel="canonical" href="https://wqlu.github.io/2019/inside_the_c-_object_model/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -43,7 +43,7 @@
 <link rel="stylesheet" href="/css/main.min.css">
 
 
-<link rel="stylesheet" href="https://simon-lu.github.io/css/aplayer.css">
+<link rel="stylesheet" href="https://wqlu.github.io/css/aplayer.css">
 
     
     
@@ -55,7 +55,7 @@
     "@type" : "BlogPosting",
     "mainEntityOfPage": {
          "@type": "WebPage",
-         "@id": "https:\/\/simon-lu.github.io"
+         "@id": "https:\/\/wqlu.github.io"
     },
     "articleSection" : "posts",
     "name" : "《深度探索C\u002b\u002b对象模型》读书笔记",
@@ -70,7 +70,7 @@
     "copyrightYear" : "2019",
     "datePublished": "2019-05-06 20:39:58 \u002b0000 UTC",
     "dateModified" : "2019-05-06 20:39:58 \u002b0000 UTC",
-    "url" : "https:\/\/simon-lu.github.io\/2019\/inside_the_c-_object_model\/",
+    "url" : "https:\/\/wqlu.github.io\/2019\/inside_the_c-_object_model\/",
     "wordCount" : "3654",
     "keywords" : [ "C\/C\u002b\u002b","深度探索C\u002b\u002b对象模型","读书笔记", "2\u002b2=5"]
 }
@@ -98,7 +98,7 @@
         
             <div class="navbar-header header-back2home-logo">
                 <span class="logo_mark" >>$</span>
-                <a href="https://simon-lu.github.io">
+                <a href="https://wqlu.github.io">
                     <span class="logo_text" >cd /home/</span>
                     <span class="logo_cursor" ></span>
                 </a>
@@ -133,7 +133,7 @@
      <div class="container">
         <div class="navbar">
             <div class="navbar-header header-logo">
-                    <a href="https://simon-lu.github.io">2&#43;2=5</a>
+                    <a href="https://wqlu.github.io">2&#43;2=5</a>
             </div>
             <div class="navbar-right">
                 <div><a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-DarkMode"></i></a></div>
@@ -200,7 +200,7 @@
                         
                         
                         
-                          <a href="https://simon-lu.github.io/categories/%E6%8A%80%E6%9C%AF/"> 技术 </a>
+                          <a href="https://wqlu.github.io/categories/%E6%8A%80%E6%9C%AF/"> 技术 </a>
                         
                         
                 </span>
@@ -208,7 +208,7 @@
 
                 
                     
-                    <a href="https://github.com/simon-lu/simon-lu.github.io/edit/blog/content/posts/inside_the_c&#43;&#43;_Object_model.md" target="_blank" rel="noopener">
+                    <a href="https://github.com/wqlu/wqlu.github.io/edit/blog/content/posts/inside_the_c&#43;&#43;_Object_model.md" target="_blank" rel="noopener">
                         <i class="iconfont icon-edit"></i>
                     </a>
                 
@@ -315,7 +315,7 @@ ADT中，程序员处理的是一个拥有固定而单一类型的实例，它�
 };
 </code></pre></div><p>在VS中查看某个类的内存布局，在project Property-&gt;Configuration Properties-&gt;C/C++-&gt;Command Line写入*/d1 reportSingleClassLayoutZooAnimal*，build后就可以在输出中看到此类的内存布局
 所有类的内存布局命令为*/d1 reportAllClassLayout*
-<img src="https://raw.githubusercontent.com/simon-lu/ImgRepo/master/Blog/ZooAnimal%E5%86%85%E5%AD%98%E5%B8%83%E5%B1%80.png" alt="ZooAnimal内存布局" loading="lazy" >
+<img src="https://raw.githubusercontent.com/wqlu/ImgRepo/master/Blog/ZooAnimal%E5%86%85%E5%AD%98%E5%B8%83%E5%B1%80.png" alt="ZooAnimal内存布局" loading="lazy" >
 由此可见，string默认大小为28bytes</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Bear</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">public</span> ZooAnimal {
 <span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
@@ -328,7 +328,7 @@ ADT中，程序员处理的是一个拥有固定而单一类型的实例，它�
     Dance dances_know;
     <span style="color:#66d9ef">int</span> cell_block;
 };
-</code></pre></div><p><img src="https://raw.githubusercontent.com/simon-lu/ImgRepo/master/Blog/Bear%E5%86%85%E5%AD%98%E5%B8%83%E5%B1%80.png" alt="Bear内存布局" loading="lazy" ></p>
+</code></pre></div><p><img src="https://raw.githubusercontent.com/wqlu/ImgRepo/master/Blog/Bear%E5%86%85%E5%AD%98%E5%B8%83%E5%B1%80.png" alt="Bear内存布局" loading="lazy" ></p>
 <h2 id="第二章-构造函数语意学">第二章 构造函数语意学</h2>
 <h3 id="default-constructor的构造操作">Default Constructor的构造操作</h3>
 <p>什么是默认构造函数？是可以不用实参进行调用的构造函数，包含两种情况：</p>
@@ -436,7 +436,7 @@ ADT中，程序员处理的是一个拥有固定而单一类型的实例，它�
             
             <p class="copyright-item">
                     <span>Link:</span>
-                    <a href=https://simon-lu.github.io/2019/inside_the_c-_object_model/>https://simon-lu.github.io/2019/inside_the_c-_object_model/</span>
+                    <a href=https://wqlu.github.io/2019/inside_the_c-_object_model/>https://wqlu.github.io/2019/inside_the_c-_object_model/</span>
             </p>
             
             
@@ -452,29 +452,29 @@ ADT中，程序员处理的是一个拥有固定而单一类型的实例，它�
             <section>
             <i class="iconfont icon-tag"></i>Tag(s):
             
-            <span class="tag"><a href="https://simon-lu.github.io/tags/c/c&#43;&#43;/">
+            <span class="tag"><a href="https://wqlu.github.io/tags/c/c&#43;&#43;/">
                     #C/C&#43;&#43;</a></span>
             
-            <span class="tag"><a href="https://simon-lu.github.io/tags/%E6%B7%B1%E5%BA%A6%E6%8E%A2%E7%B4%A2c&#43;&#43;%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/">
+            <span class="tag"><a href="https://wqlu.github.io/tags/%E6%B7%B1%E5%BA%A6%E6%8E%A2%E7%B4%A2c&#43;&#43;%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B/">
                     #深度探索C&#43;&#43;对象模型</a></span>
             
-            <span class="tag"><a href="https://simon-lu.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
+            <span class="tag"><a href="https://wqlu.github.io/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">
                     #读书笔记</a></span>
             
             </section>
         
         <section>
                 <a href="javascript:window.history.back();">back</a></span> ·
-                <span><a href="https://simon-lu.github.io">home</a></span>
+                <span><a href="https://wqlu.github.io">home</a></span>
         </section>
     </div>
 
     <div class="post-nav">
         
-        <a href="https://simon-lu.github.io/2019/leetcode107/" class="prev" rel="prev" title="LeetCode中遇到的问题"><i class="iconfont icon-left"></i>&nbsp;LeetCode中遇到的问题</a>
+        <a href="https://wqlu.github.io/2019/leetcode107/" class="prev" rel="prev" title="LeetCode中遇到的问题"><i class="iconfont icon-left"></i>&nbsp;LeetCode中遇到的问题</a>
         
         
-        <a href="https://simon-lu.github.io/2019/commands_in_server_dev/" class="next" rel="next" title="linux服务器端开发常用的命令">linux服务器端开发常用的命令&nbsp;<i class="iconfont icon-right"></i></a>
+        <a href="https://wqlu.github.io/2019/commands_in_server_dev/" class="next" rel="next" title="linux服务器端开发常用的命令">linux服务器端开发常用的命令&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 
@@ -493,13 +493,13 @@ ADT中，程序员处理的是一个拥有固定而单一类型的实例，它�
         
         <span class="with-love">
             
-            <a href="https://github.com/simon-lu/simon-lu.github.io/issues" target="_blank" rel="noopener">
+            <a href="https://github.com/wqlu/wqlu.github.io/issues" target="_blank" rel="noopener">
                <i class="iconfont icon-love"></i>
             </a>
             
          </span>
          
-            <span class="author" itemprop="copyrightHolder"><a href="https://simon-lu.github.io">Simon Lu</a> | </span>
+            <span class="author" itemprop="copyrightHolder"><a href="https://wqlu.github.io">Simon Lu</a> | </span>
          
 
          

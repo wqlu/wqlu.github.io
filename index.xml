@@ -1,28 +1,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2&#43;2=5 on 2&#43;2=5</title>
-    <link>https://simon-lu.github.io/</link>
+    <link>https://wqlu.github.io/</link>
     <description>Recent content in 2&#43;2=5 on 2&#43;2=5</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Thu, 18 Feb 2021 16:28:47 +0800</lastBuildDate>
-    <atom:link href="https://simon-lu.github.io/" rel="self" type="application/rss+xml" />
+    <atom:link href="https://wqlu.github.io/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Posts</title>
-      <link>https://simon-lu.github.io/posts/</link>
+      <link>https://wqlu.github.io/posts/</link>
       <pubDate>Thu, 18 Feb 2021 16:28:47 +0800</pubDate>
       
-      <guid>https://simon-lu.github.io/posts/</guid>
+      <guid>https://wqlu.github.io/posts/</guid>
       <description></description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://simon-lu.github.io/about/</link>
+      <link>https://wqlu.github.io/about/</link>
       <pubDate>Fri, 02 Aug 2019 11:04:49 +0800</pubDate>
       
-      <guid>https://simon-lu.github.io/about/</guid>
+      <guid>https://wqlu.github.io/about/</guid>
       <description>&lt;style&gt;
 
     @import url(&#39;https://fonts.googleapis.com/css?family=Katibeh&amp;display=swap&#39;);
@@ -119,37 +119,37 @@
         &lt;ul&gt;
 	&lt;li&gt;&lt;p&gt;&lt;span class=&#34;iconfont icon-mail&#34;&gt;&lt;/span&gt; Email: &lt;a href=&#34;mailto:wq.lu@outlook.com&#34;
                     rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;wq.lu@outlook.com&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-	&lt;li&gt;&lt;p&gt;&lt;span class=&#34;iconfont icon-git&#34;&gt;&lt;/span&gt; GitHub: &lt;a href=&#34;https://github.com/simon-lu&#34;
-                        rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;simon-lu&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;p&gt;&lt;span class=&#34;iconfont icon-git&#34;&gt;&lt;/span&gt; GitHub: &lt;a href=&#34;https://github.com/wqlu&#34;
+                        rel=&#34;nofollow noreferrer&#34; target=&#34;_blank&#34;&gt;wqlu&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
         &lt;/ul&gt;
     &lt;/div&gt;
     &lt;div class=&#34;about-info-right&#34;&gt;
 	    &lt;div class=&#34;left-hand&#34;&gt;&lt;span style=&#34;font-size: 0.5em&#34;&gt;&amp;ensp;&lt;/span&gt;٩&lt;/div&gt;
         &lt;div class=&#34;left-ear&#34;&gt;▲&lt;/div&gt;
-        &lt;img alt=&#34;simon-lu&#34; src=&#34;https://simon-lu.github.io/images/avatar.png&#34;&gt;
+        &lt;img alt=&#34;wqlu&#34; src=&#34;https://wqlu.github.io/images/avatar.png&#34;&gt;
         &lt;div class=&#34;right-ear&#34;&gt;▲&lt;/div&gt;
         &lt;div class=&#34;right-hand&#34;&gt;و&lt;span style=&#34;font-size: 0.5em&#34;&gt;✧&lt;/span&gt;&lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;img src=&#34;https://ghchart.rshah.org/simon-lu&#34; alt=&#34;simon-lu&#39;s Github chart&#34; style=&#34;width: 100%;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://ghchart.rshah.org/wqlu&#34; alt=&#34;wqlu&#39;s Github chart&#34; style=&#34;width: 100%;&#34;&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Books</title>
-      <link>https://simon-lu.github.io/books/</link>
+      <link>https://wqlu.github.io/books/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://simon-lu.github.io/books/</guid>
+      <guid>https://wqlu.github.io/books/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Movies</title>
-      <link>https://simon-lu.github.io/movies/</link>
+      <link>https://wqlu.github.io/movies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://simon-lu.github.io/movies/</guid>
+      <guid>https://wqlu.github.io/movies/</guid>
       <description></description>
     </item>
     

@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>C/C&#43;&#43; on 2&#43;2=5</title>
-    <link>https://simon-lu.github.io/tags/c/c&#43;&#43;/</link>
+    <link>https://wqlu.github.io/tags/c/c&#43;&#43;/</link>
     <description>Recent content in C/C&#43;&#43; on 2&#43;2=5</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language><atom:link href="https://simon-lu.github.io/tags/c/c++/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-CN</language><atom:link href="https://wqlu.github.io/tags/c/c++/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>从一段代码的运行结果说起</title>
-      <link>https://simon-lu.github.io/2019/begin_with_a_piece_of_code/</link>
+      <link>https://wqlu.github.io/2019/begin_with_a_piece_of_code/</link>
       <pubDate>Thu, 26 Sep 2019 22:29:48 +0000</pubDate>
       
-      <guid>https://simon-lu.github.io/2019/begin_with_a_piece_of_code/</guid>
+      <guid>https://wqlu.github.io/2019/begin_with_a_piece_of_code/</guid>
       <description>本来是一道面试题目，想深究一下，加深自己对函数调用过程的理解，题目代码如下： class A { public: void f1() { cout &amp;lt;&amp;lt; &amp;#34;f1 function&amp;#34; &amp;lt;&amp;lt; endl; } void setA(int x) { a = x; cout &amp;lt;&amp;lt; &amp;#34;setA() function&amp;#34; &amp;lt;&amp;lt; endl; } int getA() { cout</description>
     </item>
     
     <item>
       <title>《深度探索C&#43;&#43;对象模型》读书笔记</title>
-      <link>https://simon-lu.github.io/2019/inside_the_c-_object_model/</link>
+      <link>https://wqlu.github.io/2019/inside_the_c-_object_model/</link>
       <pubDate>Mon, 06 May 2019 20:39:58 +0000</pubDate>
       
-      <guid>https://simon-lu.github.io/2019/inside_the_c-_object_model/</guid>
+      <guid>https://wqlu.github.io/2019/inside_the_c-_object_model/</guid>
       <description>第一章 关于对象 关于封装后的布局成本 封装后Point3d并没有增加成本，data member直接内含在每一个class object中，memb</description>
     </item>
     
     <item>
       <title>C&#43;&#43; STL和泛型编程</title>
-      <link>https://simon-lu.github.io/2018/c-_stl/</link>
+      <link>https://wqlu.github.io/2018/c-_stl/</link>
       <pubDate>Tue, 15 May 2018 13:17:06 +0000</pubDate>
       
-      <guid>https://simon-lu.github.io/2018/c-_stl/</guid>
+      <guid>https://wqlu.github.io/2018/c-_stl/</guid>
       <description>headers C++ Standard Library &amp;gt; Standard Template Librry 标准库以header files形式呈现 C++标准库的header files不带(.h),例如 #include&amp;lt;vector&amp;gt; 新式C header files不带(.h)</description>
     </item>
     
     <item>
       <title>C&#43;&#43;面向对象学习笔记(下)</title>
-      <link>https://simon-lu.github.io/2018/c-_oop_1/</link>
+      <link>https://wqlu.github.io/2018/c-_oop_1/</link>
       <pubDate>Sat, 12 May 2018 00:09:50 +0000</pubDate>
       
-      <guid>https://simon-lu.github.io/2018/c-_oop_1/</guid>
+      <guid>https://wqlu.github.io/2018/c-_oop_1/</guid>
       <description>conversion function 没有返回类型 class Fraction { public: // 要加const，分子和分母并不会改变 // 由于已经有了double(),虽然是返回double类型，但是可以不写 operator double() const</description>
     </item>
     
     <item>
       <title>C&#43;&#43;面向对象学习笔记(上)</title>
-      <link>https://simon-lu.github.io/2018/c-_oop_2/</link>
+      <link>https://wqlu.github.io/2018/c-_oop_2/</link>
       <pubDate>Thu, 10 May 2018 14:21:17 +0000</pubDate>
       
-      <guid>https://simon-lu.github.io/2018/c-_oop_2/</guid>
+      <guid>https://wqlu.github.io/2018/c-_oop_2/</guid>
       <description>推荐书籍 《C++ Primer》 《Effective C++》 头文件与类 Header的防卫式声明： 以complex.h为例 #ifndef __COMPLEX__ #define __COMPLEX__ ... ... #endif constructor 尽量使</description>
     </item>
     

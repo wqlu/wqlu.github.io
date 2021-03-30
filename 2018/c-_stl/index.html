@@ -10,9 +10,9 @@
     
     
     
-    <link rel="prev" href="https://simon-lu.github.io/2018/c-_oop_1/" />
-    <link rel="next" href="https://simon-lu.github.io/2019/leetcode107/" />
-    <link rel="canonical" href="https://simon-lu.github.io/2018/c-_stl/" />
+    <link rel="prev" href="https://wqlu.github.io/2018/c-_oop_1/" />
+    <link rel="next" href="https://wqlu.github.io/2019/leetcode107/" />
+    <link rel="canonical" href="https://wqlu.github.io/2018/c-_stl/" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -43,7 +43,7 @@
 <link rel="stylesheet" href="/css/main.min.css">
 
 
-<link rel="stylesheet" href="https://simon-lu.github.io/css/aplayer.css">
+<link rel="stylesheet" href="https://wqlu.github.io/css/aplayer.css">
 
     
     
@@ -55,7 +55,7 @@
     "@type" : "BlogPosting",
     "mainEntityOfPage": {
          "@type": "WebPage",
-         "@id": "https:\/\/simon-lu.github.io"
+         "@id": "https:\/\/wqlu.github.io"
     },
     "articleSection" : "posts",
     "name" : "C\u002b\u002b STL和泛型编程",
@@ -70,7 +70,7 @@
     "copyrightYear" : "2018",
     "datePublished": "2018-05-15 13:17:06 \u002b0000 UTC",
     "dateModified" : "2018-05-15 13:17:06 \u002b0000 UTC",
-    "url" : "https:\/\/simon-lu.github.io\/2018\/c-_stl\/",
+    "url" : "https:\/\/wqlu.github.io\/2018\/c-_stl\/",
     "wordCount" : "1370",
     "keywords" : [ "C\/C\u002b\u002b", "2\u002b2=5"]
 }
@@ -98,7 +98,7 @@
         
             <div class="navbar-header header-back2home-logo">
                 <span class="logo_mark" >>$</span>
-                <a href="https://simon-lu.github.io">
+                <a href="https://wqlu.github.io">
                     <span class="logo_text" >cd /home/</span>
                     <span class="logo_cursor" ></span>
                 </a>
@@ -133,7 +133,7 @@
      <div class="container">
         <div class="navbar">
             <div class="navbar-header header-logo">
-                    <a href="https://simon-lu.github.io">2&#43;2=5</a>
+                    <a href="https://wqlu.github.io">2&#43;2=5</a>
             </div>
             <div class="navbar-right">
                 <div><a href="javascript:void(0);" class="theme-switch"><i class="iconfont icon-DarkMode"></i></a></div>
@@ -200,7 +200,7 @@
                         
                         
                         
-                          <a href="https://simon-lu.github.io/categories/%E6%8A%80%E6%9C%AF/"> 技术 </a>
+                          <a href="https://wqlu.github.io/categories/%E6%8A%80%E6%9C%AF/"> 技术 </a>
                         
                         
                 </span>
@@ -208,7 +208,7 @@
 
                 
                     
-                    <a href="https://github.com/simon-lu/simon-lu.github.io/edit/blog/content/posts/c&#43;&#43;_stl.md" target="_blank" rel="noopener">
+                    <a href="https://github.com/wqlu/wqlu.github.io/edit/blog/content/posts/c&#43;&#43;_stl.md" target="_blank" rel="noopener">
                         <i class="iconfont icon-edit"></i>
                     </a>
                 
@@ -269,7 +269,7 @@
 <li>旧式C header files(带.h)，仍然可以使用,例如 #include&lt;stdio.h&gt;</li>
 </ul>
 <h3 id="stl六大组件">STL六大组件</h3>
-<p><img src="https://raw.githubusercontent.com/simon-lu/ImgRepo/master/Blog/%E5%85%AD%E5%A4%A7%E7%BB%84%E4%BB%B6.png" alt="六大组件" loading="lazy" ></p>
+<p><img src="https://raw.githubusercontent.com/wqlu/ImgRepo/master/Blog/%E5%85%AD%E5%A4%A7%E7%BB%84%E4%BB%B6.png" alt="六大组件" loading="lazy" ></p>
 <p>前闭后开*(c.begin())是第一个，而*(c.end())不是容器的一部分</p>
 <h3 id="容器--结构和分类">容器&ndash;结构和分类</h3>
 <p>序列容器：</p>
@@ -296,7 +296,7 @@
 <p>list不能使用::sort()全局的排序算法,因为它要求随机存取iterator<br>
 容器有自己的sort就使用自己的sort,没有才使用全局的sort</p>
 <h3 id="各种容器的分类">各种容器的分类</h3>
-<p><img src="https://raw.githubusercontent.com/simon-lu/ImgRepo/master/Blog/%E5%90%84%E7%B1%BB%E5%AE%B9%E5%99%A8%E5%88%86%E7%B1%BB.png" alt="各类容器的分类" loading="lazy" >
+<p><img src="https://raw.githubusercontent.com/wqlu/ImgRepo/master/Blog/%E5%90%84%E7%B1%BB%E5%AE%B9%E5%99%A8%E5%88%86%E7%B1%BB.png" alt="各类容器的分类" loading="lazy" >
 其中slist就是forward_list,上图的衍生，并非继承，而是复合</p>
 <p>A想拥有B的方法，有两个方法：1.A继承B; 2.A拥有一个B;<br>
 <em>标准库一般不用继承</em></p>
@@ -319,7 +319,7 @@
     <span style="color:#66d9ef">typedef</span> T value_type;  <span style="color:#75715e">// note:是T而不是const T
 </span><span style="color:#75715e"></span>};
 </code></pre></div><p>value_type的uo用是来声明变量的，声明一个无法被赋hi的变量没用，所以不愿加上const<br>
-<img src="https://raw.githubusercontent.com/simon-lu/ImgRepo/master/Blog/%E5%AE%8C%E6%95%B4%E7%9A%84iterator%20Traits.png" alt="完整的iterator Traits" loading="lazy" ></p>
+<img src="https://raw.githubusercontent.com/wqlu/ImgRepo/master/Blog/%E5%AE%8C%E6%95%B4%E7%9A%84iterator%20Traits.png" alt="完整的iterator Traits" loading="lazy" ></p>
 <h3 id="vector深度探索">vector深度探索</h3>
 <p>二倍成hang: 扩充是不能原地扩充的，需要把东西搬过去<br>
 3个pointer: start,finish,end_of_storage<br>
@@ -371,7 +371,7 @@ stack可选vector作为底部结构,但queue不可以(<em>vector没有pop_front<
             
             <p class="copyright-item">
                     <span>Link:</span>
-                    <a href=https://simon-lu.github.io/2018/c-_stl/>https://simon-lu.github.io/2018/c-_stl/</span>
+                    <a href=https://wqlu.github.io/2018/c-_stl/>https://wqlu.github.io/2018/c-_stl/</span>
             </p>
             
             
@@ -387,23 +387,23 @@ stack可选vector作为底部结构,但queue不可以(<em>vector没有pop_front<
             <section>
             <i class="iconfont icon-tag"></i>Tag(s):
             
-            <span class="tag"><a href="https://simon-lu.github.io/tags/c/c&#43;&#43;/">
+            <span class="tag"><a href="https://wqlu.github.io/tags/c/c&#43;&#43;/">
                     #C/C&#43;&#43;</a></span>
             
             </section>
         
         <section>
                 <a href="javascript:window.history.back();">back</a></span> ·
-                <span><a href="https://simon-lu.github.io">home</a></span>
+                <span><a href="https://wqlu.github.io">home</a></span>
         </section>
     </div>
 
     <div class="post-nav">
         
-        <a href="https://simon-lu.github.io/2018/c-_oop_1/" class="prev" rel="prev" title="C&#43;&#43;面向对象学习笔记(下)"><i class="iconfont icon-left"></i>&nbsp;C&#43;&#43;面向对象学习笔记(下)</a>
+        <a href="https://wqlu.github.io/2018/c-_oop_1/" class="prev" rel="prev" title="C&#43;&#43;面向对象学习笔记(下)"><i class="iconfont icon-left"></i>&nbsp;C&#43;&#43;面向对象学习笔记(下)</a>
         
         
-        <a href="https://simon-lu.github.io/2019/leetcode107/" class="next" rel="next" title="LeetCode中遇到的问题">LeetCode中遇到的问题&nbsp;<i class="iconfont icon-right"></i></a>
+        <a href="https://wqlu.github.io/2019/leetcode107/" class="next" rel="next" title="LeetCode中遇到的问题">LeetCode中遇到的问题&nbsp;<i class="iconfont icon-right"></i></a>
         
     </div>
 
@@ -422,13 +422,13 @@ stack可选vector作为底部结构,但queue不可以(<em>vector没有pop_front<
         
         <span class="with-love">
             
-            <a href="https://github.com/simon-lu/simon-lu.github.io/issues" target="_blank" rel="noopener">
+            <a href="https://github.com/wqlu/wqlu.github.io/issues" target="_blank" rel="noopener">
                <i class="iconfont icon-love"></i>
             </a>
             
          </span>
          
-            <span class="author" itemprop="copyrightHolder"><a href="https://simon-lu.github.io">Simon Lu</a> | </span>
+            <span class="author" itemprop="copyrightHolder"><a href="https://wqlu.github.io">Simon Lu</a> | </span>
          
 
          
