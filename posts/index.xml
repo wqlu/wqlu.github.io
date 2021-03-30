@@ -6,7 +6,16 @@
     <description>Recent content in Posts on 2&#43;2=5</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sat, 12 Dec 2020 02:30:02 +0800</lastBuildDate><atom:link href="https://simon-lu.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Feb 2021 16:28:47 +0800</lastBuildDate><atom:link href="https://simon-lu.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>什么是差分数组？</title>
+      <link>https://simon-lu.github.io/2021/what_is_diff_arr/</link>
+      <pubDate>Thu, 18 Feb 2021 16:28:47 +0800</pubDate>
+      
+      <guid>https://simon-lu.github.io/2021/what_is_diff_arr/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Leetcode 376.摆动序列</title>
       <link>https://simon-lu.github.io/2020/leetcode376/</link>
