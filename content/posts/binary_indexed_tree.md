@@ -23,7 +23,7 @@ Fenwick树主要是用来解决数组前缀和的问题，其主要思想是在�
 
 在query的时候，树是另外一种的形态。需要计算从该节点到根节点所有值的和，即为前`i`的和`sum[i]`
 
-![FinwickTree](https://raw.githubusercontent.com/simon-lu/ImgRepo/master/Blog/FinwickTree.png)
+![FinwickTree](https://raw.githubusercontent.com/wqlu/ImgRepo/master/Blog/FinwickTree.png)
 
 ## 实现
 

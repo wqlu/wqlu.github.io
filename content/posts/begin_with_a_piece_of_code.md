@@ -37,14 +37,14 @@ a->f2();
 
 依次调用上述的函数，结果如下图所示：
 
-![运行结果](https://raw.githubusercontent.com/simon-lu/ImgRepo/master/Blog/%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C.png)
+![运行结果](https://raw.githubusercontent.com/wqlu/ImgRepo/master/Blog/%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C.png)
 
 首先，`a`是指向A类型的指针，它所指向的类型被编译器记住了，所以它可以调用A的成员函数。
 
-但是，剩余几个的结果都是`core dump`，使用gdb分析产生的core文件，生成core文件的方法详细见[如何使用GDB调试项目](https://simon-lu.github.io/2019/06/03/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8GDB%E8%B0%83%E8%AF%95%E9%A1%B9%E7%9B%AE/)，可以看到产生`core dump`的语句都是使用到`this`指针的时候，但是`this`指针的值是`0x0`，所以会产生这种现象。
+但是，剩余几个的结果都是`core dump`，使用gdb分析产生的core文件，生成core文件的方法详细见[如何使用GDB调试项目](https://wqlu.github.io/2019/06/03/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8GDB%E8%B0%83%E8%AF%95%E9%A1%B9%E7%9B%AE/)，可以看到产生`core dump`的语句都是使用到`this`指针的时候，但是`this`指针的值是`0x0`，所以会产生这种现象。
 
 f1()、setA()和getA()都有一个隐藏的`this`参数，调试的时候能够使用`step`进入查看
 
-![step结果](https://raw.githubusercontent.com/simon-lu/ImgRepo/master/Blog/step%E7%BB%93%E6%9E%9C.png)
+![step结果](https://raw.githubusercontent.com/wqlu/ImgRepo/master/Blog/step%E7%BB%93%E6%9E%9C.png)
 
 非虚函数的地址在编译依然确定，但虚函数的地址需要查询虚函数表才能获知，而虚函数表的访问需要`this`指针，所以无法进入f2()函数内部。

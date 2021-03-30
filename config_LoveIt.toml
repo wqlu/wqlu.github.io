@@ -95,7 +95,7 @@ theme = "LeaveIt"
       defaultHiddenFromHomePage = false
   # 主页的社交信息设置
   [params.social]
-    GitHub = "simon-lu"
+    GitHub = "wqlu"
     # Linkedin = "xxxx"
     # Twitter = "xxxx"
     # Instagram = "xxxx"

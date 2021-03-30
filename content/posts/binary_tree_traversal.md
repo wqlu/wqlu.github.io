@@ -62,7 +62,7 @@ public:
 
 Note: 使用stack来模拟rev_postorder, 使用deque省去了reverse步骤
 
-![来自花花酱](https://raw.githubusercontent.com/simon-lu/ImgRepo/master/Blog/postorder.jpg)
+![来自花花酱](https://raw.githubusercontent.com/wqlu/ImgRepo/master/Blog/postorder.jpg)
 
 ```c++
 class Solution {

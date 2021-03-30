@@ -258,7 +258,7 @@ CLOSED -> SYN_SENT -> ESTABLISHED -> FIN_WAIT_1 -> FIN_WAIT_2 -> TIME_WAIT -> CL
 
 CLOSED -> LISTEN -> SYN_REVD -> ESTABLISHED -> CLOSE_WAIT -> LAST_ACK -> CLOSED
 
-![三次握手](https://raw.githubusercontent.com/simon-lu/ImgRepo/master/Blog/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.jpg)
+![三次握手](https://raw.githubusercontent.com/wqlu/ImgRepo/master/Blog/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.jpg)
 
 * 为什么三次握手？
 
@@ -266,7 +266,7 @@ CLOSED -> LISTEN -> SYN_REVD -> ESTABLISHED -> CLOSE_WAIT -> LAST_ACK -> CLOSED
 
 > client发出的第一个连接请求由于长时间滞留，以致延误到连接释放后的某个时间到达server，server收到后向client发出确认报文段，同意建立连接。假设不采用“三次握手”，那么新的连接就建立了，但是现在client并没有发出建立连接的请求，不会理采server，也不会向server发送数据，server会一直等待client发来数据。
 
-![四次挥手](https://raw.githubusercontent.com/simon-lu/ImgRepo/master/Blog/%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B.jpg)
+![四次挥手](https://raw.githubusercontent.com/wqlu/ImgRepo/master/Blog/%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B.jpg)
 
 * 为什么需要四次握手？
 通信
@@ -343,7 +343,7 @@ ping命令：相当于一个应用程序，位于应用层，但是使用的协�
 
 HTTPS在真正请求数据时，先会与服务器有几次握手验证，以验明相互的身份，如下图：
 
-![HTTPS通信过程](https://raw.githubusercontent.com/simon-lu/ImgRepo/master/Blog/HTTPS%E9%80%9A%E4%BF%A1%E8%BF%87%E7%A8%8B.png)
+![HTTPS通信过程](https://raw.githubusercontent.com/wqlu/ImgRepo/master/Blog/HTTPS%E9%80%9A%E4%BF%A1%E8%BF%87%E7%A8%8B.png)
 
 验证流程：
 
@@ -416,7 +416,7 @@ IPC的通常有管道（包括命名管道和无名管道）、消息队列、�
 
 [待补充](https://www.cnblogs.com/ralap7/p/9184773.html)
 
-![进程内存区域](https://raw.githubusercontent.com/simon-lu/ImgRepo/master/Blog/%E8%BF%9B%E7%A8%8B%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F.png)
+![进程内存区域](https://raw.githubusercontent.com/wqlu/ImgRepo/master/Blog/%E8%BF%9B%E7%A8%8B%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F.png)
 
 ### Linux下有哪些信号
 

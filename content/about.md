@@ -101,17 +101,17 @@ menu: main
         <ul>
 	<li><p><span class="iconfont icon-mail"></span> Email: <a href="mailto:wq.lu@outlook.com"
                     rel="nofollow noreferrer" target="_blank">wq.lu@outlook.com</a></p></li>
-	<li><p><span class="iconfont icon-git"></span> GitHub: <a href="https://github.com/simon-lu"
-                        rel="nofollow noreferrer" target="_blank">simon-lu</a></p></li>
+	<li><p><span class="iconfont icon-git"></span> GitHub: <a href="https://github.com/wqlu"
+                        rel="nofollow noreferrer" target="_blank">wqlu</a></p></li>
         </ul>
     </div>
     <div class="about-info-right">
 	    <div class="left-hand"><span style="font-size: 0.5em">&ensp;</span>٩</div>
         <div class="left-ear">▲</div>
-        <img alt="simon-lu" src="/images/avatar.png">
+        <img alt="wqlu" src="/images/avatar.png">
         <div class="right-ear">▲</div>
         <div class="right-hand">و<span style="font-size: 0.5em">✧</span></div>
     </div>
 </div>
 
-<p><img src="https://ghchart.rshah.org/simon-lu" alt="simon-lu's Github chart" style="width: 100%;"></p>
+<p><img src="https://ghchart.rshah.org/wqlu" alt="wqlu's Github chart" style="width: 100%;"></p>

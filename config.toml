@@ -1,4 +1,4 @@
-baseURL = "https://simon-lu.github.io"
+baseURL = "https://wqlu.github.io"
 languageCode = "zh-CN"
 title = "2+2=5"
 theme = "mogege"
@@ -68,12 +68,12 @@ preserveTaxonomyNames = true
 
     license= '本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可'
 
-    repoEditURL = "https://github.com/simon-lu/simon-lu.github.io/edit/blog"
+    repoEditURL = "https://github.com/wqlu/wqlu.github.io/edit/blog"
 
-		ideaURL = "https://github.com/simon-lu/simon-lu.github.io/issues"
+		ideaURL = "https://github.com/wqlu/wqlu.github.io/issues"
 
 [params.social]
-    GitHub = "simon-lu"
+    GitHub = "wqlu"
     Email = "wq.lu@outlook.com"
     # Instagram = "xxoo"
     # Wechat = "/images/me/wechat.png"  # Wechat QRcode image

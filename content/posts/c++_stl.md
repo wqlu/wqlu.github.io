@@ -17,7 +17,7 @@ C++ Standard Library > Standard Template Librry
 
 ### STL六大组件
 
-![六大组件](https://raw.githubusercontent.com/simon-lu/ImgRepo/master/Blog/%E5%85%AD%E5%A4%A7%E7%BB%84%E4%BB%B6.png)
+![六大组件](https://raw.githubusercontent.com/wqlu/ImgRepo/master/Blog/%E5%85%AD%E5%A4%A7%E7%BB%84%E4%BB%B6.png)
 
 前闭后开*(c.begin())是第一个，而*(c.end())不是容器的一部分
 
@@ -50,7 +50,7 @@ list不能使用::sort()全局的排序算法,因为它要求随机存取iterato
 
 ### 各种容器的分类
 
-![各类容器的分类](https://raw.githubusercontent.com/simon-lu/ImgRepo/master/Blog/%E5%90%84%E7%B1%BB%E5%AE%B9%E5%99%A8%E5%88%86%E7%B1%BB.png)
+![各类容器的分类](https://raw.githubusercontent.com/wqlu/ImgRepo/master/Blog/%E5%90%84%E7%B1%BB%E5%AE%B9%E5%99%A8%E5%88%86%E7%B1%BB.png)
 其中slist就是forward_list,上图的衍生，并非继承，而是复合
 
 A想拥有B的方法，有两个方法：1.A继承B; 2.A拥有一个B;  
@@ -80,7 +80,7 @@ struct iterator_traits<const T*> {
 ```
 
 value_type的uo用是来声明变量的，声明一个无法被赋hi的变量没用，所以不愿加上const  
-![完整的iterator Traits](https://raw.githubusercontent.com/simon-lu/ImgRepo/master/Blog/%E5%AE%8C%E6%95%B4%E7%9A%84iterator%20Traits.png)
+![完整的iterator Traits](https://raw.githubusercontent.com/wqlu/ImgRepo/master/Blog/%E5%AE%8C%E6%95%B4%E7%9A%84iterator%20Traits.png)
 
 ### vector深度探索
 

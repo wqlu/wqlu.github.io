@@ -201,7 +201,7 @@ for (auto& elem : vec) {
 *多用于参数传递，而不是声明变量*  
 引用底层传递的其实是指针，速度比较快
 
-![reference](https://raw.githubusercontent.com/simon-lu/ImgRepo/master/Blog/reference.png)
+![reference](https://raw.githubusercontent.com/wqlu/ImgRepo/master/Blog/reference.png)
 
 ```c++
 // 两者不能同时存在，由于是same signature(不包含返回类型)
@@ -213,7 +213,7 @@ double imag(const double im) { ... } // 会有二义
 
 ### 对象模型(Object Model)：关于vptr和vtbl
 
-![vptr](https://raw.githubusercontent.com/simon-lu/ImgRepo/master/Blog/vptr.png)  
+![vptr](https://raw.githubusercontent.com/wqlu/ImgRepo/master/Blog/vptr.png)  
 
 只要有一个虚函数，就会有指针，不管有多少个，只会有一个vptr  
 父类有虚函数，子类也一定有  
@@ -228,13 +228,13 @@ double imag(const double im) { ... } // 会有二义
 
 走的是下图的路线，注意是A*,调用不同的虚函数来创建不同的形状
 p就是this pointe  
-![动态绑定](https://raw.githubusercontent.com/simon-lu/ImgRepo/master/Blog/%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A.png)
+![动态绑定](https://raw.githubusercontent.com/wqlu/ImgRepo/master/Blog/%E5%8A%A8%E6%80%81%E7%BB%91%E5%AE%9A.png)
 
 ### 关于this
 
 通过对象来调用一个函数，对象的地址就是this  
 下面的例子满足三个条件
-![深入理解this](https://raw.githubusercontent.com/simon-lu/ImgRepo/master/Blog/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3this.png)
+![深入理解this](https://raw.githubusercontent.com/wqlu/ImgRepo/master/Blog/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3this.png)
 
 ### 谈谈const
 
@@ -283,4 +283,4 @@ void* operator new(size_t size, void* start) {
 
 Rep是用来的计数引用的
 
-![basic_string](https://raw.githubusercontent.com/simon-lu/ImgRepo/master/Blog/basic_string.png)
+![basic_string](https://raw.githubusercontent.com/wqlu/ImgRepo/master/Blog/basic_string.png)

@@ -68,7 +68,7 @@ protected:
 
 在VS中查看某个类的内存布局，在project Property->Configuration Properties->C/C++->Command Line写入*/d1 reportSingleClassLayoutZooAnimal*，build后就可以在输出中看到此类的内存布局
 所有类的内存布局命令为*/d1 reportAllClassLayout*
-![ZooAnimal内存布局](https://raw.githubusercontent.com/simon-lu/ImgRepo/master/Blog/ZooAnimal%E5%86%85%E5%AD%98%E5%B8%83%E5%B1%80.png )
+![ZooAnimal内存布局](https://raw.githubusercontent.com/wqlu/ImgRepo/master/Blog/ZooAnimal%E5%86%85%E5%AD%98%E5%B8%83%E5%B1%80.png )
 由此可见，string默认大小为28bytes
 
 ```c++
@@ -85,7 +85,7 @@ protected:
 };
 ```
 
-![Bear内存布局](https://raw.githubusercontent.com/simon-lu/ImgRepo/master/Blog/Bear%E5%86%85%E5%AD%98%E5%B8%83%E5%B1%80.png)
+![Bear内存布局](https://raw.githubusercontent.com/wqlu/ImgRepo/master/Blog/Bear%E5%86%85%E5%AD%98%E5%B8%83%E5%B1%80.png)
 
 ## 第二章 构造函数语意学
 
